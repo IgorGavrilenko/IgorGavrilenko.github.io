@@ -1,0 +1,382 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/* min-width: 480px
+      ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+    .address {
+        margin-top: 0;
+    }
+    .top-header-a {
+        width: 247px;
+    }
+    .contacts-left {
+        width: 385px;
+    }
+    .text-box .autor {
+        width: 80%;
+    }
+    .tabs-nav img {
+        width: 114px;
+    }
+    /* tagline */
+
+    .mob-tagline {
+    top: -20px;
+
+}
+    /* iframe */
+
+    .reviews iframe {
+        height: 350px;
+    }
+    .aside-history iframe {
+        height: 355px;
+    }
+    .m-video iframe {
+        height: 418px;
+    }
+}
+/* min-width: 640px
+      ========================================================================== */
+
+@media only screen and (min-width: 640px) {
+    #c-form button {
+        display: block;
+        margin: 8px auto 0;
+        width: 60%;
+    }
+    /* tagline */
+
+    .mob-tagline {
+    top: -30px;
+
+    }
+    .result-right-list li {
+        background-position: right 40px bottom !important;
+    }
+    .result-right-list li:last-child {
+        background-position: right 40px bottom 30px !important;
+    }
+    .tabs-nav li {
+        margin-right: 15px;
+    }
+    .text-box .autor {
+        width: 70%;
+    }
+    .tabs-nav img {
+        width: 134px;
+        max-width: none;
+    }
+    .main-history img {
+        float: left;
+        margin: 0 15px 10px 0;
+    }
+    .main-history-p-1 {
+        margin-top: 0;
+    }
+    /* iframe */
+
+    .reviews iframe {
+        height: 370px;
+    }
+    .aside-history iframe {
+        height: 420px;
+    }
+    .m-video iframe {
+        height: 500px;
+    }
+}
+/* ================================= max-width: 767px ================================= */
+
+@media (max-width: 767px) {
+    .openMenu {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+}
+/* min-width: 768px
+      ========================================================================== */
+
+@media only screen and (min-width: 768px) {
+    .logo img {
+        width: 330px;
+    }
+    .s-icon-bar {
+        left: auto;
+        right: 1%;
+    }
+    .menu {
+        top: 10px;
+        left: auto;
+        right: 175px;
+        display: inline-block !important;
+        margin: 0;
+        width: auto;
+        background-color: transparent;
+        font-size: 16px;
+    }
+    .menu li {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .menu li:hover,
+    .menu li:active,
+    .menu li:focus {
+        background-color: transparent;
+    }
+    .menu li:after {
+        position: relative;
+        top: 0;
+        content: "|";
+        display: inline-block;
+        font-family: 'AvenirLTStdMedium';
+        font-size: 20px;
+        color: #ef3e33;
+    }
+    .menu li:last-child:after {
+        content: "";
+    }
+    .menu li:last-child {
+        border-bottom: none;
+    }
+    .menu a {
+        display: inline-block;
+        padding: 0 6.5px;
+    }
+    .mob-tagline,
+    .openMenu {
+        display: none;
+    }
+    .logo {
+        float: left;
+    }
+    .bottom-header {
+        margin-top: 47px;
+    }
+    .address {
+        float: right;
+    }
+    #c-form {
+        position: absolute;
+        top: 21%;
+        right: 0;
+        left: auto;
+        width: 345px;
+        border-radius: 12px;
+    }
+    #c-form input {
+        display: inline-block;
+        vertical-align: top;
+    }
+    #c-form #f_name,
+    #c-form #phone {
+        margin-right: 11px;
+        width: 173px;
+    }
+    #c-form #l_name,
+    #c-form #email {
+        width: 126px;
+    }
+    #c-form button {
+        display: block;
+        width: 100%;
+    }
+    /* banner */
+
+    .desc-tagline {
+        display: block;
+    }
+    .contacts .banner {
+        margin-left: -100px;
+        max-width: 945px;
+    }
+    .about {
+        padding: 65px 0 40px;
+    }
+    .center-img {
+        max-width: 650px;
+    }
+    .about-list li {
+        float: left;
+        margin-right: 2%;
+        width: 49%;
+    }
+    .about-list li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    .h-work-inner {
+        padding: 48px 50px 76px;
+    }
+    .result-inner {
+        padding: 57px 85px 20px 50px;
+    }
+}
+/* min-width: 960px
+      ========================================================================== */
+
+@media only screen and (min-width: 960px) {
+    .method {
+        background: url('../img/method_bg.jpg') center right no-repeat #ee3d33;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .method .text-box {
+        margin: 85px 0;
+        width: 54%;
+    }
+    .text-box .autor {
+        display: none;
+    }
+}
+/* min-width: 1024px
+      ========================================================================== */
+
+@media only screen and (min-width: 1024px) {
+    .logo img {
+        width: 419px;
+    }
+    .menu {
+        font-size: 20px;
+    }
+    .contacts {
+        /*background: url('../img/cont1.jpg') center no-repeat #ee3d33;*/
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .about-list li {
+        float: left;
+        margin-right: 3.5%;
+        width: 31%;
+    }
+    .about-list li:nth-child(2n+2) {
+        margin-right: 3.5%;
+    }
+    .about-list li:last-child,
+    .about-list li:first-child + * + * + * + * {
+        margin-right: 0;
+    }
+    .h-work-inner img {
+        float: left;
+        margin: -10px 0 0;
+    }
+    .h-work-inner .descrpt {
+        float: right;
+        width: 500px;
+    }
+    .result-left {
+        float: left;
+        width: 59%;
+    }
+    .result-right {
+        float: right;
+        width: 37.5%;
+    }
+    .reviews-inner {
+        width: 100%;
+        max-width: 100%;
+    }
+    .tabs-list {
+        float: left;
+        width: 660px;
+    }
+    .tabs-nav {
+        float: right;
+        width: 285px;
+        margin: 0;
+    }
+    .tabs-nav li {
+        margin-bottom: 25px;
+        margin-right: 0;
+    }
+    .tabs-nav li:first-child,
+    .tabs-nav li:first-child + * + * {
+        margin: 0 28px 0 -28px;
+    }
+    .main-history {
+        float: left;
+        width: 61%;
+    }
+    .aside-history {
+        float: right;
+        width: 32%;
+    }
+    .aside-history iframe {
+        height: 185px;
+    }
+    .footer h3 {
+        margin-bottom: 10px;
+    }
+    .aside-history iframe + h3 {
+        margin: 28px 0 10px;
+    }
+}
+/* min-width: 1280px
+      ========================================================================== */
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        padding: 0;
+    }
+    .bottom-header {
+        padding: 42px 0 14px;
+    }
+    .hero {
+        background: url('../img/hero_bg.png') center bottom 30px no-repeat, url('../img/hero_gr_bg.png') repeat-x #f6f5f5;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+    .about {
+        padding-top: 80px;
+    }
+    .center-img {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        width: 560px;
+    }
+    .about-list li:nth-child(2n+2), .about-list li:nth-child(3n+3),
+    .about-list li,
+    .about-list li:first-child + * + * + * + *,
+    .about-list-li {
+        float: left;
+        margin-bottom: 60px;
+        margin-right: 2%;
+        width: 23.5%;
+    }
+    .about-list li:first-child + *,
+    .about-list li:first-child + * + * {
+        visibility: hidden;
+        display: inline-block;
+    }
+    .about-list li:first-child + * + * + *,
+    .about-list li:last-child {
+        margin-right: 0;
+    }
+    .method .text-box {
+        margin: 130px 0 185px;
+    }
+    .h-work-inner .descrpt {
+        width: 585px;
+    }
+    .h-work-inner h2 + p {
+        padding: 0 16%;
+    }
+    .h-work-inner img {
+        float: left;
+        margin: -10px 0 0 37px;
+    }
+    .divider {
+        display: block;
+        position: absolute;
+        right: 342px;
+        width: 2px;
+        height: 385px;
+        background: url(../img/divider.png) repeat-y #882e29;
+    }
+}
