@@ -1,0 +1,87 @@
+/*_________________________________ HOME _________________________________*/
+
+/*___________ banners ___________*/
+
+.banner {
+    position: relative;
+    margin: 20px 0;
+}
+.banner .caption {
+    position: absolute;
+}
+#content .banner .caption h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.banner .caption .btn {
+    padding: 0 32px;
+    height: 35px;
+    line-height: 35px;
+}
+.banner-1 {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 2px solid #c2622b;
+    background: url(../img/main_menu_bg.png) repeat-x;
+    -webkit-background-size: contain;
+            background-size: contain;
+    color: #fff;
+}
+.banner-1 div {
+    position: relative;
+    float: left;
+    text-align: center;
+}
+#content .banner-1 h2 {
+    line-height: 1;
+    font-size: 80px;
+}
+.banner-1 > img {
+    display: none;
+}
+.banner-1 h2 sup {
+    font-size: 50%;
+    font-weight: lighter;
+}
+.banner-1 p {
+    clear: both;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.banner-1 span {
+    padding-left: 20px;
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.banner-1 div:first-of-type {
+    width: 40%;
+    border-right: 2px solid #fff;
+}
+.banner-1 div:last-of-type {
+    width: 60%;
+}
+.banner-1 div:first-of-type img {
+    display: block;
+    width: 80px;
+    margin: auto;
+}
+.banner-2 .caption,
+.banner-5 .caption {
+    right: 5%;
+    bottom: 40px;
+}
+#content .banner-2 .caption h2,
+#content .banner-5 .caption h2 {
+    text-align: right;
+    color: #fff !important;
+}
+.banner-3 .caption,
+.banner-4 .caption {
+    left: 5%;
+    top: 40px;
+}
