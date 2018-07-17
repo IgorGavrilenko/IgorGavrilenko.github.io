@@ -1,7 +1,5 @@
 <!doctype html>
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,7 +7,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="http://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -23,189 +24,160 @@
 </div>
         <div class="container"><!-- container -->
             <div class="wrapper"><!-- wrapper -->
-                <header id="header" class="clearfix"><!-- header -->
-                    <div id="mob-menu" class="dl-menuwrapper"><!-- mob-menu -->
-                        <button class="dl-trigger"><i class="fa fa-bars"></i></button>
-                        <ul class="dl-menu">
-                            <li class="clearfix">
-                                <form class="search-form clearfix" action="" method="get" accept-charset="utf-8">
-                                    <input type="search" name="search-form" value="" placeholder="What are you looking for?">
-                                </form>
-                            </li>
-                            <li><a href="#" title="">login/register</a></li>
-                            <li><a href="#" title="">categories</a>
-                                <ul class="dl-submenu">
-                                    <li><a href="#" title="">home</a></li>
-                                    <li><a href="#" title="">bedroom</a></li>
-                                    <li><a href="#" title="">bath</a></li>
-                                    <li><a href="#" title="">travel</a></li>
-                                    <li><a href="#" title="">cleaning</a></li>
-                                    <li><a href="#" title="">baby & kids</a></li>
-                                    <li><a href="#" title="">protectors</a></li>
-                                    <li><a href="#" title="">outdoor</a></li>
+                <header id="header" class="clearfix">
+                                <!-- header -->
+                                <div id="mob-menu" class="dl-menuwrapper">
+                                    <!-- mob-menu -->
+                                    <button class="dl-trigger"><i class="fa fa-bars"></i></button>
+                                    <ul class="dl-menu">
+                                        <li class="clearfix">
+                                            <form class="search-form clearfix" action="" method="get" accept-charset="utf-8">
+                                                <input type="search" name="search-form" value="" placeholder="What are you looking for?">
+                                            </form>
+                                        </li>
+                                        <li><a href="login.html">login/register</a></li>
+                                        <li><a href="category.html">categories</a>
+                                            <ul class="dl-submenu">
+                                                <li><a href="#">home</a></li>
+                                                <li><a href="#">bedroom</a></li>
+                                                <li><a href="#">bath</a></li>
+                                                <li><a href="#">travel</a></li>
+                                                <li><a href="#">cleaning</a></li>
+                                                <li><a href="#">baby & kids</a></li>
+                                                <li><a href="#">protectors</a></li>
+                                                <li><a href="#">outdoor</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">help center</a></li>
+                                        <li><a href="#">contact us</a></li>
+                                        <li><a href="#">returns</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /mob-menu -->
+                                <div id="mob-cart" class="dl-menuwrapper">
+                                    <!-- mob-cart -->
+                                    <button class="dl-trigger"><i class="fa fa-shopping-cart"></i></button>
+                                    <ul class="dl-menu my-cart-head-list">
+                                        <!-- my-cart-head-list -->
+                                        <li class="my-cart-head clearfix">
+                                            <!-- my-cart-head -->
+                                            <button class="close" type="button">✕</button>
+                                            <div class="product-img clearfix">
+                                                <img src="img/content/product_pic.jpg" alt="">
+                                            </div>
+                                            <div class="product-caption clearfix">
+                                                <h2>Kenneth Cole Reaction Home Mineral Duvet Cover </h2>
+                                                <span>Beidge</span>
+                                                <strong class=""><em>1</em>$129.99</strong>
+                                            </div>
+                                        </li>
+                                        <!-- /my-cart-head -->
+                                        <li class="my-cart-head clearfix">
+                                            <!-- my-cart-head -->
+                                            <button class="close" type="button">✕</button>
+                                            <div class="product-img clearfix">
+                                                <img src="img/content/product_pic_1.jpg" alt="">
+                                            </div>
+                                            <div class="product-caption clearfix">
+                                                <h2>Kenneth Cole Reaction Home Mineral Duvet Cover </h2>
+                                                <span>Beidge</span>
+                                                <strong class=""><em>1</em>$129.99</strong>
+                                            </div>
+                                        </li>
+                                        <!-- /my-cart-head -->
+                                        <li class="my-cart-head clearfix">
+                                            <!-- my-cart-head -->
+                                            <button class="close" type="button">✕</button>
+                                            <div class="product-img clearfix">
+                                                <img src="img/content/product_pic_2.jpg" alt="">
+                                            </div>
+                                            <div class="product-caption clearfix">
+                                                <h2>Kenneth Cole Reaction Home Mineral Duvet Cover </h2>
+                                                <span>Beidge</span>
+                                                <strong class=""><em>1</em>$129.99</strong>
+                                            </div>
+                                        </li>
+                                        <!-- /my-cart-head -->
+                                        <li class="clearfix"></li>
+                                        <li class="my-cart-head-f clearfix">
+                                            <strong class="subtotal">
+                                                    Subtotal: $139.99
+                                                </strong>
+                                            <button class="btn" type="submit">checkout</button>
+                                        </li>
+                                    </ul>
+                                    <!-- /my-cart-head-list -->
+                                </div>
+                                <!-- /mob-cart -->
+                                <ul class="top-menu clearfix">
+                                    <!-- top-menu -->
+                                    <li><a href="login.html">login</a></li>
+                                    <li><a href="category.html">categories</a>
+                                        <li><a href="#">help center</a></li>
+                                        <li><a href="contact_us.html">contact us</a></li>
+                                        <li><a href="register.html">sign in / register</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="#" title="">help center</a></li>
-                            <li><a href="#" title="">contact us</a></li>
-                            <li><a href="#" title="">returns</a></li>
-                        </ul>
-                    </div><!-- /mob-menu -->
-                    <div id="mob-cart" class="dl-menuwrapper"><!-- mob-cart -->
-                        <button class="dl-trigger"><i class="fa fa-shopping-cart"></i></button>
-                        <ul class="dl-menu my-cart-head-list"><!-- my-cart-head-list -->
-                            <li class="my-cart-head clearfix"><!-- my-cart-head -->
-                                <button class="close" type="button">✕</button>
-                                <div class="product-img clearfix">
-                                    <img src="img/content/product_pic.jpg" alt="">
+                                <!-- /top-menu -->
+                                <div class="logo">
+                                    <!-- logo -->
+                                    <a href="home.html"><img src="img/logo.jpg" alt="Homepage.com" title="Homepage.com"></a>
                                 </div>
-                                <div class="product-caption clearfix">
-                                    <h2>Kenneth Cole Reaction Home Mineral Duvet Cover </h2>
-                                    <span>Beidge</span>
-                                    <strong class=""><em>1</em>$129.99</strong>
+                                <!-- /logo -->
+                                <div class="header-bar clearfix">
+                                    <!-- header-bar -->
+                                    <form class="search-form desctop-form clearfix" action="" method="get" accept-charset="utf-8">
+                                        <div class="search">
+                                            <button class="btn btn-search" type="button">all</button>
+                                            <input type="search" name="search-form" value="" placeholder="What are you looking for?">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <br>
+                                        <button class="btn like" type="button"><i class="fa fa-heart-o"></i></button>
+                                        <div class="btn-group">
+                                            <a href="sh_cart.html" class="btn my-cart">my cart</a>
+                                            <button class="btn count" type="button" data-popmodal-bind=".my-cart-head-list" data-placement="bottomCenter" data-showclose-but="true" data-ondocumentclick-close="true" data-ondocumentclick-close-prevent="">4</button>
+                                        </div>
+                                        <a href="checkout.html" class="btn checkout">checkout</a>
+                                    </form>
                                 </div>
-                            </li><!-- /my-cart-head -->
-                            <li class="my-cart-head clearfix"><!-- my-cart-head -->
-                                <button class="close" type="button">✕</button>
-                                <div class="product-img clearfix">
-                                    <img src="img/content/product_pic_1.jpg" alt="">
-                                </div>
-                                <div class="product-caption clearfix">
-                                    <h2>Kenneth Cole Reaction Home Mineral Duvet Cover </h2>
-                                    <span>Beidge</span>
-                                    <strong class=""><em>1</em>$129.99</strong>
-                                </div>
-                            </li><!-- /my-cart-head -->
-                            <li class="my-cart-head clearfix"><!-- my-cart-head -->
-                                <button class="close" type="button">✕</button>
-                                <div class="product-img clearfix">
-                                    <img src="img/content/product_pic_2.jpg" alt="">
-                                </div>
-                                <div class="product-caption clearfix">
-                                    <h2>Kenneth Cole Reaction Home Mineral Duvet Cover </h2>
-                                    <span>Beidge</span>
-                                    <strong class=""><em>1</em>$129.99</strong>
-                                </div>
-                            </li><!-- /my-cart-head -->
-                            <li class="clearfix"></li>
-                            <li class="my-cart-head-f clearfix">
-                                <strong class="subtotal">
-                                    Subtotal: $139.99
-                                </strong>
-                                <button class="btn" type="submit">checkout</button>
-                            </li>
-                        </ul><!-- /my-cart-head-list -->
-                    </div><!-- /mob-cart -->
-                    <ul class="top-menu clearfix"><!-- top-menu -->
-                        <li><a href="#" title="">login</a></li>
-                        <li><a href="#" title="">categories</a>
-                        <li><a href="#" title="">help center</a></li>
-                        <li><a href="#" title="">contact us</a></li>
-                        <li><a href="#" title="">sign in / register</a></li>
-                    </ul><!-- /top-menu -->
-                        <div class="logo"><!-- logo -->
-                        <a href="/"><img src="img/logo.jpg" alt="Homepage.com" title="Homepage.com"></a>
-                    </div><!-- /logo -->
-                    <div class="header-bar clearfix"><!-- header-bar -->
-                        <form class="search-form desctop-form clearfix" action="" method="get" accept-charset="utf-8">
-                            <div class="search">
-                                <button class="btn btn-search" type="button">all</button>
-                                <input type="search" name="search-form" value="" placeholder="What are you looking for?">
-                                <i class="fa fa-search"></i>
-                            </div>
-                            <br>
-                            <button class="btn like" type="button"><i class="fa fa-heart-o"></i></button>
-                            <div class="btn-group">
-                                <button class="btn my-cart" type="button">my cart</button>
-                                <button class="btn count" type="button" data-popmodal-bind=".my-cart-head-list" data-placement="bottomCenter" data-showclose-but="true" data-ondocumentclick-close="true" data-ondocumentclick-close-prevent="">4</button>
-                            </div>
-                            <button class="btn checkout" type="submit">checkout</button>
-                        </form>
-                    </div><!-- /header-bar -->
-                    <div class="clearfix"></div>
-                    <ul class="main-menu menu"><!-- main-menu -->
-                        <li>
-                            <a href="#" title="">home</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">bedroom</a>
-                            <ul class="menu">
-                                <li><a href="#">All Bedroom Product</a></li>
-                                <li><a href="#">Bedding</a></li>
-                                <li><a href="#">Bedding Basics</a></li>
-                                <li><a href="#">Special Size Bedding</a></li>
-                                <li><a href="#">Bedding Accessories</a></li>
-                                <li><a href="#">Textiles & Rugs</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">bath</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">travel</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">cleaning</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">baby & kids</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">protectors</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" title="">outdoor</a>
-                            <ul class="menu">
-                                <li><a href="#">Sub-Menu 1</a></li>
-                                <li><a href="#">Sub-Menu 2</a></li>
-                                <li><a href="#">Sub-Menu 3</a></li>
-                                <li><a href="#">Sub-Menu 4</a></li>
-                                <li><a href="#">Sub-Menu 5</a></li>
-                            </ul>
-                        </li>
-                    </ul><!-- /main-menu -->
-                </header><!-- /header -->
+                                <!-- /header-bar -->
+                                <div class="clearfix"></div>
+                                <ul class="main-menu menu"><!-- main-menu -->
+                                    <li>
+                                        <a href="img/logo.jpg" title="">home</a>
+                                        <ul class="menu">
+                                            <li><a href="#">All Bedroom Product</a></li>
+                                            <li><a href="#">Bedding</a></li>
+                                            <li><a href="#">Bedding Basics</a></li>
+                                            <li><a href="#">Special Size Bedding</a></li>
+                                            <li><a href="#">Bedding Accessories</a></li>
+                                            <li><a href="#">Textiles & Rugs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">bedroom</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">bath</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">travel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">cleaning</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">baby & kids</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">protectors</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="">outdoor</a>
+                                    </li>
+                                </ul>
+                                <!-- /main-menu -->
+                            </header>
                 <!-- ************************************************************************** -->
                 <div id="content" class="clearfix"><!-- content -->
                     <ul class="breadcrumb">
@@ -231,7 +203,7 @@
                             </li>
                             <li class="clearfix">
                                  <span>*</span> - required fields
-                                <button class="btn register-btn" type="submit">register</button>
+                                 <a href="account_dash_b.html" class="btn register-btn">register</a>
                             </li>
                         </ul>
                     </form>
@@ -241,11 +213,11 @@
             <footer id="footer" class="clearfix"><!-- footer -->
                 <nav><!-- footer-menu -->
                     <ul class="footer-menu">
-                        <li><a href="#" title="">home page</a></li>
-                        <li><a href="#" title="">about us</a></li>
-                        <li><a href="#" title="">help center</a></li>
-                        <li><a href="#" title="">contact us</a></li>
-                        <li><a href="#" title="">returns</a></li>
+                        <li><a href="home.html">home page</a></li>
+                        <li><a href="about_us.html">about us</a></li>
+                        <li><a href="contact_us.html">contact us</a></li>
+                        <li><a href="#">help center</a></li>
+                        <li><a href="#">returns</a></li>
                     </ul>
                 </nav><!-- /footer-menu -->
 
