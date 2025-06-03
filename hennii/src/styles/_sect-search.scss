@@ -1,0 +1,118 @@
+/* s-search */
+.s-search {
+    opacity: 0;
+    padding-bottom: 64px;
+    @include lg {
+        padding-bottom: 71px;
+    }
+}
+.s-search__body {
+    padding-bottom: 58px;
+    @include lg {
+        padding-bottom: 82px;
+    }
+}
+.s-search__item {
+    padding-top: 48px;
+    @include lg {
+        padding-top: 63px;
+    }
+    &:first-child {
+        padding-top: 0;
+    }
+    &:last-child {
+        .s-search__line {
+            display: none !important;
+        }
+    }
+}
+.s-search__inner {
+    margin-bottom: 16px;
+    @include lg {
+        @include fl();
+        @include fl-v-start();
+        @include fl-between();
+        margin-bottom: 40px;
+    }
+}
+.s-search__content {
+    line-height: 1.5;
+    color: $galaxy-500;
+    margin-bottom: 32px;
+    @include lg {
+        line-height: 2;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+}
+.s-search__title {
+    font-family: $ff-syne;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.333333333333333;
+    color: $galaxy-600;
+    margin-bottom: 16px;
+    @include lg {
+        font-size: 32px;
+        line-height: 1.375;
+    }
+}
+.s-search__link,
+.s-search__text {
+    line-height: inherit;
+    color: inherit;
+}
+.s-search__link {
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none !important;
+}
+.s-search__text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    @include md {
+        -webkit-line-clamp: 1;
+    }
+}
+.s-search__result {
+    font-weight: 700;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $galaxy-600;
+    background-color: $moon-100;
+    border-radius: $b-radius-8;
+    text-decoration: none !important;
+    padding: 0 4px;
+}
+.s-search-more {
+    @include fli();
+    @include fl-v-centr();
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.777777777777778;
+    color: $galaxy-600;
+    text-decoration: none !important;
+    @include lg {
+        margin-top: 6px;
+    }
+    @include h {
+        .s-search-more__icon {
+            right: -8px;
+        }
+    }
+}
+.s-search-more__text {
+    margin-right: 8px;
+}
+.s-search-more__icon {
+    position: relative;
+    right: 0;
+    @extend %transition-all-300;
+}
+.s-search__line {
+    height: 2px;
+    background-color: $galaxy-600;
+}

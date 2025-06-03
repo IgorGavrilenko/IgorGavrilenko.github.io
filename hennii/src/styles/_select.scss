@@ -1,0 +1,203 @@
+/* multiple select */
+.form {
+    .ms-parent {
+        @include fl();
+        @include fl-v-centr();
+        width: 100% !important;
+    }
+    .ms-choice {
+        position: relative;
+        height: auto;
+        padding: 10px 22px;
+        overflow: hidden;
+        cursor: pointer;
+        border: none;
+        border-radius: $b-radius-16;
+        font-size: 14px;
+        line-height: 1.5714285714285714;
+        @include lg {
+            font-size: 16px;
+            line-height: 2;
+        }
+    }
+    .ms-choice > span {
+        position: static;
+        padding-left: 0;
+        @extend %transition-all-300;
+    }
+    .ms-choice > div.icon-caret {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        right: 16px;
+        border: none;
+        width: 18px;
+        height: 11px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 18px 11px;
+        @extend %transition-all-300;
+    }
+    .ms-choice > div.icon-caret.open {
+        -webkit-transform: scale(1) rotate(180deg);
+        transform: scale(1) rotate(180deg);
+    }
+    .ms-drop {
+        right: 0;
+        min-width: 240px;
+        margin-top: 8px;
+        padding: 4px 8px;
+        width: 100%;
+        box-shadow: none;
+        border-radius: $b-radius-16;
+    }
+    .ms-drop ul>li.hide-radio:focus,
+    .ms-drop ul>li.hide-radio:hover,
+    .ms-drop ul > li.hide-radio.selected {
+        background-color: transparent;
+    }
+    .ms-drop ul > li.hide-radio {
+        position: relative;
+        padding-right: 10px;
+        @include a {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 4px;
+            @extend %transition-all-300;
+        }
+    }
+    .ms-drop ul > li.hide-radio.selected {
+    }
+    .ms-drop ul > li.hide-radio label {
+        padding: 4px 8px;
+        line-height: 2;
+        @extend %transition-all-300;
+    }
+    .ms-drop ul::-webkit-scrollbar {
+        background-color: transparent;
+        width: 2px;
+    }
+    .ms-drop ul::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+    }
+    .ms-drop ul::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .ms-drop ul > li > label {
+        margin: 4px 0;
+        border-radius: $b-radius-8;
+    }
+}
+
+.select-dark {
+    .ms-choice {
+        background-color: $galaxy-500;
+        border-color: $galaxy-500;
+        color: $moon-300;
+        &:active,
+        &:focus {
+            border-color: $ice;
+            & span {
+                color: $ice;
+            }
+        }
+        &.is-active {
+            & span {
+                color: $ice;
+            }
+        }
+        &.is-open {
+            border-color: $ice;
+        }
+    }
+    .ms-choice > div.icon-caret {
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.293 1.707L1.707.293 9 7.586 16.293.293l1.414 1.414L9 10.414.293 1.707z' fill='%23fff'/%3E%3C/svg%3E");
+    }
+    .ms-drop {
+        color: $moon-300;
+        background-color: $galaxy-500;
+        border-color: $galaxy-500;
+    }
+    .ms-drop ul > li.hide-radio:focus > label,
+    .ms-drop ul > li.hide-radio:hover > label {
+        background-color: $galaxy-400;
+        color: $ice;
+    }
+    .ms-drop ul::-webkit-scrollbar-thumb {
+        background-color: $ice;
+    }
+    .ms-drop ul > li {
+        background: $galaxy-500;
+    }
+    .ms-drop ul > li.hide-radio.selected > label {
+        color: $ice;
+        background-color: $galaxy-400;
+    }
+    .ms-drop ul > li.hide-radio.selected {
+        @include a {
+            height: 32px;
+            background-color: $ice;
+        }
+    }
+}
+
+.select-light {
+    .ms-choice {
+        background-color: $ice;
+        border-color: $ice;
+        color: $moon-300;
+        &:active,
+        &:focus {
+            border-color: $galaxy-600;
+            & span {
+                color: $galaxy-600;
+            }
+        }
+        &.is-active {
+            & span {
+                color: $galaxy-600;
+            }
+        }
+        &.is-open {
+            border-color: $galaxy-600;
+        }
+    }
+    .ms-choice > div.icon-caret {
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.293 1.707L1.707.293 9 7.586 16.293.293l1.414 1.414L9 10.414.293 1.707z' fill='%23000'/%3E%3C/svg%3E");
+    }
+    .ms-drop {
+        color: $galaxy-600;
+        background-color: $ice;
+        border-color: $ice;
+        box-shadow: 4px 8px 32px rgba(227, 227, 227, .35);
+    }
+    .ms-drop ul > li.hide-radio:focus > label,
+    .ms-drop ul > li.hide-radio:hover > label {
+        color: $galaxy-600;
+        background-color: $moon-100;
+    }
+    .ms-drop ul::-webkit-scrollbar-thumb {
+        background-color: $ice;
+    }
+    .ms-drop ul > li {
+        background: $ice;
+    }
+    .ms-drop ul > li.hide-radio.selected > label {
+        color: $galaxy-600;
+        background-color: $moon-100;
+    }
+    .ms-drop ul > li.hide-radio.selected {
+        @include a {
+            height: 32px;
+            background-color: $galaxy-600;
+        }
+    }
+}

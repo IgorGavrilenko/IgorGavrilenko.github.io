@@ -1,0 +1,21 @@
+/* grid */
+.grid {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+}
+.grid__item {
+    -webkit-flex: 0 1 100%;
+    flex: 0 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}

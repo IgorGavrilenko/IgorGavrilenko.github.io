@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="preload" href="assets/fonts/Montserrat-Regular.ttf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="assets/fonts/Montserrat-Medium.ttf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="assets/fonts/Montserrat-SemiBold.ttf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="assets/fonts/Syne-Regular.ttf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="assets/fonts/Syne-Medium.ttf" as="font" crossorigin="anonymous">
+        <link rel="preload" href="assets/fonts/Syne-Bold.ttf" as="font" crossorigin="anonymous">
+        <style>
+            html{
+                line-height:1.15;
+                -webkit-text-size-adjust:100%
+            }
+            body{
+                margin:0
+            }
+            h1{
+                font-size:2em;
+                margin:0.67em 0
+            }
+            a{
+                background-color:transparent
+            }
+            img{
+                border-style:none
+            }
+            button{
+                font-family:inherit;
+                font-size:100%;
+                line-height:1.15;
+                margin:0
+            }
+            button{
+                overflow:visible
+            }
+            button{
+                text-transform:none
+            }
+            button,[type="button"]{
+                -webkit-appearance:button
+            }
+            button::-moz-focus-inner,[type="button"]::-moz-focus-inner{
+                border-style:none;
+                padding:0
+            }
+            button:-moz-focusring,[type="button"]:-moz-focusring{
+                outline:1px dotted ButtonText
+            }
+            ::-webkit-file-upload-button{
+                -webkit-appearance:button;
+                font:inherit
+            }
+            *,*::before,*::after{
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box
+            }
+            html{
+                font-family:sans-serif
+            }
+            h1{
+                margin-top:0
+            }
+            button{
+                margin:0
+            }
+            button{
+                border-radius:0
+            }
+            svg{
+                overflow:hidden;
+                vertical-align:middle
+            }
+            .btn{
+                overflow:hidden;
+                display:-webkit-inline-box;
+                display:-ms-inline-flexbox;
+                display:inline-flex;
+                -webkit-box-pack:center;
+                -ms-flex-pack:center;
+                justify-content:center;
+                -webkit-box-align:center;
+                -ms-flex-align:center;
+                align-items:center;
+                white-space:nowrap;
+                font-family:"Syne",sans-serif;
+                font-size:16px;
+                font-weight:700;
+                line-height:2;
+                padding:12px 28px 12px 20px;
+                border-radius:16px;
+                -webkit-appearance:none;
+                -moz-appearance:none;
+                appearance:none;
+                border:none;
+                -webkit-box-shadow:none;
+                box-shadow:none;
+                text-decoration:none!important
+            }
+            @media (min-width:992px){
+                .btn{
+                    font-size:16px;
+                    padding:16px 40px 16px 32px
+                }
+            }
+            .btn .btn__text{
+                font-size:inherit;
+                color:inherit;
+                white-space:nowrap
+            }
+            .btn .btn__icon{
+                position:relative;
+                left:8px
+            }
+            .btn.btn--moon{
+                background-color:#F9F9F9;
+                color:#000
+            }
+            .btn.btn--moon path{
+                fill:#000
+            }
+            .btn.btn--neptune{
+                background-color:#7635FF;
+                color:#fff
+            }
+            .btn.btn--sm{
+                font-size:14px;
+                line-height:1.7142857142857142;
+                padding:8px 20px
+            }
+            @media (min-width:992px){
+                .btn.btn--sm{
+                    font-size:16px;
+                    line-height:2;
+                    padding:8px 39px 8px 24px
+                }
+            }
+            body{
+                font-family:"Montserrat",sans-serif;
+                font-size:16px;
+                font-weight:400;
+                color:#000;
+                overflow:hidden;
+                background:#fff;
+                height:100vh;
+                min-height:100vh
+            }
+            .smooth-scroll{
+                position:relative;
+                overflow:hidden;
+                overflow-y:hidden!important;
+                min-height:100vh
+            }
+            .container{
+                max-width:1342px;
+                margin-right:auto;
+                margin-left:auto;
+                padding-left:20px;
+                padding-right:20px
+            }
+            @media (min-width:992px){
+                .container{
+                    width:960px
+                }
+            }
+            @media (min-width:1200px){
+                .container{
+                    width:1140px
+                }
+            }
+            @media (min-width:1440px){
+                .container{
+                    width:100%
+                }
+            }
+            @media (min-width:1200px){
+                .container{
+                    padding-left:16px;
+                    padding-right:16px
+                }
+            }
+            section{
+                background-color:#fff
+            }
+            picture{
+                display:block
+            }
+            picture img{
+                display:block
+            }
+            .split-text-hero{
+                overflow:hidden
+            }
+            .footer__top .btn--footer{
+                display:block
+            }
+            @media (min-width:992px){
+                .footer__top .btn--footer{
+                    display:none
+                }
+            }
+            .footer__top .btn--footer .btn__icon{
+                display:none
+            }
+            .header{
+                padding-top:8px;
+                padding-bottom:8px;
+                background-color:#fff
+            }
+            @media (min-width:992px){
+                .header{
+                    padding-top:24px;
+                    padding-bottom:24px
+                }
+            }
+            .container--header{
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-align:center;
+                -ms-flex-align:center;
+                align-items:center;
+                -webkit-box-pack:justify;
+                -ms-flex-pack:justify;
+                justify-content:space-between
+            }
+            .header__logo{
+                overflow:hidden;
+                display:block;
+                width:85px
+            }
+            @media (min-width:992px){
+                .header__logo{
+                    width:112px
+                }
+            }
+            @media (max-width:991px){
+                .btn--header .btn__icon{
+                    display:none
+                }
+            }
+            .s-intro{
+                position:fixed;
+                z-index:1000;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color:#fff
+            }
+            .s-intro,.s-intro-logo{
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-pack:center;
+                -ms-flex-pack:center;
+                justify-content:center;
+                -webkit-box-align:center;
+                -ms-flex-align:center;
+                align-items:center
+            }
+            .s-intro-logo{
+                opacity:0;
+                position:relative;
+                width:154px;
+                height:154px
+            }
+            .s-intro-logo::after{
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                width:152px;
+                height:152px;
+                margin:auto;
+                background-color:#fff
+            }
+            .s-intro-logo__bg{
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0
+            }
+            .s-intro-logo__bg--1{
+                background:-o-radial-gradient(73.87% -5.42%,29.42% 29.42%,#000000 0%,rgba(0,0,0,0) 100%);
+                background:radial-gradient(29.42% 29.42% at 73.87% -5.42%,#000000 0%,rgba(0,0,0,0) 100%)
+            }
+            .s-intro-logo__bg--2{
+                background:-o-radial-gradient(100% 4.46%,43.83% 43.83%,#000000 0%,rgba(0,0,0,0) 100%);
+                background:radial-gradient(43.83% 43.83% at 100% 4.46%,#000000 0%,rgba(0,0,0,0) 100%)
+            }
+            .s-intro-logo__bg--3{
+                background:-o-radial-gradient(115.16% 17.35%,73.87% 73.87%,#000000 0%,rgba(0,0,0,0) 100%);
+                background:radial-gradient(73.87% 73.87% at 115.16% 17.35%,#000000 0%,rgba(0,0,0,0) 100%)
+            }
+            .s-intro-logo__bg--4{
+                background:-o-radial-gradient(115.16% 17.35%,97.39% 97.39%,#000000 0%,rgba(0,0,0,0) 100%);
+                background:radial-gradient(97.39% 97.39% at 115.16% 17.35%,#000000 0%,rgba(0,0,0,0) 100%)
+            }
+            .s-intro-logo__bg--5{
+                background:-o-radial-gradient(115.16% 17.35%,137.52% 137.52%,#000000 0%,rgba(0,0,0,0) 100%);
+                background:radial-gradient(137.52% 137.52% at 115.16% 17.35%,#000000 0%,rgba(0,0,0,0) 100%)
+            }
+            .s-intro-logo__bg--6{
+                background:-o-radial-gradient(115.16% 17.35%,171.19% 171.19%,#000000 0%,rgba(0,0,0,0) 100%);
+                background:radial-gradient(171.19% 171.19% at 115.16% 17.35%,#000000 0%,rgba(0,0,0,0) 100%)
+            }
+            .s-intro-logo__svg{
+                position:relative;
+                z-index:1;
+                width:46px;
+                height:42px
+            }
+            .s-hero{
+                position:relative;
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-orient:vertical;
+                -webkit-box-direction:normal;
+                -ms-flex-direction:column;
+                flex-direction:column;
+                overflow:hidden;
+                padding-top:26px
+            }
+            @media (min-width:768px){
+                .s-hero{
+                    height:calc(100vh - 56px)
+                }
+            }
+            @media (min-width:992px){
+                .s-hero{
+                    height:calc(100vh - 96px)
+                }
+            }
+            @media (max-width:767px){
+                .container--hero{
+                    margin-right:0;
+                    margin-left:0
+                }
+            }
+            @media (min-width:768px){
+                .container--hero{
+                    height:100%
+                }
+            }
+            @media (min-width:1440px){
+                .container--hero{
+                    width:100%
+                }
+            }
+            @media (min-width:768px){
+                .s-hero__inner{
+                    display:-webkit-inline-box;
+                    display:-ms-inline-flexbox;
+                    display:inline-flex;
+                    -webkit-align-items:flex-end;
+                    -ms-flex-align:end;
+                    -webkit-box-pack:justify;
+                    -ms-flex-pack:justify;
+                    justify-content:space-between;
+                    height:100%;
+                    left:-20px;
+                    padding-left:20px
+                }
+            }
+            @media (min-width:992px){
+                .s-hero__inner{
+                    left:0;
+                    padding-left:0
+                }
+            }
+            .s-hero__top{
+                -webkit-box-flex:1;
+                -ms-flex:1 1 auto;
+                flex:1 1 auto
+            }
+            @media (max-width:767px){
+                .s-hero__top{
+                    display:-webkit-box;
+                    display:-ms-flexbox;
+                    display:flex;
+                    -webkit-box-orient:vertical;
+                    -webkit-box-direction:normal;
+                    -ms-flex-direction:column;
+                    flex-direction:column;
+                    -webkit-box-pack:end;
+                    -ms-flex-pack:end;
+                    justify-content:flex-end
+                }
+            }
+            .s-hero__right{
+                overflow:hidden
+            }
+            @media (min-width:768px){
+                .s-hero__right{
+                    position:absolute;
+                    top:0;
+                    width:44%;
+                    left:56%;
+                    bottom:44px;
+                    height:calc(100% - 44px)
+                }
+            }
+            @media (min-width:992px){
+                .s-hero__right{
+                    width:50%;
+                    left:50%
+                }
+            }
+            @media (min-width:1440px){
+                .s-hero__right{
+                    bottom:72px;
+                    height:calc(100% - 72px);
+                    width:45%;
+                    left:55%
+                }
+            }
+            @media (min-width:1920px){
+                .s-hero__right{
+                    height:100%
+                }
+            }
+            @media (min-width:1921px){
+                .s-hero__right{
+                    width:45%;
+                    height:calc(100% - 72px)
+                }
+            }
+            .s-hero__right picture{
+                width:100%;
+                height:100%
+            }
+            .s-hero__img{
+                width:100%
+            }
+            @media (max-width:767px){
+                .s-hero__img{
+                    max-width:100%
+                }
+            }
+            @media (min-width:768px){
+                .s-hero__img{
+                    -o-object-fit:cover;
+                    object-fit:cover;
+                    -o-object-position:bottom;
+                    object-position:bottom;
+                    height:100%
+                }
+            }
+            @media (min-width:768px){
+                .s-hero__left{
+                    min-width:370px
+                }
+            }
+            @media (min-width:1440px){
+                .s-hero__left{
+                    min-width:660px
+                }
+            }
+            @media (min-width:1600px){
+                .s-hero__left{
+                    padding-right:112px;
+                    min-width:752px
+                }
+            }
+            .s-hero-caption{
+                max-width:480px
+            }
+            @media (min-width:992px){
+                .s-hero-caption{
+                    max-width:640px
+                }
+            }
+            .s-hero-caption__top{
+                overflow:hidden;
+                display:-webkit-inline-box;
+                display:-ms-inline-flexbox;
+                display:inline-flex;
+                -webkit-box-align:center;
+                -ms-flex-align:center;
+                align-items:center;
+                font-family:"Syne",sans-serif;
+                font-weight:700;
+                font-size:10px;
+                line-height:2.5;
+                letter-spacing:0.16em;
+                text-transform:uppercase;
+                margin-bottom:8px
+            }
+            @media (min-width:992px){
+                .s-hero-caption__top{
+                    font-size:16px;
+                    margin-bottom:0
+                }
+            }
+            .s-hero-caption__top svg{
+                margin-right:8px
+            }
+            .s-hero__title{
+                font-family:"Syne",sans-serif;
+                font-weight:700;
+                font-size:34px;
+                line-height:1.2;
+                margin-bottom:11px;
+                min-width:330px;
+                max-width:376px
+            }
+            @media (min-width:768px){
+                .s-hero__title{
+                    font-size:39px;
+                    margin-bottom:0
+                }
+            }
+            @media (min-width:1440px){
+                .s-hero__title{
+                    font-size:64px;
+                    line-height:1;
+                    margin-bottom:23px;
+                    padding-top:24px;
+                    max-width:100%
+                }
+            }
+            .s-hero__title .s-hero-caption__img{
+                position:relative;
+                top:-14px;
+                width:72px
+            }
+            @media (min-width:992px){
+                .s-hero__title .s-hero-caption__img{
+                    top:-19px;
+                    width:103px;
+                    margin-right:16px
+                }
+            }
+            .s-hero__title .s-hero-caption__img+div{
+                position:relative;
+                top:-6px;
+                left:9px
+            }
+            @media (min-width:992px){
+                .s-hero__title .s-hero-caption__img+div{
+                    top:-10px;
+                    left:0
+                }
+            }
+            .s-hero__title>div{
+                display:inline-block;
+                position:relative
+            }
+            @media (min-width:992px){
+                .s-hero__title>div{
+                    top:2px;
+                    left:16px;
+                    left:0
+                }
+            }
+            @media (max-width:767px){
+                .s-hero__title br{
+                    display:none
+                }
+            }
+            .s-hero-caption__bottom{
+                margin-bottom:24px
+            }
+            @media (min-width:768px){
+                .s-hero-caption__bottom{
+                    margin-bottom:20vh
+                }
+            }
+            @media (min-width:992px){
+                .s-hero-caption__bottom{
+                    margin-bottom:72px
+                }
+            }
+            @media (max-width:1366px) and (max-height:799px){
+                .s-hero-caption__bottom{
+                    margin-bottom:24px
+                }
+            }
+            @media (min-width:1440px){
+                .s-hero-caption__bottom{
+                    display:-webkit-box;
+                    display:-ms-flexbox;
+                    display:flex;
+                    -webkit-align-items:flex-end;
+                    -ms-flex-align:end;
+                    -webkit-box-pack:justify;
+                    -ms-flex-pack:justify;
+                    justify-content:space-between
+                }
+            }
+            .s-hero__text{
+                font-size:16px;
+                line-height:1.5;
+                color:#3D3D3D;
+                max-width:336px;
+                margin-bottom:23px;
+                height:72px
+            }
+            @media (min-width:1440px){
+                .s-hero__text{
+                    height:96px;
+                    font-size:18px;
+                    line-height:1.7777777777777777;
+                    margin-bottom:0
+                }
+            }
+            .s-hero__text .s-hero-caption__accent{
+                font-weight:500!important
+            }
+            .s-marquee{
+                position:relative;
+                z-index:1;
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                overflow:hidden;
+                font-size:0;
+                white-space:nowrap;
+                margin-bottom:0;
+                padding-top:10px;
+                padding-bottom:10px;
+                background:#fff;
+                min-height:44px
+            }
+            @media (min-width:1440px){
+                .s-marquee{
+                    padding-top:15px;
+                    padding-bottom:15px;
+                    min-height:72px
+                }
+            }
+            .s-marquee ul{
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-align:center;
+                -ms-flex-align:center;
+                align-items:center;
+                font-family:"Syne",sans-serif;
+                font-weight:700;
+                font-size:10px;
+                line-height:2.45;
+                letter-spacing:0.16em;
+                text-transform:uppercase;
+                white-space:nowrap;
+                list-style:none;
+                margin:0;
+                padding:0
+            }
+            @media (min-width:1440px){
+                .s-marquee ul{
+                    font-size:16px
+                }
+            }
+            .s-marquee ul li{
+                position:relative;
+                padding-right:56px;
+                padding-left:56px
+            }
+            .s-marquee ul li::after{
+                content:"";
+                position:absolute;
+                top:0;
+                right:-4px;
+                bottom:0;
+                margin:auto;
+                width:8px;
+                height:8px;
+                background-image:url("data:image/svg+xml,%3Csvg width=%278%27 height=%278%27 fill=%27none%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M6.115 4.01L8 5.09 6.928 6.979 4.988 5.74 5.044 8H2.938l.055-2.26-1.94 1.238L0 5.09 1.885 4.01 0 2.91l1.053-1.888 1.94 1.258L2.938 0h2.106l-.056 2.28 1.94-1.258L8 2.91l-1.885 1.1z%27 fill=%27%23000%27/%3E%3C/svg%3E");
+                background-color:transparent;
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:cover
+            }
+            .s-marquee__border{
+                position:absolute;
+                background-color:#000
+            }
+            .s-marquee__border--top,.s-marquee__border--bottom{
+                left:0;
+                width:100%;
+                height:2px
+            }
+            .s-marquee__border--top{
+                top:0
+            }
+            .s-marquee__border--bottom{
+                bottom:0
+            }
+            .s-marquee__border--right-fill,.s-marquee__border--right,.s-marquee__border--left{
+                top:0;
+                bottom:0;
+                width:2px;
+                margin-top:auto;
+                margin-bottom:auto
+            }
+            .s-marquee__border--right-fill,.s-marquee__border--right{
+                right:0
+            }
+            .s-marquee__border--left{
+                left:0
+            }
+            .s-marquee__border--right-fill{
+                z-index:1;
+                background-color:#fff
+            }
+            .s-achieve__deco{
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-pack:center;
+                -ms-flex-pack:center;
+                justify-content:center;
+                position:absolute;
+                left:0;
+                right:0;
+                bottom:0;
+                margin:auto
+            }
+            .s-achieve__deco--mob{
+                position:relative
+            }
+            @media (min-width:768px){
+                .s-achieve__deco--mob{
+                    display:none
+                }
+            }
+            .s-achieve__deco--mob img{
+                position:absolute
+            }
+            .s-achieve__deco--mob .img-achieve-1-m{
+                left:-20px;
+                bottom:-57px
+            }
+            .s-achieve__deco--mob .img-achieve-2-m{
+                bottom:-4px;
+                right:-30px
+            }
+            .s-achieve__deco--mob .img-achieve-3-m{
+                bottom:-216px;
+                z-index:1;
+                max-width:100%;
+                width:auto;
+                height:auto
+            }
+            .tabs-nav{
+                display:-webkit-box;
+                display:-ms-flexbox;
+                display:flex;
+                -webkit-box-pack:justify;
+                -ms-flex-pack:justify;
+                justify-content:space-between;
+                margin-bottom:28px
+            }
+            @media (min-width:768px){
+                .tabs-nav{
+                    display:none
+                }
+            }
+            .tabs-nav .tabs-nav__btn{
+                -ms-flex:1 1 auto;
+                -webkit-box-flex:1;
+                flex:1 1 auto;
+                width:auto;
+                height:auto;
+                line-height:1.5;
+                padding-top:12px;
+                padding-bottom:17px;
+                border-top:none;
+                border-right:none;
+                border-left:none;
+                border-bottom:2px solid transparent;
+                margin:0;
+                background:none;
+                border-radius:0;
+                outline:none!important;
+                -webkit-appearance:none;
+                -moz-appearance:none;
+                appearance:none
+            }
+            .tabs-nav .tabs-nav__btn.is-color-active{
+                border-bottom-color:#000
+            }
+            @media (max-width:991px){
+                .tabs-nav{
+                    overflow-x:auto;
+                    -webkit-overflow-scrolling:touch
+                }
+            }
+        </style>
+
+        <title>Hennii</title>
+    </head>
+    <body>
+        <section class="s-intro">
+            <div class="s-intro-logo">
+                <svg class="s-intro-logo__svg" width="46" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M45.006 16.719V41.3H36.15V16.719h8.856zM9.252 0v41.3H.396V0h8.856z" fill="#000"/><path d="M40.62 16.719H1.472v7.862H40.62V16.72z" fill="#000"/><path d="M45.089 0h-8.856v8.856h8.856V0z" fill="#7635FF"/>
+                </svg>
+                <div class="s-intro-logo__bg s-intro-logo__bg--1"></div>
+                <div class="s-intro-logo__bg s-intro-logo__bg--2"></div>
+                <div class="s-intro-logo__bg s-intro-logo__bg--3"></div>
+                <div class="s-intro-logo__bg s-intro-logo__bg--4"></div>
+                <div class="s-intro-logo__bg s-intro-logo__bg--5"></div>
+                <div class="s-intro-logo__bg s-intro-logo__bg--6"></div>
+            </div>
+        </section>
+        <!-- /s-intro -->
+
+        <div class="smooth-scroll" data-scroll-container>
+            <header class="header" data-scroll-call="header">
+                <div class="container container--header">
+                    <a class="header__logo" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/">
+                        <svg class="header__logo-svg" viewBox="0 0 112 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M72.5247 12.877L72.4816 21.7381H67.8653V14.623C67.8653 11.2183 66.7435 9.47223 62.9469 9.47223C59.8406 9.47223 56.5186 11.0873 55.0948 12.746V21.7381H50.4785V5.71826H55.0948V8.51192C57.3383 6.72223 60.4878 5.45636 64.3275 5.45636C68.5124 5.45636 72.4816 6.98414 72.5247 12.877Z" fill="black"/>
+                        <path d="M97.3314 12.877L97.2882 21.7381H92.6719V14.623C92.6719 11.2183 91.5502 9.47223 87.7536 9.47223C84.6473 9.47223 81.3252 11.0873 79.9015 12.746V21.7381H75.2852V5.71826H79.9015V8.51192C82.1449 6.72223 85.2944 5.45636 89.1342 5.45636C93.3191 5.45636 97.2451 6.98414 97.3314 12.877Z" fill="black"/>
+                        <path d="M39.6919 17.9841C38.8722 18.1587 37.8799 18.246 36.7581 18.246C33.695 18.246 31.2789 17.4167 30.7612 14.8413H39.6919H47.846C47.846 7.5516 43.0139 5.45636 37.017 5.45636C30.5886 5.45636 26.0586 7.85715 26.0586 13.75C26.0586 19.6429 30.7181 22 36.7581 22C37.7936 22 38.7859 21.9564 39.6919 21.8254V17.9841ZM37.017 8.99207C39.9076 8.99207 42.1942 9.60319 42.9708 11.873H30.9338C31.6672 9.60319 33.8675 8.99207 37.017 8.99207Z" fill="black"/>
+                        <path d="M23.298 8.7738V21.7381H18.6816V8.7738H23.298Z" fill="black"/>
+                        <path d="M4.61633 0V21.7818H0V0H4.61633Z" fill="black"/>
+                        <path d="M21.0103 8.7738H0.603516V12.9206H21.0103V8.7738Z" fill="black"/>
+                        <path d="M23.3405 0H18.7241V4.67064H23.3405V0Z" fill="#FB35FF"/>
+                        <path d="M104.666 0H100.049V4.05952H104.666V0Z" fill="black"/>
+                        <path d="M104.665 5.71826H100.049V21.7381H104.665V5.71826Z" fill="black"/>
+                        <path d="M112 0H107.384V4.05952H112V0Z" fill="black"/>
+                        <path d="M111.999 5.71826H107.383V21.7381H111.999V5.71826Z" fill="black"/>
+                        </svg>
+                    </a>
+                    <div class="header__right">
+                        <a class="btn btn--sm btn--moon btn--header" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                            <span class="btn__text">Get early access</span>
+                            <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243774L15.5284 8.00002L6.56337 15.7563L5.25481 14.2438L11.3158 9.00002H0V7.00002H11.3158L5.25481 1.75627L6.56337 0.243774Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <!-- /header -->
+
+            <section class="s-hero">
+                <div class="s-hero__top">
+                    <div class="container container--hero">
+                        <div class="s-hero__inner">
+                            <div class="s-hero__left">
+                                <div class="s-hero-caption">
+                                    <div class="s-hero-caption__top">
+                                        <svg width="34" height="6" viewBox="0 0 34 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M34 3H2" stroke="black" stroke-width="2"/>
+                                        <circle cx="3" cy="3" r="3" fill="black"/>
+                                        </svg>
+                                        <span>Reimagining possible</span>
+                                    </div>
+                                    <h1 class="s-hero__title">
+                                        <div class="split-text-hero">Hennii is your <br>financial home <br>where everything <br></div>
+                                        <svg class="s-hero-caption__img" viewBox="0 0 72 30" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M71 15C71 16.6739 70.1734 18.3642 68.4764 20.0025C66.7765 21.6436 64.2641 23.1676 61.0778 24.4687C54.7101 27.0689 45.8443 28.7001 36 28.7001C26.1557 28.7001 17.2899 27.0689 10.9222 24.4687C7.73587 23.1676 5.22354 21.6436 3.52361 20.0025C1.82656 18.3642 1 16.6739 1 15C1 13.3262 1.82657 11.6359 3.52361 9.99759C5.22354 8.35646 7.73587 6.83245 10.9222 5.53137C17.2899 2.93123 26.1557 1.30005 36 1.30005C45.8443 1.30005 54.7101 2.93123 61.0778 5.53137C64.2641 6.83245 66.7765 8.35646 68.4764 9.99759C70.1734 11.6359 71 13.3262 71 15Z" stroke="black" stroke-width="2"/>
+                                        <path d="M71 15C71 15.1089 70.9474 15.3365 70.5798 15.6858C70.2119 16.0354 69.6143 16.4203 68.7533 16.8161C67.0371 17.6051 64.4906 18.3409 61.265 18.9681C54.8302 20.2193 45.8971 21 36 21C26.1029 21 17.1698 20.2193 10.735 18.9681C7.50939 18.3409 4.96288 17.6051 3.24675 16.8161C2.38575 16.4203 1.78815 16.0354 1.42023 15.6858C1.05259 15.3365 1 15.1089 1 15C1 14.8911 1.05259 14.6635 1.42023 14.3142C1.78815 13.9646 2.38575 13.5797 3.24675 13.1839C4.96288 12.3949 7.50939 11.6591 10.735 11.0319C17.1698 9.78066 26.1029 9 36 9C45.8971 9 54.8302 9.78066 61.265 11.0319C64.4906 11.6591 67.0371 12.3949 68.7533 13.1839C69.6143 13.5797 70.2119 13.9646 70.5798 14.3142C70.9474 14.6635 71 14.8911 71 15Z" stroke="black" stroke-width="2"/>
+                                        <path d="M36.0006 28.7C28.5339 28.7 22.4621 22.5768 22.4621 15C22.4621 7.4233 28.5339 1.30005 36.0006 1.30005C43.4673 1.30005 49.5391 7.4233 49.5391 15C49.5391 22.5768 43.4673 28.7 36.0006 28.7Z" stroke="black" stroke-width="2"/>
+                                        <path d="M36 0.300049V29.7" stroke="black" stroke-width="2"/>
+                                        </svg>
+                                        <div class="split-text-hero">connects</div>
+                                    </h1>
+                                    <div class="s-hero-caption__bottom">
+                                        <div class="s-hero__text split-text-hero">Forget everything you know about the chaotic world of
+                                            finance.
+                                            <br><span class="s-hero-caption__accent">It can be easy.</span></div>
+                                        <a class="btn btn--neptune" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                                            <span class="btn__text">Get early access</span>
+                                            <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243744L15.5284 7.99999L6.56337 15.7562L5.25481 14.2437L11.3158 8.99999H0V6.99999H11.3158L5.25481 1.75624L6.56337 0.243744Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-hero__right">
+                        <picture>
+                            <source media="(max-width: 575px)" srcset="assets/img/hero-sm.webp">
+                            <source media="(max-width: 1920px)" srcset="assets/img/hero.webp">
+                            <img class="s-hero__img" src="assets/img/hero-big.png" width="1184" height="880" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="s-marquee s-marquee--1">
+                    <div class="s-marquee__border s-marquee__border--top"></div>
+                    <div class="s-marquee__border s-marquee__border--right"></div>
+                    <div class="s-marquee__border s-marquee__border--right-fill"></div>
+                    <div class="s-marquee__border s-marquee__border--bottom"></div>
+                    <div class="s-marquee__border s-marquee__border--left"></div>
+                    <ul class="s-marquee__inner s-marquee__inner--1">
+                        <li>Intelligence</li>
+                        <li>Innovation</li>
+                        <li>Governance</li>
+                        <li>Inclusion</li>
+                        <li>Design</li>
+                        <li>Intelligence</li>
+                        <li>Innovation</li>
+                        <li>Governance</li>
+                        <li>Inclusion</li>
+                        <li>Design</li>
+                    </ul>
+                </div>
+                <!-- /move-list -->
+            </section>
+            <!-- /s-hero -->
+
+            <section class="s-ask">
+                <div class="container">
+                    <h2 class="s-ask__title split-text">Let's start a community
+                        for
+                        people to
+                        share their best
+                        practices and get
+                        questions
+                        answered from the financial experts.</h2>
+                    <h3 class="s-ask__sub-title split-text">What would you
+                        ask?</h3>
+                </div>
+                <div class="container container--ask">
+                    <div class="s-ask__content">
+                        <picture>
+                            <source media="(max-width: 1199px)" srcset="assets/img/ask-sm.webp">
+                            <img class="s-ask__img" src="assets/img/ask.webp" width="333" height="648" alt="" loading="lazy">
+                        </picture>
+                        <ul class="s-ask__list">
+                            <li class="s-ask__text s-ask__text--1 s-ask__text--all">
+                                <span class="s-ask__text-wrap">
+                                    <span class="s-ask__text-inner">How to budget wisely?</span>
+                                </span>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                            <li class="s-ask__text s-ask__text--2 s-ask__text--all s-ask__text--right">
+                                <span class="s-ask__text-wrap">
+                                    <span class="s-ask__text-inner">How to save and invest?</span>
+                                </span>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                            <li class="s-ask__text s-ask__text--3 s-ask__text--all s-ask__text--right">
+                                <span class="s-ask__text-wrap">
+                                    <span class="s-ask__text-inner">How to invest in virtual currencies?</span>
+                                </span>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                            <li class="s-ask__text s-ask__text--4 s-ask__text--all">
+                                <span class="s-ask__text-wrap">
+                                    <span class="s-ask__text-inner">How to keep up with the stock market?</span>
+                                </span>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                            <li class="s-ask__text s-ask__text--5 s-ask__text--all">
+                                <span class="s-ask__text-wrap">
+                                    <span class="s-ask__text-inner">How to track my spending habits and financial goals?</span>
+                                </span>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                            <li class="s-ask__text s-ask__text--6 s-ask__text--all s-ask__text--right">
+                                <span class="s-ask__text-wrap">
+                                    <span class="s-ask__text-inner">How to save money for a new phone or trip to Thailand? :)</span>
+                                </span>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                            <li class="s-ask__text s-ask__text--7 s-ask__text--end">
+                                <div class="s-ask__text-bg">
+                                    <span class="s-ask__text-wrap">
+                                        <span class="s-ask__text-inner">How to achieve financial freedom?</span>
+                                    </span>
+                                </div>
+                                <span class="s-ask__line">
+                                    <span class="s-ask__point"></span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- /s-ask -->
+
+            <section class="s-achieve">
+                <div class="container container--achieve">
+                    <h2 class="s-achieve__title">
+                        <div class="split-text">Today, maybe you don’t know the answers to these questions.</div>
+                        <div class="split-text">But you can find them with our help.</div>
+                    </h2>
+                    <div class="grid grid--achieve-icon">
+                        <div class="grid__item">
+                            <div class="s-achieve__icon s-achieve__icon--1"></div>
+                            <h3 class="s-achieve__sub-title split-text">Personalized Insights</h3>
+                        </div>
+                        <div class="grid__item">
+                            <div class="s-achieve__icon s-achieve__icon--2"></div>
+                            <h3 class="s-achieve__sub-title split-text">AI-Powered Agents</h3>
+                        </div>
+                        <div class="grid__item">
+                            <div class="s-achieve__icon s-achieve__icon--3"></div>
+                            <h3 class="s-achieve__sub-title split-text">Self-Driving</h3>
+                        </div>
+                    </div>
+                    <div class="grid grid--achieve-text">
+                        <div class="grid__item" data-scroll>
+                            We believe that personal financial management should be different. Using modern technologies and integrated AI, we dared to rethink consumer financial journeys unmet in the current financial system. The financial industry isn’t ready for the age of AI - but Hennii predictions core is developed with conversational and assistive AI focus from Day-1.
+                        </div>
+                        <div class="grid__item"></div>
+                        <div class="grid__item"></div>
+                        <div class="grid__item" data-scroll>
+                            Let us help you get control of your financial life.  We built Hennii, a secure financial assistant with conversational AI, to empower individuals and enable them to create/build wealth and achieve peace of mind that comes with the kind of financial security achieved through socially-conscious actions. Inclusive, accessible, designed to reimagine a better financial future for everyone. With Hennii, taking control over your financial reality will be easy and fun.
+                        </div>
+                    </div>
+                    <div class="s-achieve__deco s-achieve__deco--desc">
+                        <img class="img-achieve-1-d" src="assets/img/achieve-2.svg" width="588" height="588" alt="" loading="lazy">
+                        <img class="img-achieve-2-d" src="assets/img/achieve-1.svg" width="1052" height="692" alt="" loading="lazy">
+                    </div>
+                    <div class="s-achieve__deco s-achieve__deco--mob">
+                        <img class="img-achieve-1-m" src="assets/img/achieve-1-sm.svg" width="375" height="94" alt="" loading="lazy">
+                        <img class="img-achieve-2-m" src="assets/img/achieve-2-sm.svg" width="186" height="319" alt="" loading="lazy">
+                        <img class="img-achieve-3-m" src="assets/img/achieve-2.svg" width="588" height="588" alt="" loading="lazy">
+                    </div>
+                </div>
+            </section>
+            <!-- /s-achieve -->
+
+            <section class="s-value">
+                <div class="container container--value">
+                    <h2 class="s-value__title split-text">What we value</h2>
+                    <div class="s-value__box">
+                        <div class="s-value__box-inner">
+                            <div class="s-value__text">
+                                <span>Hennii</span> aims to inspire people to invest in themselves. We’ll invest in building the social-finance technology. You’ll invest in <span>building you.</span>
+                            </div>
+                            <a class="btn btn--saturn btn--bg-black" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                                <span class="btn__text">Get early access</span>
+                                <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243744L15.5284 7.99999L6.56337 15.7562L5.25481 14.2437L11.3158 8.99999H0V6.99999H11.3158L5.25481 1.75624L6.56337 0.243744Z" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid grid--value">
+                        <div class="grid__item">
+                            <h3 class="s-value__sub-title">Inclusion</h3>
+                            <div>Universal coverage & accessibility.</div>
+                        </div>
+                        <div class="grid__item">
+                            <h3 class="s-value__sub-title">Innovation</h3>
+                            <div>Customer centric innovation & constant improvement.</div>
+                        </div>
+                        <div class="grid__item">
+                            <h3 class="s-value__sub-title">Intelligence</h3>
+                            <div>Human, artificial, and financial.</div>
+                        </div>
+                        <div class="grid__item">
+                            <h3 class="s-value__sub-title">Design</h3>
+                            <div>Robust, responsive, human-centric & sustainable.</div>
+                        </div>
+                        <div class="grid__item">
+                            <h3 class="s-value__sub-title">Governance</h3>
+                            <div>Security, compliance, privacy & transparency.</div>
+                        </div>
+                    </div>
+                </div>
+                <picture>
+                    <source media="(max-width: 767px)" srcset="assets/img/value-2-sm.webp">
+                    <img class="s-value__img-2" src="assets/img/value-2.webp" width="994" height="606" alt="" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 991px)" srcset="assets/img/value-1-sm.svg">
+                    <img class="s-value__img-1" src="assets/img/value-1.svg" width="892" height="347" alt="" loading="lazy">
+                </picture>
+            </section>
+            <!-- /s-value -->
+
+            <section class="s-design">
+                <div class="container container--design">
+                    <h2 class="s-design__title split-text">Custom&nbsp;designed&nbsp;cards</h2>
+                    <h3 class="s-design__sub-title split-text">What would you choose?</h3>
+                    <h4 class="s-design__select-title split-text">Color option</h4>
+                </div>
+                <div class="form form--design select-light">
+                    <div class="container container--design">
+                        <div class="select-wrap">
+                            <div class="select-wrap__border select-wrap__border--top"></div>
+                            <div class="select-wrap__border select-wrap__border--right"></div>
+                            <div class="select-wrap__border select-wrap__border--bottom"></div>
+                            <div class="select-wrap__border select-wrap__border--left"></div>
+                            <div class="select-wrap__border select-wrap__border--bottom-fill"></div>
+                            <div class="select-wrap__fill"></div>
+                        </div>
+                        <div class="ms-wrap">
+                            <select id="color-option">
+                                <option value="-black">Black</option>
+                                <option value="-white">White</option>
+                                <option value="-gray">Grey</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tabs-nav">
+                        <button data-tab-target="#d-card-black" class="tabs-nav__btn is-color-active" type="button">Black</button>
+                        <button data-tab-target="#d-card-white" class="tabs-nav__btn" type="button">White</button>
+                        <button data-tab-target="#d-card-gray" class="tabs-nav__btn" type="button">Grey</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="d-card-black" data-tab-content class="tab-content__color is-color-active">
+                            <div class="container container--design">
+                                <div class="tabs">
+                                    <div class="tabs__nav">
+                                        <button class="tabs__btn is-active" type="button">
+                                            <img src="assets/img/b-1.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/b-2.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/b-3.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/b-4.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="tabs__pane is-active">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-b-1.webp" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-b-2.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-b-3.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-b-4.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="d-card-white" data-tab-content class="tab-content__color">
+                            <div class="container container--design">
+                                <div class="tabs">
+                                    <div class="tabs__nav">
+                                        <button class="tabs__btn is-active" type="button">
+                                            <img src="assets/img/w-1.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/w-2.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/w-3.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/w-4.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="tabs__pane is-active">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-w-1.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-w-2.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-w-3.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-w-4.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="d-card-gray" data-tab-content class="tab-content__color">
+                            <div class="container container--design">
+                                <div class="tabs">
+                                    <div class="tabs__nav">
+                                        <button class="tabs__btn is-active" type="button">
+                                            <img src="assets/img/g-1.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/g-2.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/g-3.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                        <button class="tabs__btn" type="button">
+                                            <img src="assets/img/g-4.png" alt="" width="64" height="64" loading="lazy">
+                                        </button>
+                                    </div>
+                                    <div class="tabs__content">
+                                        <div class="tabs__pane is-active">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-g-1.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-g-2.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-g-3.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="tabs__pane">
+                                            <div class="tabs__img-wrap">
+                                                <img class="tabs__img" src="assets/img/card-g-4.png" alt="" width="525"
+                                                     height="300" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /s-design -->
+
+            <section class="s-fback">
+                <div class="container container--fback">
+                    <div class="s-fback__left">
+                        <h2 class="s-fback__title split-text">Our diverse community inspires our progress</h2>
+                        <div class="s-fback__sub-title split-text">The creative spirits. The independent thinkers. The true believers.</div>
+                        <div class="s-fback__link">
+                            <a class="link split-text" href="https://www.instagram.com/henniimoney/" target="_blank">
+                                <span class="link__text">Instagram</span>
+                                <svg class="link__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.106338 1.72374L11.9301 0.869012L11.0753 12.6927L9.08054 12.5485L9.65839 4.55489L1.65693 12.5563L0.242721 11.1421L8.24417 3.14068L0.25054 3.71853L0.106338 1.72374Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <a class="link split-text" href="javascript:;" target="_blank">
+                                <span class="link__text">YouTube</span>
+                                <svg class="link__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.106338 1.72374L11.9301 0.869012L11.0753 12.6927L9.08054 12.5485L9.65839 4.55489L1.65693 12.5563L0.242721 11.1421L8.24417 3.14068L0.25054 3.71853L0.106338 1.72374Z" fill="black"/>
+                                </svg>
+                            </a>
+                            <a class="link split-text" href="https://www.tiktok.com/@henniimoney?lang=en" target="_blank">
+                                <span class="link__text">TikTok</span>
+                                <svg class="link__icon" width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.106338 1.72374L11.9301 0.869012L11.0753 12.6927L9.08054 12.5485L9.65839 4.55489L1.65693 12.5563L0.242721 11.1421L8.24417 3.14068L0.25054 3.71853L0.106338 1.72374Z" fill="black"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- <img class="s-fback__img" src="assets/img/fback.svg" alt=""> -->
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="assets/img/fback-sm.svg">
+                            <img class="s-fback__img" src="assets/img/fback.svg" width="720" height="250" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="s-fback__right">
+                        <form class="form form--fback select-dark" action="#">
+                            <h3 class="form__title">Here we are. Rough and imperfect, but quickly learning. Now, your turn. Who are you?</h3>
+                            <div class="form__group">
+                                <label class="form__label" for="name">Name</label>
+                                <input class="form__t-input" type="text" name="name" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="email">Email</label>
+                                <input class="form__t-input" type="email" name="email" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="select">Who are you?</label>
+                                <select name="select" id="select">
+                                    <option value="">I’m just watching</option>
+                                    <option value="">I’m just watching 1</option>
+                                    <option value="">I’m just watching 2</option>
+                                    <option value="">I’m just watching 3</option>
+                                </select>
+                            </div>
+                            <div class="form__group">
+                                <label class="form__label" for="message">Message</label>
+                                <textarea class="form__t-input" name="message" id="message" cols="30" rows="5" placeholder="Enter your message..."></textarea>
+                            </div>
+                            <div class="form__group form__group--submit">
+                                <button class="btn btn--submit btn--saturn btn--bg-black" type="submit">
+                                    <span class="btn__text">Send message</span>
+                                    <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243744L15.5284 7.99999L6.56337 15.7562L5.25481 14.2437L11.3158 8.99999H0V6.99999H11.3158L5.25481 1.75624L6.56337 0.243744Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- /s-fback -->
+
+            <section class="s-marquee s-marquee--2">
+                <div class="s-marquee__border s-marquee__border--top"></div>
+                <div class="s-marquee__border s-marquee__border--right"></div>
+                <div class="s-marquee__border s-marquee__border--right-fill"></div>
+                <div class="s-marquee__border s-marquee__border--bottom"></div>
+                <div class="s-marquee__border s-marquee__border--left"></div>
+                <ul class="s-marquee__inner s-marquee__inner--2">
+                    <li>Intelligence</li>
+                    <li>Innovation</li>
+                    <li>Governance</li>
+                    <li>Inclusion</li>
+                    <li>Design</li>
+                    <li>Intelligence</li>
+                    <li>Innovation</li>
+                    <li>Governance</li>
+                    <li>Inclusion</li>
+                    <li>Design</li>
+                </ul>
+            </section>
+            <!-- /move-list -->
+            <footer class="footer">
+                <div class="container container--footer">
+                    <div class="footer__top">
+                        <a class="footer__logo" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/">
+                            <svg viewBox="0 0 112 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M72.5247 12.877L72.4816 21.7381H67.8653V14.623C67.8653 11.2183 66.7435 9.47223 62.9469 9.47223C59.8406 9.47223 56.5186 11.0873 55.0948 12.746V21.7381H50.4785V5.71826H55.0948V8.51192C57.3383 6.72223 60.4878 5.45636 64.3275 5.45636C68.5124 5.45636 72.4816 6.98414 72.5247 12.877Z" fill="black"/>
+                            <path d="M97.3314 12.877L97.2882 21.7381H92.6719V14.623C92.6719 11.2183 91.5502 9.47223 87.7536 9.47223C84.6473 9.47223 81.3252 11.0873 79.9015 12.746V21.7381H75.2852V5.71826H79.9015V8.51192C82.1449 6.72223 85.2944 5.45636 89.1342 5.45636C93.3191 5.45636 97.2451 6.98414 97.3314 12.877Z" fill="black"/>
+                            <path d="M39.6919 17.9841C38.8722 18.1587 37.8799 18.246 36.7581 18.246C33.695 18.246 31.2789 17.4167 30.7612 14.8413H39.6919H47.846C47.846 7.5516 43.0139 5.45636 37.017 5.45636C30.5886 5.45636 26.0586 7.85715 26.0586 13.75C26.0586 19.6429 30.7181 22 36.7581 22C37.7936 22 38.7859 21.9564 39.6919 21.8254V17.9841ZM37.017 8.99207C39.9076 8.99207 42.1942 9.60319 42.9708 11.873H30.9338C31.6672 9.60319 33.8675 8.99207 37.017 8.99207Z" fill="black"/>
+                            <path d="M23.298 8.7738V21.7381H18.6816V8.7738H23.298Z" fill="black"/>
+                            <path d="M4.61633 0V21.7818H0V0H4.61633Z" fill="black"/>
+                            <path d="M21.0103 8.7738H0.603516V12.9206H21.0103V8.7738Z" fill="black"/>
+                            <path d="M23.3405 0H18.7241V4.67064H23.3405V0Z" fill="#FB35FF"/>
+                            <path d="M104.666 0H100.049V4.05952H104.666V0Z" fill="black"/>
+                            <path d="M104.665 5.71826H100.049V21.7381H104.665V5.71826Z" fill="black"/>
+                            <path d="M112 0H107.384V4.05952H112V0Z" fill="black"/>
+                            <path d="M111.999 5.71826H107.383V21.7381H111.999V5.71826Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a class="btn btn--moon btn--sm btn--footer" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                            <span class="btn__text">Get early access</span>
+                            <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243774L15.5284 8.00002L6.56337 15.7563L5.25481 14.2438L11.3158 9.00002H0V7.00002H11.3158L5.25481 1.75627L6.56337 0.243774Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__left">
+                            <div class="footer__tag split-text">From San Francisco with love 💜</div>
+                        </div>
+                        <div class="footer__right">
+                            <a class="footer__pp split-text" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/privacy-policy.php">Privacy Policy</a>
+                            <a class="btn btn--moon btn--sm btn--footer" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                                <span class="btn__text">Get early access</span>
+                                <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243774L15.5284 8.00002L6.56337 15.7563L5.25481 14.2438L11.3158 9.00002H0V7.00002H11.3158L5.25481 1.75627L6.56337 0.243774Z" fill="black"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /footer -->
+
+        </div>
+        <!-- /scroll-container -->
+        <script src="assets/libs/jquery.min.js"></script>
+        <script src="assets/libs/locomotive-scroll/locomotive-scroll.min.js"></script>
+        <script src="assets/libs/gsap/gsap.min.js"></script>
+        <script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+        <script src="assets/libs/gsap/ScrollLottie.js"></script>
+        <script defer src="assets/libs/lottie/lottie.min.js"></script>
+        <script src="assets/libs/gsap/SplitText.min.js"></script>
+        <script defer src="assets/libs/multiple-select/multiple-select.min.js"></script>
+        <script src="assets/js/home.min.js"></script>
+
+        <link rel="stylesheet" href="assets/css/home.min.css">
+
+    </body>
+</html>

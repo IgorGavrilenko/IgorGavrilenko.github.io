@@ -1,0 +1,30 @@
+/* header */
+.header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: $ice;
+    @include lg {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+.container--header {
+    @include fl();
+    @include fl-v-centr();
+    @include fl-between();
+}
+.header__logo {
+    overflow: hidden;
+    display: block;
+    width: 85px;
+    @include lg {
+        width: 112px;
+    }
+}
+.btn--header {
+    .btn__icon {
+        @include max-lg {
+            display: none;
+        }
+    }
+}

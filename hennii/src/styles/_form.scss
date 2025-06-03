@@ -1,0 +1,81 @@
+/* form */
+.form--fback {
+    max-width: 528px;
+    margin: auto;
+    padding: 32px 20px;
+    background: $galaxy-600;
+    border-radius: $b-radius-24;
+    @include lg {
+        padding: 40px;
+    }
+    textarea {
+        height: 80px;
+        @include lg {
+            height: 112px;
+        }
+    }
+    .form__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5714285714285714;
+        color: $ice;
+        margin-bottom: 17px;
+        @include lg {
+            font-size: 18px;
+            line-height: 1.7777777777777777;
+            margin-bottom: 32px;
+        }
+    }
+    .form__group {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+            @include lg {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .form__group--submit {
+        margin-top: 24px;
+    }
+    .form__label {
+        font-family: $ff-syne;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 1.2;
+        letter-spacing: $l-spacing-016;
+        text-transform: uppercase;
+        color: $ice;
+        display: block;
+        margin-bottom: 12px;
+    }
+    .form__t-input {
+        padding: 10px 22px;
+        background-color: $galaxy-500;
+        border-radius: $b-radius-16;
+        border: 2px solid $galaxy-500;
+        color: $ice;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5714285714285714;
+        @include lg {
+            font-size: 16px;
+            line-height: 2;
+        }
+        @include f {
+            border-color: $ice;
+        }
+    }
+    .form__t-input::-webkit-input-placeholder {
+        color: $moon-300;
+    }
+    .form__t-input::-moz-placeholder {
+        color: $moon-300;
+    }
+    .form__t-input:-ms-input-placeholder {
+        color: $moon-300;
+    }
+    .form__t-input:-moz-placeholder {
+        color: $moon-300;
+    }
+}

@@ -1,0 +1,190 @@
+/* btn */
+button {
+    @extend %transition-all-300;
+}
+.btn {
+    overflow: hidden;
+    @include fli();
+    @include fl-h-centr();
+    @include fl-v-centr();
+    white-space: nowrap;
+    font-family: $ff-syne;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 2;
+    padding: 12px 28px 12px 20px;
+    @include lg {
+        font-size: 16px;
+        padding: 16px 40px 16px 32px;
+    }
+    border-radius: $b-radius-16;
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    text-decoration: none !important;
+    .btn__text {
+        font-size: inherit;
+        color: inherit;
+        white-space: nowrap;
+    }
+    .btn__icon {
+        position: relative;
+        left: 8px;
+        @extend %transition-all-300;
+    }
+    @include h {
+        .btn__icon {
+            left: 16px;
+        }
+    }
+    &.btn--moon {
+        background-color: $moon-100;
+        color: $galaxy-600;
+        path {
+            fill: $galaxy-600;
+        }
+        @include h {
+            background-color: $galaxy-600;
+            color: $ice;
+            path {
+                fill: $ice;
+            }
+        }
+        @include f {
+            outline: 2px solid $galaxy-600;
+            outline-offset: 4px;
+                    .btn__icon {
+            left: 8px;
+        }
+        }
+        @include act {
+            outline: none;
+            color: $galaxy-600;
+            background-color: $moon-200;
+            outline: none;
+            path {
+                fill: $galaxy-600;
+            }
+                    .btn__icon {
+            left: 8px;
+        }
+        }
+        &.btn--disabled,
+        &[disabled] {
+            pointer-events: none;
+            cursor: default;
+            color: $moon-300;
+            background-color: $moon-100;
+            path {
+                fill: $moon-300;
+            }
+        }
+    }
+    &.btn--neptune {
+        background-color: $neptune-600;
+        color: $ice;
+        @include h {
+            background-color: $galaxy-600;
+        }
+        @include f {
+            outline: 2px solid $galaxy-600;
+            outline-offset: 4px;
+                    .btn__icon {
+            left: 8px;
+        }
+        }
+        @include act {
+            outline: none;
+            background-color: $neptune-700;
+                    .btn__icon {
+            left: 8px;
+        }
+        }
+        &.btn--bg-black {
+            background-color: $ice;
+            color: $galaxy-600;
+        }
+        &.btn--disabled,
+        &[disabled] {
+            pointer-events: none;
+            cursor: default;
+            color: $ice;
+            background-color: $neptune-200;
+            outline: none;
+            path {
+                fill: $ice;
+            }
+        }
+    }
+    &.btn--saturn {
+        background-color: $saturn-600;
+        color: $ice;
+        @include h {
+            background-color: $galaxy-600;
+        }
+        @include f {
+            outline: 2px solid $galaxy-600;
+                    .btn__icon {
+            left: 8px;
+        }
+            outline-offset: 4px;
+        }
+        @include act {
+            outline: none;
+            background-color: $saturn-700;
+                    .btn__icon {
+            left: 8px;
+        }
+        }
+        .btn__icon {
+            path {
+                fill: $ice;
+            }
+        }
+        &.btn--disabled,
+        &[disabled] {
+            pointer-events: none;
+            cursor: default;
+            color: $ice;
+            background-color: $saturn-200;
+            outline: none;
+            path {
+                fill: $ice;
+            }
+        }
+    }
+    &.btn--bg-black {
+        @include h {
+            background-color: $ice;
+            color: $galaxy-600;
+            path {
+                fill: $galaxy-600;
+            }
+        }
+        @include f {
+            outline-color: $ice;
+        }
+    }
+    &.btn--bg-white {
+        @include h {
+            background-color: $galaxy-600;
+            color: $ice;
+            path {
+                fill: $ice;
+            }
+        }
+        @include f {
+            outline-color: $galaxy-600;
+        }
+    }
+    &.btn--sm {
+        font-size: 14px;
+        line-height: 1.7142857142857142;
+        padding: 8px 20px;
+        @include lg {
+            font-size: 16px;
+            line-height: 2;
+            padding: 8px 39px 8px 24px;
+        }
+    }
+}

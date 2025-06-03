@@ -1,0 +1,49 @@
+/* b-share */
+.b-share {
+    @include fl();
+    @include fl-between();
+}
+.b-share__title {
+    font-size: 14px;
+    line-height: 1.571428571428571;
+    color: $galaxy-400;
+}
+.b-share__list {
+    @include fl();
+    @include fl-between();
+    margin: 0;
+    padding: 0;
+}
+.b-share__item {
+    list-style: none;
+    &:not(:last-child) {
+        margin-right: 24px;
+    }
+}
+.b-share__btn {
+    @include fli();
+    @include fl-h-centr();
+    @include fl-v-centr();
+    width: 48px;
+    height: 48px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: $moon-100;
+    border-radius: $b-radius-8;
+    @extend %transition-all-300;
+    @include h {
+        background-color: $galaxy-600;
+        path {
+            fill: $ice;
+        }
+    }
+}
+.b-share__icon {
+    path {
+        @extend %transition-all-300;
+    }
+}

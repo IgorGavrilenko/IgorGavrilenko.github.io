@@ -1,0 +1,29 @@
+/* tag */
+.tag-list {
+    line-height: 1;
+}
+.tag {
+    @include fli();
+    @include fl-v-centr();
+    @include fl-h-centr();
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: $l-spacing-016;
+    text-transform: uppercase;
+    color: $galaxy-600;
+    padding: 7px 15px;
+    border: 1px solid $galaxy-600;
+    border-radius: $b-radius-16;
+    text-decoration: none !important;
+    white-space: nowrap;
+    background-color: $moon-100;
+}
+a.tag {
+
+    @include h {
+        color: $ice;
+        background-color: $galaxy-600;
+    }
+}

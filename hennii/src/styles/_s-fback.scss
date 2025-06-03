@@ -1,0 +1,118 @@
+/* s-fback */
+.s-fback {
+    padding-top: 57px;
+    padding-bottom: 65px;
+    @include lg {
+        padding-top: 96px;
+        padding-bottom: 73px;
+    }
+}
+.container--fback {
+    @include lg {
+        @include fl();
+        @include fl-between();
+    }
+}
+.s-fback__left {
+    position: relative;
+    @include lg {
+        width: calc(100% - 480px);
+        padding-right: 3%;
+    }
+    @include xl {
+        width: calc(100% - 528px);
+        padding-right: 6%;
+    }
+}
+.s-fback__link {
+    overflow: hidden;
+    margin-bottom: 29px;
+    margin-left: -9px;
+    padding: 6px 0 0 6px;
+    @include sm {
+        @include fl();
+        @include fl-h-centr();
+    }
+    @include lg {
+        @include fl-h-start();
+        margin-bottom: 40px;
+    }
+    .link {
+        margin-bottom: 20px;
+        @include sm {
+            margin-right: 6px;
+        }
+        @include lg {
+            margin-right: 16px;
+        }
+        @include xl {
+            margin-right: 24px;
+        }
+    }
+}
+.s-fback__img {
+    position: absolute;
+    left: -20px;
+    top: 320px;
+    width: auto;
+    @include md {
+        width: 40%;
+    }
+    @include lg {
+        position: relative;
+        left: auto;
+        top: auto;
+         width: auto;
+    }
+    @include xl {
+        right: -23%;
+    }
+}
+.s-fback__right {
+    position: relative;
+    z-index: 1;
+    @include lg {
+        width: 480px;
+    }
+    @include xl {
+        width: 528px;
+    }
+}
+.s-fback__title {
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    @include max-lg {
+        @include fl();
+        @include fl-h-centr();
+    }
+    .line,
+    .line-wrapper {
+        text-align: center !important;
+        @include lg {
+            text-align: left !important;
+        }
+    }
+    @include lg {
+        font-size: 40px;
+        line-height: 1;
+    }
+    @include xl {
+        font-size: 64px;
+        margin-bottom: 24px;
+    }
+}
+.s-fback__sub-title {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    text-align: center;
+    @include lg {
+        font-size: 18px;
+        line-height: 1.7777777777777777;
+        text-align: left !important;
+        margin-bottom: 33px;
+    }
+}

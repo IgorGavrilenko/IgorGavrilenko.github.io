@@ -1,0 +1,37 @@
+/* page-heading */
+.page-heading {
+    margin-bottom: 49px;
+    @include lg {
+        margin-bottom: 64px;
+        padding-top: 72px;
+    }
+    + .section {
+        padding-top: 0;
+    }
+}
+.page-heading__line {
+    height: 2px;
+    background-color: $galaxy-600;
+}
+.page-heading__results {
+    font-size: 14px;
+    line-height: 1.714285714285714;
+    color: $galaxy-400;
+    margin-bottom: 15px;
+    @include lg {
+        margin-bottom: 24px;
+    }
+}
+.page-heading__title {
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.176470588235294;
+    margin-bottom: 9px;
+    transition: all .15s ease-in;
+    @include lg {
+        font-size: 64px;
+        line-height: 1;
+        margin-bottom: 24px;
+    }
+}

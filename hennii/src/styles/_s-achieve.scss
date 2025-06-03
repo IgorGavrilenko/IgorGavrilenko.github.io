@@ -1,0 +1,172 @@
+/* s-achieve */
+.s-achieve {
+    overflow: hidden;
+    padding-top: 57px;
+    padding-bottom: 58px;
+    color: $ice;
+    background-color: $galaxy-600;
+    @include lg {
+        padding-top: 96px;
+        padding-bottom: 65px;
+
+    }
+}
+.container--achieve {
+    position: relative;
+}
+.s-achieve__title {
+    font-family: $ff-syne;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 28px;
+    @include lg {
+        font-size: 32px;
+        line-height: 1.375;
+        margin-bottom: 40px;
+    }
+}
+.grid--achieve-icon {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+    @include md {
+        @include fl-between();
+        margin-bottom: 72px;
+    }
+    .grid__item {
+        margin-bottom: 40px;
+        @include md {
+            -webkit-flex: 0 1 31.5%;
+            -ms-flex: 0 1 31.5%;
+            flex: 0 1 31.5%;
+            width: 31.5%;
+            max-width: 31.5%;
+            min-width: 31.5%;
+            margin-bottom: 0;
+        }
+        svg {
+            position: relative;
+            top: 12px;
+        }
+    }
+}
+.s-achieve__sub-title {
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: $l-spacing-016;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0;
+    width: 100%;
+    @include lg {
+        font-size: 16px;
+        line-height: 2.5;
+    }
+}
+.s-achieve__icon {
+    @include fl();
+    @include fl-v-end();
+    @include fl-h-centr();
+    margin-bottom: 2px;
+    height: 112px;
+    @include lg {
+        margin-bottom: 8px;
+    }
+}
+.grid--achieve-text {
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    @include lg {
+        font-size: 18px;
+        line-height: 1.7777777777777777;
+        margin-right: -16px;
+        margin-left: -16px;
+    }
+    .grid__item {
+        &:last-child {
+            padding-top: 16px;
+            @include md {
+                padding-top: 0;
+            }
+        }
+        @include md {
+            -webkit-flex: 0 1 50%;
+            -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+            width: 50%;
+            max-width: 50%;
+            min-width: 50%;
+            padding-right: 16px;
+            padding-left: 16px;
+            padding-bottom: 32px;
+        }
+    }
+}
+.s-achieve__deco {
+    @include fl();
+    @include fl-h-centr();
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+.s-achieve__deco--desc {
+    display: none;
+    @include md {
+        display: block;
+    }
+}
+.s-achieve__deco--mob {
+    position: relative;
+    @include md {
+        display: none;
+    }
+    img {
+        position: absolute;
+    }
+    .img-achieve-1-m {
+        left: -20px;
+        bottom: -57px;
+    }
+    .img-achieve-2-m {
+        bottom: -4px;
+        right: -30px;
+    }
+    .img-achieve-3-m {
+        bottom: -216px;
+        z-index: 1;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.img-achieve-1-d,
+.img-achieve-2-d {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.img-achieve-1-d {
+    bottom: 7px;
+    z-index: 1;
+}
+.img-achieve-2-d {
+    left: -16%;
+    bottom: -70px;
+    @include xl {
+        left: 0;
+    }
+}

@@ -1,0 +1,47 @@
+/* pagin */
+.pagin {
+    margin-bottom: 38px;
+    @include lg {
+        margin-bottom: 16px;
+    }
+    .search-page &,
+    .category-page & {
+        @include max-lg {
+            margin-bottom: 16px;
+        }
+        @include md {
+            margin-top: 72px;
+        }
+    }
+}
+.pagin__link {
+    @include fli();
+    @include fl-v-centr();
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 2.285714285714286;
+    color: $galaxy-600;
+    text-decoration: none !important;
+    @include lg {
+        font-size: 18px;
+        line-height: 1.777777777777778;
+    }
+    @include h {
+        .pagin__icon {
+            left: -8px;
+        }
+    }
+}
+.pagin__icon {
+    position: relative;
+    left: 0;
+    @extend %transition-all-300;
+    @include max-lg {
+        width: 14px;
+        height: 14px;
+    }
+}
+.pagin__text {
+    margin-left: 8px;
+}

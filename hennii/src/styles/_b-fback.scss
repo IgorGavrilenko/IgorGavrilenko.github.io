@@ -1,0 +1,179 @@
+/* b-fback */
+.b-fback-carousel__nav {
+    @include fl();
+    @include fl-v-centr();
+    @include fl-between();
+    .swiper-button {
+        position: static;
+        margin-top: 0 !important;
+        width: auto !important;
+        height: auto !important;
+    }
+    .swiper-button__text {
+        font-family: $ff-syne;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 2.285714285714286;
+        color: inherit;
+        margin: 0 8px;
+        @include lg {
+            font-size: 18px;
+            line-height: 1.777777777777778;
+        }
+    }
+    .swiper-button__icon--mob {
+        min-width: 14px;
+        width: 14px;
+        height: 14px;
+        @include lg {
+            display: none;
+        }
+    }
+    .swiper-button__icon--desc {
+        min-width: 16px;
+        width: 16px;
+        height: 16px;
+        @include max-lg {
+            display: none;
+        }
+    }
+}
+.carousel-fback {
+    margin-bottom: 56px;
+    @include md {
+        margin-bottom: 32px;
+    }
+    @include xl {
+        margin-bottom: 64px;
+    }
+}
+.b-fback {
+    padding: 20px;
+    background-color: $galaxy-600;
+    color: $ice;
+    @include md {
+        padding: 48px;
+    }
+}
+.b-fback__inner {
+    position: relative;
+    @include fl();
+    @include fl-column();
+    @include md {
+        @include fl-v-centr();
+        @include fl-row();
+        @include fl-between();
+        align-items: stretch;
+    }
+}
+.b-fback__content {
+    margin: 38px auto;
+    width: 100%;
+    @include md {
+        max-width: 80%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: right;
+    }
+    @include xxl {
+        max-width: 71.17%;
+    }
+}
+
+.b-fback__title {
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 32px;
+    @include lg {
+        font-size: 32px;
+        line-height: 1.375;
+        margin-bottom: 16px;
+    }
+}
+.b-fback__btn {
+    width: 234px;
+    height: 64px;
+}
+.b-fback-decor {
+    position: relative;
+    @include md {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        writing-mode: vertical-lr;
+        @include fl();
+    }
+    &.b-fback-decor--1 {
+        @include md {
+            left: -2px;
+        }
+    }
+    &.b-fback-decor--2 {
+        @include md {
+            right: -1px;
+        }
+        @include fl-h-end();
+    }
+}
+.b-fback-decor__inner {
+    @include fl();
+    @include max-md {
+        @include fl-column();
+    }
+    @include md {
+        display: block;
+        transform: scale(1) rotate(180deg);
+    }
+}
+.b-fback-decor__text {
+    @include fl();
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    @include max-md {
+        @include fl-v-centr();
+    }
+    &:first-child {
+        @include max-md {
+            order: 1;
+        }
+        @include md {
+            margin-right: 5px;
+        }
+        .b-fback-decor--2 & {
+            @include max-md {
+                margin-right: 50px;
+            }
+        }
+    }
+    &:last-child {
+        @include max-md {
+            margin-bottom: 6px;
+        }
+        .b-fback-decor--1 & {
+            @include max-md {
+                margin-left: 50px;
+            }
+        }
+        @include md {
+            margin-top: 58px;
+        }
+    }
+    .b-fback-decor--2 & {
+        @include max-md {
+            @include fl-h-end();
+        }
+    }
+}
+.b-fback-decor__icon {
+    @include max-md {
+        margin-right: 16px;
+    }
+    @include md {
+        margin-bottom: 16px;
+    }
+}

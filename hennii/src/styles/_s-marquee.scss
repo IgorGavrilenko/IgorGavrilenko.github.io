@@ -1,0 +1,94 @@
+/* s-marquee */
+.s-marquee {
+    position: relative;
+    z-index: 1;
+    @include fl();
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: $ice;
+    min-height: 44px;
+    @include xxl {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        min-height: 72px;
+    }
+    ul {
+        @include fl();
+        @include fl-v-centr();
+        font-family: $ff-syne;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 2.45;
+        letter-spacing: $l-spacing-016;
+        text-transform: uppercase;
+        white-space: nowrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include xxl {
+            font-size: 16px;
+        }
+        li {
+            position: relative;
+            padding-right: 56px;
+            padding-left: 56px;
+            @include a {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: -4px;
+                bottom: 0;
+                margin: auto;
+                width: 8px;
+                height: 8px;
+                background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.115 4.01L8 5.09 6.928 6.979 4.988 5.74 5.044 8H2.938l.055-2.26-1.94 1.238L0 5.09 1.885 4.01 0 2.91l1.053-1.888 1.94 1.258L2.938 0h2.106l-.056 2.28 1.94-1.258L8 2.91l-1.885 1.1z' fill='%23000'/%3E%3C/svg%3E");
+                background-color: transparent;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
+.s-marquee__border {
+    position: absolute;
+    background-color: $galaxy-600;
+}
+.s-marquee__border--top,
+.s-marquee__border--bottom {
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+.s-marquee__border--top {
+    top: 0;
+}
+.s-marquee__border--bottom {
+    bottom: 0;
+}
+.s-marquee__border--right-fill,
+.s-marquee__border--right,
+.s-marquee__border--left {
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.s-marquee__border--right-fill,
+.s-marquee__border--right {
+    right: 0;
+}
+.s-marquee__border--left {
+    left: 0;
+}
+.s-marquee__border--right-fill {
+    z-index: 1;
+    background-color: $ice;
+}

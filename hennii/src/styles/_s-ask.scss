@@ -1,0 +1,256 @@
+/* s-ask */
+.s-ask {
+    position: relative;
+    overflow: hidden;
+    padding-top: 27px;
+    @include lg {
+        padding-top: 66px;
+    }
+}
+.container--ask {
+    @include xl {
+        width: 100%;
+    }
+}
+.s-ask__title,
+.s-ask__sub-title {
+    font-family: $ff-syne;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    max-width: 1120px;
+    @include lg {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+}
+.s-ask__title {
+    margin-bottom: 7px;
+    @include lg {
+        margin-bottom: 22px;
+    }
+}
+.s-ask__sub-title {
+    margin-bottom: 30px;
+    @include lg {
+        margin-bottom: 0;
+    }
+}
+.s-ask__content {
+    @include xl {
+        position: relative;
+    }
+}
+.s-ask__img {
+    margin-bottom: 37px;
+    width: 358px;
+    position: absolute;
+        z-index: 1;
+        right: -20px;
+        margin-bottom: 120px;
+    @include sm {
+        width: 520px;
+    }
+    @include lg {
+        width: 600px;
+        margin-bottom: 37px;
+    }
+    @include max-xl {
+        bottom: auto !important;
+    }
+    @include xl {
+        position: relative;
+        right: 44px;
+        bottom: -12px;
+        width: auto;
+        margin: 0 auto -12px;
+    }
+}
+.s-ask__list {
+    margin: 0;
+    padding: 164px 0 0 15px;
+    @include xl {
+        list-style: none;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.s-ask__text {
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    &:not(:last-child) {
+        margin-bottom: 16px;
+        @include xl {
+            margin-bottom: 0;
+        }
+    }
+    @include xl {
+     position: absolute;
+        font-size: 18px;
+        line-height: 1.7777777777777777;
+    }
+}
+.s-ask__text-wrap {
+    @include xl {
+        overflow: hidden;
+    }
+    display: block;
+}
+.s-ask__text-inner {
+    position: relative;
+    left: -3px;
+    @include xl {
+        left: auto;
+        display: inline-block;
+    }
+}
+.s-ask__line {
+    height: 4px;
+    position: absolute;
+    .s-ask__point,
+    &::before {
+        position: relative;
+        content: '';
+        display: block;
+        background: $galaxy-600;
+    }
+    .s-ask__point {
+        left: -5px;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+    }
+    @include b {
+        top: 3px;
+        height: 1px;
+    }
+    @include max-xl {
+        display: none;
+    }
+}
+.s-ask__text--2,
+.s-ask__text--3,
+.s-ask__text--6,
+.s-ask__text--7 {
+    .s-ask__line {
+        .s-ask__point {
+            position: absolute;
+            right: -5px;
+            left: auto;
+        }
+    }
+}
+.s-ask__text--1 {
+    @include lg {
+        top: 176px;
+        left: 190px;
+    }
+    .s-ask__line {
+        top: 14px;
+        right: -183px;
+        width: 145px;
+    }
+}
+.s-ask__text--2 {
+    @include xl {
+        top: 29px;
+        left: 764px;
+    }
+    @include xxl {
+        left: 784px;
+    }
+    .s-ask__line {
+        top: 13px;
+        left: -117px;
+        width: 95px;
+    }
+}
+.s-ask__text--3 {
+    @include xl {
+        top: 144px;
+        left: 822px;
+        width: 175px;
+    }
+    @include xxl {
+        left: 896px;
+    }
+    .s-ask__line {
+        top: 21px;
+        left: -163px;
+        width: 142px;
+    }
+}
+.s-ask__text--4 {
+    @include xl {
+        top: 308px;
+        left: 79px;
+        width: 225px;
+    }
+    .s-ask__line {
+        top: 21px;
+        right: -227px;
+        width: 208px;
+    }
+}
+.s-ask__text--5 {
+    @include xl {
+        left: 160px;
+        bottom: 73px;
+        width: 245px;
+    }
+    @include xxl {
+        left: 191px;
+    }
+    .s-ask__line {
+        top: 21px;
+        right: -137px;
+        width: 109px;
+    }
+}
+.s-ask__text--6 {
+    @include xl {
+        bottom: 220px;
+        left: 930px;
+        width: 213px;
+    }
+    @include xxl {
+        left: 1008px;
+    }
+    .s-ask__line {
+        top: 32px;
+        left: -264px;
+        width: 242px;
+    }
+}
+.s-ask__text--7 {
+    list-style: none;
+    width: 275px;
+    margin-top: 20px;
+    margin-left: -14px;
+    font-weight: 600;
+    color: $ice;
+    @include xl {
+        bottom: 0;
+        left: auto;
+        right: 212px;
+        width: 234px;
+        margin-left: 0;
+    }
+    .s-ask__text-bg {
+        padding: 12px;
+        background-color: $galaxy-600;
+        border-radius: $b-radius-8 $b-radius-8 0 0;
+        @include xl {
+            padding: 24px 24px 36px 24px;
+            border-radius: $b-radius-16 $b-radius-16 0 0;
+        }
+    }
+    .s-ask__line {
+        top: 65px;
+        left: -176px;
+        width: 155px;
+    }
+    .s-ask__text-inner {
+        left: 0;
+    }
+}
