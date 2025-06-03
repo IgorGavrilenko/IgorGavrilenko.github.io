@@ -1,0 +1,106 @@
+.img--block {
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 r(-5);
+
+    @include max-md {
+      margin: 0 r(-2);
+    }
+
+  }
+
+  &__inner {
+    padding: 0 r(5);
+    flex: 0 0 26.3%;
+    max-width: 26.3%;
+
+    @include max-lg {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include max-md {
+      padding: 0 r(2);
+    }
+
+    &__lg {
+      flex: 0 0 47.4%;
+      max-width: 47.4%;
+
+      @include max-lg {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-top: r(10);
+      }
+
+      @include max-md {
+        padding-top: r(4);
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    &__media {
+      height: 100%;
+
+      picture, img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    &__desc {
+      position: absolute;
+      font-size: r(18);
+      line-height: 1.2;
+      color: var(--color-1);
+      padding: r(34);
+      bottom: 0;
+      left: 0;
+      width: 56%;
+
+      @include max-md {
+        padding: r(16) r(24);
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: r(14);
+        line-height: 1.25;
+      }
+
+      div {
+        position: relative;
+        z-index: 2;
+      }
+
+      &:before {
+        background-image: url(../../assets/img/section/about-page/hero-card-ellipse.svg);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: r(640);
+        height: r(445);
+        z-index: 1;
+        background-size: cover;
+        pointer-events: none;
+
+        @include max-md {
+          background-image: url(../../assets/img/section/about-page/hero-card-ellipse-mob.svg);
+          width: 100%;
+          height: 255%;
+        }
+      }
+    }
+  }
+}

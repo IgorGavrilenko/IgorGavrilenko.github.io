@@ -1,0 +1,180 @@
+/*section--feedback*/
+.section--feedback {
+    padding-top: r(40);
+    padding-bottom: r(40);
+    background-color: var(--color-12);
+    @include section-dark-after();
+    @include lg {
+        padding-top: r(70);
+        padding-bottom: r(105);
+    }
+    .section__wrapper {
+        background-color: var(--color-12);
+    }
+    .section__pre-text,
+    .section__post-text {
+        font-size: r(12);
+        line-height: 1.25;
+        position: relative;
+        z-index: 1;
+        padding: 0 r(12);
+        background-color: var(--color-3);
+        @extend %transition-all-300;
+        @include lg {
+            font-size: r(24);
+            position: relative;
+            padding-right: r(24);
+            padding-left: r(24);
+        }
+    }
+    .section__pre-text {
+        @include lg {
+            top: r(3);
+            left: r(-87);
+        }
+    }
+    .section__post-text {
+        @include lg {
+            left: r(-103);
+        }
+    }
+    .section__content {
+        position: relative;
+        overflow: hidden;
+        @include fl();
+        @include fl-h-centr();
+        @include fl-v-centr();
+        @include fl-column();
+        padding: r(24) 0;
+        color: var(--color-1);
+        border-radius: r($border-radius-xs);
+        background-color: var(--color-3);
+        @extend %transition-all-300;
+        @include lg {
+            border-radius: r($border-radius-m);
+            @include lg {
+                padding-top: r(36);
+                padding-bottom: r(36);
+            }
+        }
+        &:after,
+        &:before {
+            position: absolute;
+            z-index: 0;
+            right: 0;
+            left: 0;
+            height: r(1);
+            content: "";
+            background-color: var(--color-22);
+            @extend %transition-all-300;
+            @include lg {
+                right: r(17);
+                left: r(17);
+            }
+        }
+        &:after {
+            bottom: r(40);
+            @include lg {
+                bottom: r(66);
+            }
+        }
+        &:before {
+            top: r(40);
+            @include lg {
+                top: r(66);
+            }
+        }
+    }
+}
+
+// hover
+.section--feedback {
+    .section__content {
+        &:hover {
+            color: var(--color-3);
+            background-color: var(--color-1);
+            .marquee__icon {
+                background-color: var(--color-3);
+                path {
+                    stroke: var(--color-1);
+                }
+            }
+            &:after,
+            &:before {
+                background-color: var(--color-3);
+            }
+            .section__pre-text,
+            .section__post-text {
+                background-color: var(--color-1);
+            }
+        }
+    }
+}
+
+.section--feedback {
+
+    &.type__white {
+        &:after {
+            display: none;
+        }
+    }
+
+    &.type__text__left {
+
+        .section__pre-text, .section__post-text {
+
+            @include lg {
+                position: relative;
+                left: r(-86);
+                padding-right: r(56);
+            }
+
+        }
+    }
+}
+
+.type__white {
+    background-color: var(--color-1) !important;
+
+    .section__wrapper {
+        background-color: var(--color-1) !important;
+    }
+}
+
+.content__purple .section__content {
+    border: 1px solid var(--color-4);
+    background-color: var(--color-4);
+
+    &:hover {
+        color: var(--color-4);
+
+        &:before, &:after {
+            background-color: var(--color-4);
+        }
+
+        .marquee__icon {
+            background-color: var(--color-4);
+        }
+    }
+
+    .section__pre-text, .section__post-text {
+        background-color: var(--color-4);
+    }
+}
+
+.section__pre-text, .section__post-text {
+    display: flex;
+    align-items: center;
+    min-height: r(60);
+
+    @include max-lg {
+        min-height: r(30);
+    }
+}
+
+/*page-home*/
+.page-home, .page-article, .page-blog {
+    .section__post-text {
+        display: block;
+    }
+}

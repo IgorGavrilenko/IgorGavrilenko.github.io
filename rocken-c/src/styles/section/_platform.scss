@@ -1,0 +1,230 @@
+/*section--platform*/
+.section--platform {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding-top: r(40);
+    padding-bottom: r(27);
+    @include max-lg {
+        @include section-before();
+    }
+    @include max-md {
+        margin-top: r(-40);
+    }
+    @include lg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        padding-top: r(62);
+        padding-bottom: r(86);
+        background-color: transparent;
+    }
+    .section__container--platform {
+        @include lg {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .section__content--platform {
+        @include lg {
+            padding-left: r(60);
+        }
+    }
+    .section__intro--platform {
+        margin-bottom: r(32);
+        padding-left: 0;
+        @include max-lg {
+            transform: none !important;
+        }
+        @include lg {
+            @include fl-row();
+            margin-bottom: r(96);
+            transform: translateX(200%);
+        }
+        .section-title__accent {
+            color: var(--color-9);
+        }
+        .br-com {
+            display: block;
+        }
+    }
+    .section__tag {
+        @include lg {
+            margin-top: r(6);
+            margin-right: r(185);
+        }
+    }
+}
+.m-grid--platform {
+    @include sm {
+        margin: r(-6);
+    }
+    @include lg {
+        margin-right: r(54);
+    }
+    .m-grid__item {
+        margin-bottom: r(12);
+        @include max-lg {
+            transform: none !important;
+        }
+        @include sm {
+            @include fl-width-50();
+            margin-bottom: 0;
+            padding: r(6);
+        }
+        @include lg {
+            position: relative;
+            left: 110%;
+        }
+    }
+}
+.card--platform {
+    @include fl();
+    @include fl-column();
+    @include fl-between();
+    @extend %transition-none;
+    padding: r(30) r(16) r(16) r(16);
+    text-decoration: none !important;
+    color: var(--color-2);
+    border-radius: r($border-radius-xs);
+    background-color: var(--color-11);
+    @include lg {
+        padding: r(53) r(32) r(38) r(32);
+        border-radius: r($border-radius-m);
+    }
+    .card__top {
+        position: relative;
+        z-index: 1;
+        display: block;
+        @extend %transition-all-300-ease-in-out;
+        @include lg {
+            padding-bottom: r(7);
+        }
+    }
+    .card__bottom {
+        position: relative;
+        z-index: 1;
+        @include fl();
+        @include fl-v-centr();
+        @include fl-between();
+        margin-top: r(24);
+        padding-top: r(40);
+        border-top: r(1) solid var(--color-24);
+    }
+    .card__media {
+        display: block;
+        max-width: r(62);
+        height: r(59);
+        margin-bottom: r(40);
+        @extend %transition-all-300-ease-in-out;
+        @include lg {
+            max-width: r(99);
+            margin-bottom: r(76);
+            margin-left: r(13);
+        }
+        img {
+            @include object-fit-cover();
+        }
+    }
+    .card__title {
+        font-size: r(24);
+        font-weight: var(--font-weight-medium);
+        line-height: 1.2;
+        display: block;
+        margin-bottom: r(24);
+        color: inherit;
+        @include lg {
+            font-size: r(40);
+            margin-bottom: r(34);
+            letter-spacing: .032em;
+        }
+    }
+    .card__text {
+        font-size: r(14);
+        line-height: 1.3;
+        display: block;
+        letter-spacing: .004em;
+        color: inherit;
+        @include lg {
+            font-size: r(18);
+            line-height: 1.5;
+        }
+    }
+    .card__tag {
+        font-size: r(16);
+        line-height: 1.2;
+        display: block;
+        @extend %transition-all-300;
+        color: inherit;
+        @include lg {
+            font-size: r(20);
+        }
+    }
+    .card__icon {
+        overflow: hidden;
+        @include fl();
+        @include fl-h-centr();
+        @include fl-v-centr();
+        flex: 0 1 r(60);
+        width: r(60);
+        min-width: r(60);
+        max-width: r(60);
+        height: r(46);
+        min-height: r(46);
+        max-height: r(46);
+        border-radius: r($border-radius-xs);
+        @extend %transition-all-300;
+    }
+    &:before {
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin: auto;
+        @extend %transition-all-300-ease-in-out;
+        content: "";
+        border-radius: $border-radius-round;
+    }
+    &.card--platform--1 {
+        &:before {
+            background-color: var(--color-4);
+        }
+        .card__icon {
+            background-color: var(--color-4);
+        }
+    }
+    &.card--platform--2 {
+        &:before {
+            background-color: var(--color-3);
+        }
+        .card__icon {
+            background-color: var(--color-3);
+        }
+    }
+    &:hover {
+        color: var(--color-1);
+        &:before {
+            top: -50%;
+            left: -50%;
+            width: r(1000);
+            height: r(1000);
+            content: "";
+            @extend %transition-all-300-ease-in-out;
+            @include lg {
+                left: -10%;
+            }
+        }
+        .card__bottom {
+            @extend %transition-all-300-ease-in-out;
+            border-color: var(--color-1);
+        }
+        .card__tag {
+            @include lg {
+                font-weight: var(--font-weight-semi-bold);
+            }
+        }
+    }
+}

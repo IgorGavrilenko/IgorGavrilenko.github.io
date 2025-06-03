@@ -1,0 +1,26 @@
+@import 'utils/variable';
+@import 'utils/mixin';
+@import 'utils/placeholder';
+
+@import 'base/font';
+@import 'base/reset';
+@import 'base/type';
+@import 'base/btn';
+@import 'base/form';
+@import 'base/grid';
+@import 'base/common';
+
+@import 'component/card';
+@import 'component/star-parallax';
+
+@import 'templ/header';
+@import 'templ/footer';
+@import 'templ/menu';
+@import 'templ/lang';
+
+@import 'section/loader';
+@import 'section/hero-page';
+@import 'section/case-2';
+@import 'section/feature-4';
+@import 'section/service-4';
+@import 'section/contact';

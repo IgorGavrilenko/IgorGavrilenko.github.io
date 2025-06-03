@@ -1,0 +1,47 @@
+@import 'utils/variable';
+@import 'utils/mixin';
+@import 'utils/placeholder';
+
+@import 'base/font';
+@import 'base/reset';
+@import 'base/type';
+@import 'base/btn';
+@import 'base/form';
+@import 'base/grid';
+@import 'base/common';
+
+@import 'component/card';
+@import 'component/star-parallax';
+
+@import 'templ/header';
+@import 'templ/footer';
+@import 'templ/menu';
+@import 'templ/lang';
+
+@import 'component/marquee';
+
+@import 'section/loader';
+
+@import 'section/contact';
+@import 'section/contact-hero';
+@import 'section/blockquote-section';
+@import 'section/faq__section';
+@import 'section/platform';
+@import 'section/two-card-section';
+@import 'section/map-section';
+@import 'section/contact-social-section';
+
+.top__line {
+  border-radius: r(16) r(16) 0 0;
+  border: 2px solid var(--color-16);
+  height: r(42);
+  border-bottom: 0;
+  margin: 0 r(-28) r(86);
+
+  @include max-md {
+    border-radius: r(8) r(8) 0 0;
+    height: r(29);
+    margin: 0 r(-12) r(14);
+
+  }
+}

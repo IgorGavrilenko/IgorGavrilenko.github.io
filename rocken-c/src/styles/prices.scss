@@ -1,0 +1,33 @@
+@import 'utils/variable';
+@import 'utils/mixin';
+@import 'utils/placeholder';
+
+@import 'base/font';
+@import 'base/reset';
+@import 'base/type';
+@import 'base/btn';
+@import 'base/form';
+@import 'base/grid';
+@import 'base/common';
+
+@import 'component/card';
+@import 'component/star-parallax';
+
+@import 'templ/header';
+@import 'templ/footer';
+@import 'templ/menu';
+@import 'templ/lang';
+
+@import 'component/marquee';
+
+@import 'section/loader';
+
+@import 'section/blog-hero';
+
+@import 'section/prices-hero';
+@import 'section/speak-expert';
+@import 'section/compare';
+@import 'section/choose-model';
+@import 'section/still-uncertain';
+@import 'section/map-section';
+@import 'blocks/modal';

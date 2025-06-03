@@ -1,0 +1,23 @@
+/*marquee*/
+.marquee--ticker {
+    .marquee__item {
+        .marquee__text {
+            font-size: r(32);
+            font-weight: var(--font-weight-light);
+            line-height: 1.1;
+            letter-spacing: .015em;
+            text-transform: uppercase;
+            color: var(--color-6);
+            @include md {
+                font-size: r(64);
+            }
+        }
+        &:nth-child(even) {
+            .marquee__text span {
+                background: -webkit-linear-gradient(91.36deg, #4893f4 34.58%, #ce73e2 103.69%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

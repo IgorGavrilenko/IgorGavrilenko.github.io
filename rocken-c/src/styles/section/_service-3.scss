@@ -1,0 +1,338 @@
+/*section--service-3*/
+.section--service-3 {
+    @include lg {
+        padding-top: r(100);
+        padding-bottom: r(101);
+    }
+    .section__wrapper {
+        position: relative;
+        z-index: 2;
+    }
+    /* … */
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+    .section--service-3-0 {
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: r(16);
+            height: 14.375rem;
+            margin: 0 auto;
+            content: "";
+            background: var(--color-1);
+        }
+    }
+}
+.card--service-3 {
+    font-size: r(18);
+    @include fl();
+    //    @include fl-between();
+    @include fl-column();
+    flex: 0 1 r(248);
+    width: r(386);
+    min-width: r(248);
+    max-width: r(248);
+    height: auto;
+    padding: r(16) r(16) r(24) r(16);
+    color: var(--color-6);
+    border-radius: r($border-radius-xs) r($border-radius-xs) r($border-radius-2) r($border-radius-xs);
+    @include lg {
+        flex: 0 1 r(388);
+        width: r(386);
+        min-width: r(388);
+        max-width: r(388);
+        padding: r(20) r(20) r(32) r(20);
+        border-radius: r($border-radius-s) r($border-radius-s) r($border-radius-xl) r($border-radius-s);
+    }
+    @include max-md {
+        transform: none !important;
+    }
+    .card__top {
+        margin-bottom: r(32);
+        @include lg {
+            margin-bottom: r(51);
+        }
+    }
+    .card__media {
+        img {
+            @include object-fit-cover();
+        }
+    }
+    .card__title {
+        font-size: r(18);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: r(6);
+        @include lg {
+            font-size: r(32);
+            line-height: 1.2;
+            margin-bottom: r(26);
+        }
+    }
+    .card__text {
+        font-size: r(14);
+        line-height: 1.25;
+        position: relative;
+        z-index: 1;
+        @include lg {
+            font-size: r(18);
+            line-height: 1.2;
+        }
+        .br-d {
+            @include max-lg {
+                display: none;
+            }
+        }
+    }
+}
+.pattern-service-3 {
+    position: absolute;
+    overflow: hidden;
+    content: "";
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include max-lg {
+        display: none;
+    }
+}
+.pattern-service-3--1 {
+    width: r(198);
+    height: r(198);
+    background-image: url("data:image/svg+xml,%3Csvg class='pattern-1' width='100%25' height='100%25' viewBox='0 0 198 198' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M99 0v88.393M99 109.607V198M0 97.674h88.393M109.607 97.674H198' stroke='%23ECECEC' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+.pattern-service-3--2 {
+    width: r(296);
+    height: r(265);
+    background-image: url("data:image/svg+xml,%3Csvg class='pattern pattern--2' width='100%25' height='100%25' viewBox='0 0 296 265' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M99 0v88.393M99 109.607V198M0 97.674h88.393M109.607 97.674H198M209 99v88.393M209 208.607V297M110 196.674h88.393M219.607 196.674H308' stroke='%23ECECEC' stroke-width='2'/%3E%3C/svg%3E%0A");
+}
+
+/*m-grid--service-3*/
+.m-grid--service-3 {
+    position: relative;
+    z-index: 2;
+    max-width: r(768);
+    margin-right: auto;
+    margin-left: auto;
+    @include lg {
+        //        max-width: r(1069);
+        max-width: r(1143);
+    }
+    .m-grid__item {
+        position: relative;
+        @include max-md {
+            @include fl();
+            margin-bottom: r(72);
+            @include fl-h-centr();
+        }
+        @include max-sm {
+            @include fl-h-end();
+        }
+        &:last-child {
+            @include max-md {
+                margin-bottom: 0;
+            }
+        }
+        @include md {
+            @include fl-width-50();
+        }
+        &:nth-child(odd) {
+            .card--service-3 {
+                @include lg {
+                    left: r(4);
+                }
+            }
+        }
+        &:nth-child(even) {
+            @include md {
+                @include fl();
+                @include fl-h-end();
+                margin-top: r(150);
+            }
+            @include xl {
+                margin-top: r(328);
+            }
+        }
+        &:nth-child(1) {
+            .card--service-3 {
+                background-color: var(--color-11);
+            }
+            .pattern-service-3--1 {
+                bottom: r(54);
+                left: r(-135);
+            }
+        }
+        &:nth-child(2) {
+            .card--service-3 {
+                background-color: var(--color-17);
+            }
+            .pattern-service-3--2 {
+                right: r(-294);
+                bottom: r(-7);
+            }
+        }
+        &:nth-child(3) {
+            @include md {
+                margin-top: r(68);
+            }
+            .card--service-3 {
+                border-radius: r($border-radius-2) r($border-radius-xs) r($border-radius-xs) r($border-radius-xs);
+                background-image: url("../../assets/img/section/service-3/3-bg.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                @include lg {
+                    padding-top: 0;
+                    padding-bottom: r(21);
+                    border-radius: r($border-radius-2) r($border-radius-s) r($border-radius-s) r($border-radius-s);
+                }
+                @include lg {
+                    border-top-left-radius: r($border-radius-xl);
+                }
+                &:after {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: r(388);
+                    height: r(375);
+                    margin: auto;
+                    content: "";
+                    background-image: url("../../assets/img/section/service-3/3-grad.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+                .card__top {
+                    @include md {
+                        margin-bottom: r(-10);
+                    }
+                }
+                .card__bottom {
+                    position: relative;
+                    z-index: 2;
+                    color: var(--color-1);
+                }
+                .card__title {
+                    @include md {
+                        margin-bottom: r(25);
+                    }
+                }
+            }
+            .pattern-service-3--2 {
+                bottom: r(24);
+                left: r(-252);
+            }
+        }
+        &:nth-child(4) {
+            @include lg {
+                margin-top: r(307);
+            }
+            .card--service-3 {
+                background-color: var(--color-11);
+                .card__top {
+                    @include md {
+                        margin-bottom: r(23);
+                    }
+                }
+            }
+            .pattern-service-3--2 {
+                right: r(-292);
+                bottom: r(-80);
+            }
+        }
+        &:nth-child(5) {
+            @include lg {
+                margin-top: r(181);
+            }
+            .card--service-3 {
+                background-color: var(--color-17);
+                .card__top {
+                    @include md {
+                        margin-bottom: r(62);
+                    }
+                }
+            }
+        }
+        &:nth-child(6) {
+            @include lg {
+                margin-top: r(371);
+            }
+            .card--service-3 {
+                background-color: var(--color-18);
+                .card__top {
+                    @include md {
+                        margin-bottom: r(39);
+                    }
+                }
+                .card__media {
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: r(96);
+                        height: r(78);
+                        margin: auto;
+                        content: "";
+                        background-color: transparent;
+                        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 96 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFE9D3' stroke='%23ED994A' stroke-width='1.732' stroke-dasharray='9.95 1.99' d='M1 1h28v76H1z'/%3E%3Ccircle cx='14.553' cy='18.553' r='3.553' fill='%23ED994A' stroke='%23ED994A' stroke-width='1.732'/%3E%3Cpath fill='%23FFE9D3' stroke='%23ED994A' stroke-width='1.732' stroke-dasharray='9.95 1.99' d='M34 1h28v76H34zM67 1h28v76H67z'/%3E%3Ccircle cx='47.553' cy='57.553' r='3.553' fill='%23ED994A' stroke='%23ED994A' stroke-width='1.732'/%3E%3Ccircle cx='80.553' cy='35.553' r='3.553' fill='%23ED994A' stroke='%23ED994A' stroke-width='1.732'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+            .pattern-service-3--2 {
+                right: r(-292);
+                bottom: r(-73);
+            }
+        }
+        &:nth-child(7) {
+            @include lg {
+                margin-top: r(104);
+            }
+            .card--service-3 {
+                background-color: var(--color-11);
+                .card__top {
+                    @include md {
+                        margin-bottom: r(32);
+                    }
+                }
+                .card__title {
+                    @include md {
+                        margin-bottom: r(25);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*section--service-3-1*/
+.section--service-3-1 {
+    @include lg {
+        padding-top: r(175);
+    }
+    .m-grid__item {
+        .card--service-3 {
+            background-color: var(--color-17);
+            .card__top {
+                @include md {
+                    margin-bottom: r(41);
+                }
+            }
+        }
+        &:nth-child(even) {
+            @include md {
+                @include fl();
+                @include fl-h-end();
+                margin-top: 0;
+            }
+        }
+    }
+}

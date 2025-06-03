@@ -1,0 +1,84 @@
+//@include fl();
+@mixin fl() {
+    display: flex;
+}
+.d-flex {
+    @include fl();
+}
+//@include fli();
+@mixin fli() {
+    display: inline-flex;
+}
+//@include fl-row();
+@mixin fl-row() {
+    flex-direction: row;
+}
+//@include fl-column();
+@mixin fl-column() {
+    flex-direction: column;
+}
+//@include fl-nowrap();
+@mixin fl-nowrap() {
+    flex-wrap: nowrap;
+}
+//@include fl-wrap();
+@mixin fl-wrap() {
+    flex-wrap: wrap;
+}
+//@include fl-h-centr();
+@mixin fl-h-centr() {
+    justify-content: center;
+}
+.d-flex--h-centr {
+    @include fl-h-centr();
+}
+//@include fl-h-start();
+@mixin fl-h-start() {
+    justify-content: flex-start;
+}
+//@include fl-h-end();
+@mixin fl-h-end() {
+    justify-content: flex-end;
+}
+//@include fl-h-around();
+@mixin fl-h-around() {
+    justify-content: space-around;
+}
+//@include fl-v-centr();
+@mixin fl-v-centr() {
+    align-items: center;
+}
+//@include fl-v-end();
+@mixin fl-v-end() {
+    align-items: flex-end;
+}
+//@include fl-v-start();
+@mixin fl-v-start() {
+    align-items: flex-start;
+}
+//@include fl-between();
+@mixin fl-between() {
+    justify-content: space-between;
+}
+//@include fl-align-items-start();
+@mixin fl-align-items-start() {
+    align-items: flex-start;
+}
+
+//@include fl-align-items-stretch();
+@mixin fl-align-items-stretch() {
+    align-items: stretch;
+}
+
+//@include fl-align-items-end();
+@mixin fl-align-items-end() {
+    align-self: flex-end;
+}
+//@include fl-1-1-auto();
+@mixin fl-1-1-auto() {
+    flex: 1 1 auto;
+}
+//@include fl-align-content-stretch();
+@mixin fl-align-content-stretch() {
+    align-content: stretch;
+}

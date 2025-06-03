@@ -1,0 +1,331 @@
+/*section--ticker-1*/
+.section--case-2 {
+    @include section-before();
+    @include lg {
+        padding-top: r(127);
+        padding-bottom: r(185);
+    }
+    &:before {
+        margin-bottom: r(11);
+        @include lg {
+            display: none;
+        }
+    }
+    .section__intro {
+        @include fl-row();
+        @include lg {
+            margin-bottom: r(103);
+        }
+    }
+    .section__title {
+    }
+    .section__content {
+
+    }
+    .section__control {
+        position: relative;
+        @include max-md {
+            display: none;
+        }
+
+    }
+
+    // scroll-btn
+    .scroll-btn-wrap {
+        position: relative;
+        right: r(-11);
+        bottom: r(-74);
+    }
+    .scroll-btn {
+        min-width: r(150);
+        &:after {
+            display: none;
+        }
+        .scroll-btn__text {
+            @include lg {
+                font-size: r(20);
+            }
+        }
+    }
+
+    // pattern
+    .pattern {
+        position: relative;
+        top: r(6);
+        left: r(49);
+        width: r(90);
+        height: r(90);
+        @include max-md {
+            display: none;
+        }
+        .pattern__item {
+            width: 100%;
+            height: 100%;
+        }
+        img {
+            @include object-fit-cover();
+        }
+    }
+
+    // card--case-2
+    .card--case-2 {
+        overflow: hidden;
+        margin-bottom: r(8);
+        border-radius: r($border-radius-6);
+        background-color: var(--color-36);
+        @extend %transition-none;
+
+        @include lg {
+            min-height: r(416);
+            margin-bottom: 0;
+        }
+        .card__inner {
+            @include fl();
+            padding: r(16);
+            @include lg {
+                height: 100%;
+                padding: r(17) r(15);
+            }
+        }
+        .card__title {
+            font-size: r(16);
+            font-weight: var(--font-weight-regular);
+            line-height: 1.25;
+            color: var(--color-12);
+        }
+        .card__head {
+            overflow: hidden;
+            @include fl();
+            @include fl-v-centr();
+            margin-bottom: r(16);
+            padding-bottom: r(16);
+            border-bottom: 1px solid var(--color-9);
+            @include lg {
+                width: r(86);
+                @include fl-h-centr();
+                margin-bottom: 0;
+                padding: r(23) 0 r(23) 0;
+                border: none;
+            }
+            .card__title {
+                margin-left: r(14);
+                @include lg {
+                    font-size: r(18);
+                    margin-left: 0;
+                    transform: rotate(180deg);
+                    text-align: center;
+                    writing-mode: vertical-rl;
+                    text-orientation: mixed;
+                }
+            }
+            .card__num {
+                &:before {
+                    line-height: 1;
+                    position: relative;
+                    top: r(2);
+                    content: "0" counter(card);
+                    counter-increment: card;
+                }
+                @include lg {
+                    position: absolute;
+                    bottom: r(32);
+                }
+            }
+        }
+        .card__body {
+            @include lg {
+                @include fl();
+                @include fl-1-1-auto();
+                @include fl-between();
+                overflow: hidden;
+                width: auto;
+            }
+            .card__title {
+                font-size: r(32);
+                font-weight: var(--font-weight-medium);
+                line-height: 1.2;
+                margin-bottom: r(30);
+                padding-bottom: r(30);
+                border-bottom: 1px solid var(--color-9);
+                @include max-lg {
+                }
+                    display: none;
+            }
+        }
+        .card__caption {
+            flex: 0 1 r(458);
+            width: r(458);
+            min-width: r(458);
+            margin-bottom: r(16);
+            @include lg {
+                margin-bottom: 0;
+                padding: r(23) r(48) r(23) r(25);
+            }
+        }
+        .card__text {
+            font-size: r(14);
+            color: var(--color-6);
+            @include lg {
+                font-size: r(24);
+                right: r(24);
+            }
+        }
+        .card__text--accent {
+            color: var(--color-9);
+        }
+        .card__num {
+            font-size: r(16);
+            line-height: 1;
+            overflow: hidden;
+            flex: 0 1 r(43);
+            width: r(43);
+            min-width: r(43);
+            max-width: r(43);
+            @include fl();
+            @include fl-h-centr();
+            @include fl-v-centr();
+            height: r(28);
+            color: var(--color-12);
+            border-radius: r($border-radius-xxs);
+            background-color: var(--color-1);
+            @include lg {
+                font-size: r(24);
+                flex: 0 1 r(73);
+                width: r(73);
+                min-width: r(73);
+                max-width: r(73);
+                height: r(42);
+                border-radius: r($border-radius-xs);
+            }
+        }
+        .card__media {
+            overflow: hidden;
+            height: r(314);
+            border-radius: r($border-radius-6);
+            @include lg {
+                flex: 0 1 r(369);
+                width: r(369);
+                min-width: r(369);
+                max-width: r(369);
+                height: r(382);
+            }
+        }
+        .card__pic {
+            width: 100%;
+            height: 100%;
+        }
+        .card__img {
+            @include object-fit-cover();
+        }
+
+    }
+
+    // b-tab
+    .b-tab {
+        counter-reset: card;
+        margin-right: r(-10);
+        margin-left: r(-10);
+        @include lg {
+            @include fl();
+//            @include fl-between();
+        }
+    }
+    .b-tab__item {
+        // 100 1608
+        //     136
+
+//        max-width: r(950);
+        padding-right: r(10);
+        padding-left: r(10);
+        &:nth-child(1) {
+            .card--case-2 {
+                background-color: var(--color-37);
+            }
+        }
+        &:nth-child(2) {
+            .card--case-2 {
+                background-color: var(--color-38);
+            }
+        }
+        &:nth-child(3) {
+            .card--case-2 {
+                background-color: var(--color-39);
+            }
+        }
+        &:nth-child(4) {
+            .card--case-2 {
+
+            }
+        }
+        &:nth-child(5) {
+            .card--case-2 {
+                color: var(--color-1);
+                background-color: var(--color-36);
+                border-color: var(--color-1);
+                .card__text,
+                .card__title {
+                    color: var(--color-1);
+                }
+                                .card__title {
+                    border-color: var(--color-1);
+                }
+            }
+        }
+        &:nth-child(6) {
+            .card--case-2 {
+                color: var(--color-1);
+                background-color: var(--color-3);
+                .card__text,
+                .card__title {
+                    color: var(--color-1);
+                }
+                .card__title {
+                    border-color: var(--color-1);
+                }
+            }
+        }
+        &:last-child {
+            @include lg {
+                margin-right: 0;
+            }
+            .card__media {
+                            @include lg {
+                flex: 0 1 r(202);
+                width: r(202);
+                min-width: r(202);
+                max-width: r(202);
+            }
+            }
+        }
+        &.is-active {
+            .card--case-2 {
+                @include lg {
+
+                    width: auto;
+                }
+                .card__body {
+                    @include lg {
+                        @include fl();
+                    }
+                }
+                .card__head {
+                    @include lg {
+                        width: auto;
+                        padding: 0;
+                    }
+                    .card__title {
+                        @include lg {
+                            display: none;
+                        }
+                    }
+                }
+                .card__num {
+                    @include lg {
+                        left: r(40);
+                    }
+                }
+            }
+        }
+    }
+
+}

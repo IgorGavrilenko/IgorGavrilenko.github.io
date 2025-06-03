@@ -1,0 +1,49 @@
+// Academy
+
+.academy {
+  color: var(--color-2);
+
+  .top__line {
+    margin-bottom: r(46);
+  }
+
+  &__head {
+    padding-left: r(404);
+    padding-right: r(270);
+    font-size: r(24);
+    line-height: 1.5;
+    position: relative;
+
+    &__bg {
+      position: absolute;
+      left: r(-38);
+      top: r(122);
+      z-index: -1;
+      pointer-events: none;
+      width: r(349);
+
+      picture, img {
+        width: 100%;
+      }
+    }
+
+    span {
+      color: var(--color-9);
+    }
+
+    .section__tag {
+      position: absolute;
+      top: r(15);
+      left: r(4);
+      z-index: 1;
+    }
+
+    .section__title {
+      margin-bottom: r(56);
+    }
+
+    .bdesc {
+      max-width: 85%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+/*card*/
+.card {
+    position: relative;
+    overflow: hidden;
+    @extend %transition-all-300;
+    height: 100%;
+}
+
+
+//@include card-btn-hover();
+@mixin card-btn-hover() {
+    .btn {
+        @include fl-h-centr();
+        &:after {
+            transition: all var(--transition-all-300) ease-out;
+        }
+        &:hover {
+            &:after {
+                @include lg {
+                    margin-left: r(16);
+                }
+            }
+        }
+    }
+}

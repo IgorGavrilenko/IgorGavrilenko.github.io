@@ -1,0 +1,11 @@
+//Font face
+//Usage: @include font_face('RobotoRegular', 'Roboto', 300, italic);
+@mixin font_face($file_name, $font_name: $file_name, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: quote($font_name);
+		src: url('../../assets/fonts/' + $file-name + '.ttf') format('ttf');
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
