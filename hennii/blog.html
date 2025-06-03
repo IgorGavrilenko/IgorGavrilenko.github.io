@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="preload" href="assets/fonts/Montserrat-Regular.ttf" as="font" crossorigin="anonymous">
+<link rel="preload" href="assets/fonts/Montserrat-Medium.ttf" as="font" crossorigin="anonymous">
+<link rel="preload" href="assets/fonts/Montserrat-SemiBold.ttf" as="font" crossorigin="anonymous">
+<link rel="preload" href="assets/fonts/Syne-Regular.ttf" as="font" crossorigin="anonymous">
+<link rel="preload" href="assets/fonts/Syne-Medium.ttf" as="font" crossorigin="anonymous">
+<link rel="preload" href="assets/fonts/Syne-Bold.ttf" as="font" crossorigin="anonymous">
+
+<link rel="stylesheet" href="assets/css/blog.min.css">
+
+    <title>Hennii Blog</title>
+</head>
+<body class="blog-page">
+    <div class="smooth-scroll" data-scroll-container>
+        <header class="header" data-scroll-call="header">
+    <div class="container container--header">
+        <div class="header__top">
+            <a class="header__logo" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/">
+                <svg class="header__logo-svg" viewBox="0 0 112 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M72.5247 12.877L72.4816 21.7381H67.8653V14.623C67.8653 11.2183 66.7435 9.47223 62.9469 9.47223C59.8406 9.47223 56.5186 11.0873 55.0948 12.746V21.7381H50.4785V5.71826H55.0948V8.51192C57.3383 6.72223 60.4878 5.45636 64.3275 5.45636C68.5124 5.45636 72.4816 6.98414 72.5247 12.877Z" fill="black"/>
+                    <path d="M97.3314 12.877L97.2882 21.7381H92.6719V14.623C92.6719 11.2183 91.5502 9.47223 87.7536 9.47223C84.6473 9.47223 81.3252 11.0873 79.9015 12.746V21.7381H75.2852V5.71826H79.9015V8.51192C82.1449 6.72223 85.2944 5.45636 89.1342 5.45636C93.3191 5.45636 97.2451 6.98414 97.3314 12.877Z" fill="black"/>
+                    <path d="M39.6919 17.9841C38.8722 18.1587 37.8799 18.246 36.7581 18.246C33.695 18.246 31.2789 17.4167 30.7612 14.8413H39.6919H47.846C47.846 7.5516 43.0139 5.45636 37.017 5.45636C30.5886 5.45636 26.0586 7.85715 26.0586 13.75C26.0586 19.6429 30.7181 22 36.7581 22C37.7936 22 38.7859 21.9564 39.6919 21.8254V17.9841ZM37.017 8.99207C39.9076 8.99207 42.1942 9.60319 42.9708 11.873H30.9338C31.6672 9.60319 33.8675 8.99207 37.017 8.99207Z" fill="black"/>
+                    <path d="M23.298 8.7738V21.7381H18.6816V8.7738H23.298Z" fill="black"/>
+                    <path d="M4.61633 0V21.7818H0V0H4.61633Z" fill="black"/>
+                    <path d="M21.0103 8.7738H0.603516V12.9206H21.0103V8.7738Z" fill="black"/>
+                    <path d="M23.3405 0H18.7241V4.67064H23.3405V0Z" fill="#FB35FF"/>
+                    <path d="M104.666 0H100.049V4.05952H104.666V0Z" fill="black"/>
+                    <path d="M104.665 5.71826H100.049V21.7381H104.665V5.71826Z" fill="black"/>
+                    <path d="M112 0H107.384V4.05952H112V0Z" fill="black"/>
+                    <path d="M111.999 5.71826H107.383V21.7381H111.999V5.71826Z" fill="black"/>
+                </svg>
+                <span class="header__logo-text">blog</span>
+            </a>
+            <div class="header__right">
+                <a class="btn btn--sm btn--moon btn--header" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                    <span class="btn__text">Get early access</span>
+                    <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243774L15.5284 8.00002L6.56337 15.7563L5.25481 14.2438L11.3158 9.00002H0V7.00002H11.3158L5.25481 1.75627L6.56337 0.243774Z" fill="black"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header-search" id="header-search">
+                <button class="header-search__mob" id="header-search-mob" type="button">
+                    <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_840_6199)" stroke="#222" stroke-width="2"><circle cx="6.5" cy="6.5" r="5.5"/><path d="M10 10l5 5"/></g><defs><clipPath id="clip0_840_6199"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+                </button>
+                <form class="header-search__form" id="header-search-form" action="#">
+                    <input class="header-search__input" type="search" name="header-search" id="header-search-input"
+                           placeholder="Search...">
+                    <button class="header-search__reset"  id="header-search-reset" type="reset">
+                        <svg width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l8 8m0-8L1 9" stroke="#000" stroke-width="2"/></svg>
+                    </button>
+                </form>
+            </div>
+            <div class="header-categories">
+                <div class="header-categories__title">Categories</div>
+                <div class="header-categories__inner">
+                    <div class="swiper carousel-header">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a class="tag" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/category.php">Learning</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Bank Earnings</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Personal Finance</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Interview</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Business</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Learning</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Bank Earnings</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Personal Finance</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Interview</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="tag" href="#">Business</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button swiper-button-prev">
+                        <svg class="swiper-button__icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.563.244L15.528 8l-8.965 7.756-1.308-1.512L11.315 9H0V7h11.316L5.255 1.756 6.563.244z" fill="#000"/></svg>
+                    </div>
+                    <div class="swiper-button swiper-button-next">
+                        <svg class="swiper-button__icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.563.244L15.528 8l-8.965 7.756-1.308-1.512L11.315 9H0V7h11.316L5.255 1.756 6.563.244z" fill="#000"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- /header -->
+
+        <section class="s-hero">
+    <a class="stretched-link" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/article.php"></a>
+    <div class="s-hero__img">
+        <img src="assets/img/blog/hero.png" width="864" height="780" alt="">
+    </div>
+    <div class="s-hero__container container">
+        <div class="s-hero__caption">
+            <div class="s-hero__top">
+                <div class="tag-list tag-list--hero">
+                    <div class="tag">Learning</div>
+                </div>
+                <h1 class="s-hero__title split-text-hero">Learn and Grow with Hennii</h1>
+                <div class="s-hero__sub-title split-text-hero">Learn about investing and get the support you need, all within the
+                    Hennii app</div>
+            </div>
+            <div class="s-hero__bottom">
+                <div class="s-hero__arr">
+                    <img src="assets/img/blog/arr.svg" width="50" height="50" alt="">
+                </div>
+                <div class="s-hero__info">
+                    <div class="s-hero__autor split-text-hero">Written by <strong>Tauseef Bashir</strong></div>
+                    <div class="s-hero__date split-text-hero">April 6, 2021</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="s-marquee s-marquee--1">
+        <div class="s-marquee__border s-marquee__border--top"></div>
+        <div class="s-marquee__border s-marquee__border--right"></div>
+        <div class="s-marquee__border s-marquee__border--right-fill"></div>
+        <div class="s-marquee__border s-marquee__border--bottom"></div>
+        <div class="s-marquee__border s-marquee__border--left"></div>
+        <ul class="s-marquee__inner s-marquee__inner--1">
+            <li>Intelligence</li>
+            <li>Innovation</li>
+            <li>Governance</li>
+            <li>Inclusion</li>
+            <li>Design</li>
+            <li>Intelligence</li>
+            <li>Innovation</li>
+            <li>Governance</li>
+            <li>Inclusion</li>
+            <li>Design</li>
+        </ul>
+    </div>
+    <!-- /move-list -->
+    <div class="s-hero__border s-hero__border--top"></div>
+    <div class="s-hero__border s-hero__border--right"></div>
+    <div class="s-hero__border s-hero__border--right-fill"></div>
+    <div class="s-hero__border s-hero__border--left"></div>
+</section>
+<!-- /s-hero -->
+
+        <section class="section s-latest">
+    <div class="container">
+        <h2 class="section__title split-text">Latest articles</h2>
+        <div class="b-grid b-grid--v1 b-grid--latest">
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Personal finance</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">Credit Cards vs. Debit Cards: diiference?</h3>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/latest-1.png"
+                         width="416" height="515" alt=""
+                         loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="b-grid__info split-text">
+                        Written by
+                        <strong>Tauseef Bashir</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Interview</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">“I know the future of banking”. Interview with CEO Erti - Jessi Joe.</h3>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/latest-2.png"
+                         width="784" height="515" alt=""
+                     loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="b-grid__info split-text">
+                        Written by
+                        <strong>Tauseef Bashir</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /s-latest -->
+
+        <section class="section s-popular">
+    <div class="container">
+        <h2 class="section__title split-text">Popular</h2>
+        <div class="b-grid b-grid--v2 b-grid--popular">
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Learning</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">We got our own banking license - and can give you better features
+                        faster</h3>
+                    <p class="split-text">Learn about investing and get the support you need, all within the Hennii app</p>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/popular-1.png" width="864" height="498" alt=""
+                         loading="lazy">
+                </div>
+            </div>
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/popular-2.png" width="336" height="498" alt=""
+                         loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="tag-list">
+                        <div class="tag">Interview</div>
+                    </div>
+                    <h4 class="b-grid__sub-title split-text">Stock Futures Edge Up Ahead of Bank Earnings</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /s-popular -->
+
+        <section class="section s-category">
+    <div class="container">
+        <h2 class="section__title split-text">All news</h2>
+        <div class="b-grid b-grid--v1">
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Personal finance</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">Credit Cards vs. Debit Cards: diiference?</h3>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/news-1.png"
+                         width="416" height="515" alt=""
+                     loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="b-grid__info split-text">
+                        Written by
+                        <strong>Tauseef Bashir</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Interview</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">“I know the future of banking”. Interview with CEO Erti - Jessi Joe.</h3>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/news-2.png" width="784" height="515" alt=""
+                     loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="b-grid__info split-text">
+                        Written by
+                        <strong>Tauseef Bashir</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="b-grid__item">
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Interview</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">Stock Futures Edge Up Ahead of Bank Earnings</h3>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/news-3.png" width="784" height="515" alt=""
+                     loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="b-grid__info split-text">
+                        Written by
+                        <strong>Tauseef Bashir</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="b-grid__item" data-scroll>
+                <a class="stretched-link" href="javascript:;"></a>
+                <div class="b-grid__head">
+                    <div class="tag-list">
+                        <div class="tag">Personal finance</div>
+                    </div>
+                    <h3 class="b-grid__title split-text">Credit Cards vs. Debit Cards: diiference?</h3>
+                </div>
+                <div class="b-grid__body">
+                    <img data-scroll data-scroll-speed="-.7" class="b-grid__img" src="assets/img/blog/news-4.png" width="416" height="515" alt=""
+                     loading="lazy">
+                </div>
+                <div class="b-grid__footer">
+                    <div class="b-grid__info split-text">
+                        Written by
+                        <strong>Tauseef Bashir</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-fback-carousel">
+            <div class="swiper carousel-fback">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="b-fback">
+                            <div class="b-fback__inner">
+                                <div class="b-fback-decor b-fback-decor--1">
+                                    <div class="b-fback-decor__inner">
+                                        <div class="b-fback-decor__text">
+                                            <svg class="b-fback-decor__icon" width="8" height="8" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg"><path
+                                                d="M6.115 4.01L8 5.09 6.928 6.979 4.988 5.74 5.044 8H2.938l.055-2.26-1.94 1.238L0 5.09 1.885 4.01 0 2.91l1.053-1.888 1.94 1.258L2.938 0h2.106l-.056 2.28 1.94-1.258L8 2.91l-1.885 1.1z" fill="#fff"/></svg>
+                                            Innovation
+                                        </div>
+                                        <div class="b-fback-decor__text">Intelligence</div>
+                                    </div>
+                                </div>
+                                <div class="b-fback__content">
+                                    <h3 class="b-fback__title split-text">The creative spirits. The independent thinkers. The
+                                        true believers.</h3>
+                                    <a class="b-fback__btn btn btn--saturn btn--bg-black" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                                        <span class="btn__text">Get early access</span>
+                                        <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243744L15.5284 7.99999L6.56337 15.7562L5.25481 14.2437L11.3158 8.99999H0V6.99999H11.3158L5.25481 1.75624L6.56337 0.243744Z" fill="white"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="b-fback-decor b-fback-decor--2">
+                                    <div class="b-fback-decor__inner">
+                                        <div class="b-fback-decor__text">
+                                            <svg class="b-fback-decor__icon" width="8" height="8" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg"><path
+                                                d="M6.115 4.01L8 5.09 6.928 6.979 4.988 5.74 5.044 8H2.938l.055-2.26-1.94 1.238L0 5.09 1.885 4.01 0 2.91l1.053-1.888 1.94 1.258L2.938 0h2.106l-.056 2.28 1.94-1.258L8 2.91l-1.885 1.1z" fill="#fff"/></svg>
+                                            Inclusion
+                                        </div>
+                                        <div class="b-fback-decor__text">Governance</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="b-fback">
+                            <div class="b-fback__inner">
+                                <div class="b-fback-decor b-fback-decor--1">
+                                    <div class="b-fback-decor__inner">
+                                        <div class="b-fback-decor__text">
+                                            <svg class="b-fback-decor__icon" width="8" height="8" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg"><path
+                                                d="M6.115 4.01L8 5.09 6.928 6.979 4.988 5.74 5.044 8H2.938l.055-2.26-1.94 1.238L0 5.09 1.885 4.01 0 2.91l1.053-1.888 1.94 1.258L2.938 0h2.106l-.056 2.28 1.94-1.258L8 2.91l-1.885 1.1z" fill="#fff"/></svg>
+                                            Innovation
+                                        </div>
+                                        <div class="b-fback-decor__text">Intelligence</div>
+                                    </div>
+                                </div>
+                                <div class="b-fback__content">
+                                    <h3 class="b-fback__title split-text">The creative spirits. The independent thinkers. The
+                                        true believers.</h3>
+                                    <a class="b-fback__btn btn btn--saturn btn--bg-black" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/feedback.php">
+                                        <span class="btn__text">Get early access</span>
+                                        <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.56337 0.243744L15.5284 7.99999L6.56337 15.7562L5.25481 14.2437L11.3158 8.99999H0V6.99999H11.3158L5.25481 1.75624L6.56337 0.243744Z" fill="white"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="b-fback-decor b-fback-decor--2">
+                                    <div class="b-fback-decor__inner">
+                                        <div class="b-fback-decor__text">
+                                            <svg class="b-fback-decor__icon" width="8" height="8" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg"><path
+                                                d="M6.115 4.01L8 5.09 6.928 6.979 4.988 5.74 5.044 8H2.938l.055-2.26-1.94 1.238L0 5.09 1.885 4.01 0 2.91l1.053-1.888 1.94 1.258L2.938 0h2.106l-.056 2.28 1.94-1.258L8 2.91l-1.885 1.1z" fill="#fff"/></svg>
+                                            Inclusion
+                                        </div>
+                                        <div class="b-fback-decor__text">Governance</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-fback-carousel__nav">
+                <div class="swiper-button swiper-button-prev">
+                    <svg class="swiper-button__icon swiper-button__icon--desc" width="16" height="16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.563.244L15.528 8l-8.965 7.756-1.308-1.512L11.315 9H0V7h11.316L5.255 1.756 6.563.244z" fill="#000"/></svg>
+                    <svg class="swiper-button__icon swiper-button__icon--mob" width="14" height="14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.743.213L13.587 7l-7.844 6.787-1.145-1.324 5.303-4.588H0v-1.75h9.901L4.598 1.537 5.743.213z" fill="#000"/></svg>
+                    <span class="swiper-button__text">Prev</span>
+                </div>
+                <div class="swiper-button swiper-button-next">
+                    <span class="swiper-button__text">Next</span>
+                    <svg class="swiper-button__icon swiper-button__icon--desc" width="16" height="16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.563.244L15.528 8l-8.965 7.756-1.308-1.512L11.315 9H0V7h11.316L5.255 1.756 6.563.244z" fill="#000"/></svg>
+                    <svg class="swiper-button__icon swiper-button__icon--mob" width="14" height="14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.743.213L13.587 7l-7.844 6.787-1.145-1.324 5.303-4.588H0v-1.75h9.901L4.598 1.537 5.743.213z" fill="#000"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /s-new -->
+
+        <section class="s-marquee s-marquee--2">
+    <div class="s-marquee__border s-marquee__border--top"></div>
+    <div class="s-marquee__border s-marquee__border--right"></div>
+    <div class="s-marquee__border s-marquee__border--right-fill"></div>
+    <div class="s-marquee__border s-marquee__border--bottom"></div>
+    <div class="s-marquee__border s-marquee__border--left"></div>
+    <ul class="s-marquee__inner s-marquee__inner--2">
+        <li>Intelligence</li>
+        <li>Innovation</li>
+        <li>Governance</li>
+        <li>Inclusion</li>
+        <li>Design</li>
+        <li>Intelligence</li>
+        <li>Innovation</li>
+        <li>Governance</li>
+        <li>Inclusion</li>
+        <li>Design</li>
+    </ul>
+</section>
+<!-- /move-list -->
+        <footer class="footer">
+	<div class="container container--footer">
+        <div class="footer__top">
+            <a class="footer__logo" href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/">
+                <svg viewBox="0 0 112 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M72.5247 12.877L72.4816 21.7381H67.8653V14.623C67.8653 11.2183 66.7435 9.47223 62.9469 9.47223C59.8406 9.47223 56.5186 11.0873 55.0948 12.746V21.7381H50.4785V5.71826H55.0948V8.51192C57.3383 6.72223 60.4878 5.45636 64.3275 5.45636C68.5124 5.45636 72.4816 6.98414 72.5247 12.877Z" fill="black"/>
+                    <path d="M97.3314 12.877L97.2882 21.7381H92.6719V14.623C92.6719 11.2183 91.5502 9.47223 87.7536 9.47223C84.6473 9.47223 81.3252 11.0873 79.9015 12.746V21.7381H75.2852V5.71826H79.9015V8.51192C82.1449 6.72223 85.2944 5.45636 89.1342 5.45636C93.3191 5.45636 97.2451 6.98414 97.3314 12.877Z" fill="black"/>
+                    <path d="M39.6919 17.9841C38.8722 18.1587 37.8799 18.246 36.7581 18.246C33.695 18.246 31.2789 17.4167 30.7612 14.8413H39.6919H47.846C47.846 7.5516 43.0139 5.45636 37.017 5.45636C30.5886 5.45636 26.0586 7.85715 26.0586 13.75C26.0586 19.6429 30.7181 22 36.7581 22C37.7936 22 38.7859 21.9564 39.6919 21.8254V17.9841ZM37.017 8.99207C39.9076 8.99207 42.1942 9.60319 42.9708 11.873H30.9338C31.6672 9.60319 33.8675 8.99207 37.017 8.99207Z" fill="black"/>
+                    <path d="M23.298 8.7738V21.7381H18.6816V8.7738H23.298Z" fill="black"/>
+                    <path d="M4.61633 0V21.7818H0V0H4.61633Z" fill="black"/>
+                    <path d="M21.0103 8.7738H0.603516V12.9206H21.0103V8.7738Z" fill="black"/>
+                    <path d="M23.3405 0H18.7241V4.67064H23.3405V0Z" fill="#FB35FF"/>
+                    <path d="M104.666 0H100.049V4.05952H104.666V0Z" fill="black"/>
+                    <path d="M104.665 5.71826H100.049V21.7381H104.665V5.71826Z" fill="black"/>
+                    <path d="M112 0H107.384V4.05952H112V0Z" fill="black"/>
+                    <path d="M111.999 5.71826H107.383V21.7381H111.999V5.71826Z" fill="black"/>
+                </svg>
+            </a>
+            <div class="footer__link">
+                <a href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/privacy-policy.php">Privacy Policy</a>
+                <a href="https://frontend-a.dev.cheitgroup.com/ihor/hennii/blog.php">Blog</a>
+            </div>
+            <div class="footer__tag">From San Francisco with love 💜</div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__tag">From San Francisco with love 💜</div>
+        </div>
+    </div>
+</footer>
+<!-- /footer -->
+
+    </div>
+    <!-- /scroll-container -->
+    <script src="assets/libs/jquery.min.js"></script>
+<script src="assets/libs/locomotive-scroll/locomotive-scroll.min.js"></script>
+<script src="assets/libs/gsap/gsap.min.js"></script>
+<script src="assets/libs/gsap/ScrollTrigger.min.js"></script>
+<script src="assets/libs/gsap/SplitText.min.js"></script>
+<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/blog.min.js"></script>
+
+</body>
+</html>
