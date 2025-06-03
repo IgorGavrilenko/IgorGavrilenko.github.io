@@ -1,0 +1,148 @@
+// Speak Expert
+
+.speak-expert {
+
+  padding: r(122) 0 r(90);
+  overflow: hidden;
+
+  @include max-md {
+    padding: r(42) 0 r(52);
+  }
+
+  .section__container {
+
+    @include lg {
+      display: flex;
+    }
+
+  }
+
+  &__left {
+    @include lg {
+      flex: 0 0 49%;
+      max-width: 49%;
+      order: 2;
+    }
+  }
+
+  &__right {
+    @include lg {
+      flex: 0 0 51%;
+      max-width: 51%;
+    }
+  }
+
+  .section__title {
+    margin-bottom: r(30);
+  }
+
+  &__media {
+    width: r(531);
+    margin-left: 11%;
+    transform: translateY(-4%);
+    max-width: 100%;
+
+    @include max-lg {
+      transform: translateY(0);
+      margin-top: r(50);
+    }
+
+    @include max-md {
+      margin-top: r(29);
+      margin-left: r(-16);
+      width: auto;
+      margin-right: r(-24);
+      max-width: r(450);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+
+    &__footer {
+      margin-top: r(88);
+
+      @include max-md {
+        margin-top: r(34);
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+.info__contact {
+  display: inline-flex;
+  align-items: center;
+  margin-right: r(40);
+  margin-bottom: r(24);
+
+  @include max-md {
+    margin-right: 0;
+    margin-bottom: r(22);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__icon {
+    border-radius: 50%;
+    width: r(46);
+    height: r(46);
+    min-width: r(46);
+    margin-right: r(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: r(11);
+
+    @include max-md {
+      width: r(40);
+      height: r(40);
+      min-width: r(40);
+      margin-right: r(8);
+      margin-bottom: r(2);
+    }
+
+    picture, img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: r(18);
+    line-height: 1.5;
+    color: var(--color-9);
+    margin-bottom: r(4);
+
+    @include max-md {
+      font-size: r(14);
+      line-height: 1.25;
+      margin-bottom: r(2);
+    }
+  }
+
+  &__link {
+    font-size: r(24);
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-1);
+
+    @include max-md {
+      font-size: r(16);
+      line-height: 1.25;
+    }
+  }
+}
+
+.purple-bg {
+  background-color: var(--color-4);
+}
+
+.blue-bg {
+  background-color: var(--color-3);
+}

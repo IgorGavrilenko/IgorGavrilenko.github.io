@@ -1,0 +1,115 @@
+/*banner-1*/
+.section--banner {
+    @include section-dark-after();
+    padding-bottom: r(70);
+    .section__wrapper {
+        position: relative;
+        background-color: var(--color-12);
+        @include lg {
+            padding: r(20);
+        }
+    }
+    .banner-decor,
+    .banner-logo,
+    .banner-pic {
+        img {
+            @include object-fit-cover();
+        }
+    }
+    .banner-pic {
+        overflow: hidden;
+        @include lg {
+            border-radius: r($border-radius-8);
+        }
+        img {
+            @include lg {
+                filter: grayscale(1);
+            }
+        }
+    }
+    .banner-decor,
+    .banner-logo {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+    .banner-decor {
+        right: 0;
+        width: r(215);
+        min-width: r(215);
+        max-width: r(215);
+        height: r(248);
+    }
+    .banner-logo {
+        width: r(45);
+        min-width: r(45);
+        max-width: r(45);
+        height: r(159);
+    }
+}
+
+/*m-grid--banner*/
+.m-grid--banner {
+    position: absolute;
+    top: r(20);
+    right: r(20);
+    bottom: r(20);
+    left: r(20);
+    @include max-lg {
+        display: none;
+    }
+    .m-grid__frame {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-width: r(10);
+        border-style: solid;
+        border-color: var(--color-12);
+        border-radius: r($border-radius-8);
+    }
+    .m-grid__item--logo {
+        background-color: var(--color-12);
+    }
+    .m-grid__divider {
+        position: absolute;
+        background-color: var(--color-8);
+    }
+    .m-grid__divider--h {
+        top: 0;
+        right: r(10);
+        left: r(10);
+        height: 1px;
+    }
+    .m-grid__divider--v {
+        top: r(10);
+        bottom: r(10);
+        left: 0;
+        width: 1px;
+    }
+    .m-grid__item {
+        position: relative;
+        @include fl-width-20();
+        height: 33.333333%;
+        padding: r(10);
+        box-shadow: inset 0 0 0 r(9) var(--color-12);
+        &:nth-child(5n+1) {
+            .m-grid__divider--v {
+                display: none;
+            }
+        }
+        &:nth-child(-n+5) {
+            .m-grid__divider--h {
+                display: none;
+            }
+        }
+    }
+}
+
+/*section--banner-2*/
+//.section--banner-2 {
+//
+//}

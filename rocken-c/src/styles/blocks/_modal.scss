@@ -1,0 +1,631 @@
+
+.modal-show {
+  overflow: hidden;
+
+  .modal-window__backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.modal-body {
+  @include max-lg {
+    padding-top: r(62);
+  }
+  @include max-md {
+    padding-top: 0;
+  }
+}
+
+.modal-window__backdrop {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: visibility .6s, opacity.6s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-window {
+  background-color: var(--color-1);
+  width: r(1404);
+  border-radius: r(32);
+  padding: r(24) r(24) r(30);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .6s, opacity.6s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+
+  @media (min-width: 1800px) {
+    width: r(1200);
+  }
+
+  @include max-xxxl {
+    width: r(1200);
+  }
+
+  @include max-lg {
+    border-radius: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    height: var(--app-height);
+    overflow: auto;
+    padding: r(36) r(20);
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .form-group {
+    margin-bottom: r(40);
+  }
+
+  label {
+    font-weight: 400;
+    font-size: r(24);
+    line-height: 1.5;
+    color: var(--color-13);
+    margin-bottom: r(16);
+    display: block;
+
+    @include max-md {
+      font-size: r(14);
+      line-height: 1.25;
+      margin-bottom: r(12);
+    }
+
+    span {
+      color: var(--color-4)
+    }
+  }
+
+  .form-control {
+    font-size: r(24);
+    line-height: 1.5;
+    color: var(--color-13);
+    border: 0;
+    border-bottom: 1px solid var(--color-9);
+    padding: 0 0 r(12) 0;
+    width: 100%;
+    height: r(48);
+
+    @include max-md {
+      font-size: r(14);
+      line-height: 1.25;
+      height: r(30);
+    }
+
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+        letter-spacing: r(10);
+      }
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.15);
+      transition: .6s all;
+    }
+  }
+}
+
+.modal-close {
+  display: flex;
+  position: absolute;
+  top: r(28);
+  right: r(26);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: r(48);
+  height: r(48);
+  background-color: var(--color-11);
+  transition: .6s background-color;
+  cursor: pointer;
+
+  &:hover {
+    @include md {
+      background-color: var(--color-9);
+    }
+
+    .icon-close {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6693 1.33346L1.33594 14.6667M14.6693 14.6666L1.33594 1.33337' stroke='%2310222C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  @include max-md {
+    top: r(14);
+    right: r(19);
+    background-color: transparent;
+    width: r(14);
+    height: r(14);
+  }
+}
+
+.icon-close {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.6693 1.33346L1.33594 14.6667M14.6693 14.6666L1.33594 1.33337' stroke='%23A3AFB9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  width: r(16);
+  height: r(16);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .6s background-image;
+}
+
+.nl-modal {
+
+
+  form {
+    height: 100%;
+  }
+
+  .modal-body {
+    @include lg {
+      display: flex;
+    }
+
+  }
+
+  &__left {
+    @include lg {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+  }
+
+  &__right {
+    @include lg {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+  }
+
+  &__media {
+    .media__logo {
+      width: r(280);
+
+      @include max-md {
+        width: r(141);
+      }
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: r(52) r(96) r(48) r(113);
+
+    @media (min-width: 1800px) {
+      padding: r(42) r(76) r(38) r(93);
+    }
+
+    @include max-xxxl {
+      padding: r(42) r(76) r(38) r(93);
+    }
+
+    @include max-lg {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include max-md {
+      padding-top: r(24);
+      padding-bottom: 0;
+    }
+
+    &__bottom {
+      @include max-lg {
+        margin-top: r(36);
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__form-group-wrapper {
+    padding-left: r(46);
+
+    @include max-md {
+      padding-left: r(26);
+    }
+
+    .form-group {
+      counter-increment: my-awesome-counter;
+      position: relative;
+
+      &:before {
+        content: "0" counter(my-awesome-counter) ;
+        font-weight: 400;
+        font-size: r(18);
+        line-height: 1.5;
+        color: var(--color-9);
+        position: absolute;
+        top: r(3);
+        left: r(-46);
+
+        @include max-md {
+          font-size: r(14);
+          line-height: 1.25;
+          left: r(-26);
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .form-title {
+    font-weight: 400;
+    font-size: r(48);
+    line-height: 1.24;
+    color: var(--color-6);
+    margin-bottom: r(49);
+
+    @include max-xxxl {
+      font-size: r(42);
+      margin-bottom: r(36);
+    }
+
+    @include max-md {
+      font-size: r(32);
+      line-height: 1.1;
+      margin-bottom: r(16);
+    }
+
+    span {
+      color: var(--color-9);
+    }
+  }
+
+  .modal__head {
+    .form-title {
+
+    }
+  }
+
+  .sm-text {
+    font-size: r(18);
+    line-height: 1.5;
+    color: #666;
+
+    a {
+      text-decoration: underline;
+    }
+
+    @include max-md {
+      font-size: r(14);
+      line-height: 1.25;
+    }
+  }
+
+  .color-4 {
+    color: var(--color-4);
+
+    a {
+      color: var(--color-4);
+    }
+  }
+}
+
+.plan__modal {
+  .nl-modal__desc {
+    @include md {
+      height: 88.5vh;
+      overflow: auto;
+    }
+  }
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.plan__modal {
+
+  padding: r(24);
+
+  .nl-modal__media {
+    position: relative;
+    height: 88.5vh;
+
+    @include max-md {
+      height: 100%;
+    }
+
+    &:before, &:after {
+      background-image: url(../../assets/img/section/prices-page/plus-white.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: r(52);
+      height: r(52);
+      position: absolute;
+      z-index: 2;
+      content: '';
+    }
+
+    &:before {
+      top: r(24);
+      left: r(32);
+    }
+
+    &:after {
+      top: r(24);
+      right: r(32);
+    }
+
+    .form-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      color: var(--color-1);
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0;
+      padding-bottom: r(24);
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .hor__card__media {
+    height: 100%;
+    position: relative;
+
+    &:before, &:after {
+      background-image: url(../../assets/img/section/prices-page/plus-white.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: r(52);
+      height: r(52);
+      position: absolute;
+      z-index: 2;
+      content: '';
+
+    }
+
+    &:before {
+      bottom: r(42);
+      left: r(32);
+    }
+
+    &:after {
+      bottom: r(42);
+      right: r(32);
+    }
+
+    .media__logo {
+      position: absolute;
+      z-index: 2;
+      bottom: r(42);
+      left: 50%;
+      transform: translateX(-50%);
+      width: r(137);
+      height: fit-content;
+      top: auto;
+    }
+
+    picture {
+      height: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .nl-modal__desc {
+
+
+    @include md {
+      padding: r(44) r(64) r(16);
+    }
+
+    .modal__head {
+      margin-bottom: r(48);
+
+      .form-title {
+        margin-bottom: r(16);
+      }
+
+      .sm-text {
+        margin-bottom: r(8);
+      }
+    }
+
+    textarea.form-control {
+      height: r(116);
+      margin-bottom: r(-8);
+    }
+
+    &__bottom {
+
+      @include md {
+        display: flex;
+        justify-content: space-between;
+        padding-left: r(46);
+        margin-top: r(62);
+      }
+
+      @include max-lg {
+        padding-left: r(26);
+      }
+
+      @include max-md {
+        padding-left: 0;
+        margin-top: r(8);
+      }
+
+      .btn {
+        width: auto;
+        padding: r(16);
+
+        @include max-md {
+          width: 100%;
+          margin-top: r(24);
+        }
+
+        img {
+          width: r(24);
+        }
+
+      }
+
+      .go-step-03 {
+        min-width: r(206);
+      }
+    }
+
+  }
+
+  .position__head {
+    font-size: r(32);
+    margin-bottom: r(32);
+    display: flex;
+    justify-content: space-between;
+
+    @include max-md {
+      font-size: r(24);
+      margin-bottom: r(24);
+    }
+
+    .btn {
+      position: relative;
+      top: r(-6);
+
+      @include max-md {
+        top: r(-8)
+      }
+
+      img {
+        width: r(16);
+      }
+    }
+  }
+
+  .nl-modal__form-group-wrapper {
+    &:first-child {
+      .remove-form-row {
+        display: none;
+      }
+    }
+    .position__head {
+      display: none;
+    }
+  }
+
+  .multiple-elements .nl-modal__form-group-wrapper {
+    .position__head {
+      display: flex;
+    }
+  }
+
+  .nl-modal__form-group-wrapper + .nl-modal__form-group-wrapper {
+    margin-top: r(100);
+  }
+
+  .step-01, .step-02, .step-03 {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  .step-03 {
+    height: 100%;
+  }
+
+}
+
+.form-success-mess {
+  font-size: r(24);
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: r(20);
+
+  @include max-md {
+    height: var(--app-height);
+    font-size: r(16);
+    line-height: 1.25;
+  }
+
+  &__media {
+    width: r(78);
+    margin: 0 auto r(16);
+
+    @include max-md {
+      width: r(60);
+      margin-bottom: r(8);
+    }
+
+    img {
+      width: 100%;
+    }
+
+
+  }
+
+  div {
+    br {
+      @include max-md {
+        display: none;
+      }
+    }
+  }
+
+  .form-title {
+    margin-bottom: r(18);
+  }
+
+  .btn {
+    margin-top: r(46);
+    width: auto;
+
+    @include max-md {
+      width: 100%;
+      margin-top: r(40);
+    }
+  }
+}
+
+.color-9 {
+  color: var(--color-9)
+}

@@ -1,0 +1,41 @@
+// Careers Hero
+
+.careers-hero {
+  .section__content, .section__tag {
+    opacity: 1;
+  }
+
+  .contact-hero__head {
+    margin-top: r(16);
+  }
+
+  .section__tag {
+    margin-bottom: r(20);
+  }
+
+  .section__title {
+    margin-bottom: r(34);
+  }
+
+  .contact-hero__desc {
+    font-size: r(24);
+    line-height: 1.5;
+    max-width: 85%;
+    margin-bottom: r(30);
+
+    span {
+      color: var(--color-9);
+    }
+  }
+
+  .contact-hero__footer {
+    .btn {
+      vertical-align: top;
+      margin-right: r(6);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

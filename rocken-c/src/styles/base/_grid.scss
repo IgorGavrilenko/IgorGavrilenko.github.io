@@ -1,0 +1,42 @@
+/*simple width elements grid*/
+//.s-grid {
+//    @include md {
+//        --elements: 1;
+//        --gap: 30px;
+//          --r-gap: 30px;
+//    }
+//}
+//.s-grid {
+//    --gap: 0;
+//    --r-gap: 0;
+//    --elements: 1;
+//    @include fl();
+//    @include fl-row();
+//    @include fl-wrap();
+//    @include fl-h-start();
+//    column-gap: var(--gap);
+//    row-gap: var(--r-gap);
+//  }
+//  .s-grid__item {
+//    flex: 0 1 calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+//    width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+//    max-width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+//    min-width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
+//    height: auto;
+//  }
+
+/*multiple width elements grid*/
+.m-grid {
+    @include fl();
+    @include fl-row();
+    @include fl-wrap();
+    @include fl-h-start();
+    align-content: stretch;
+}
+.m-grid__item {
+    flex: 0 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}

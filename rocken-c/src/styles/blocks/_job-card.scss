@@ -1,0 +1,175 @@
+.job__card {
+
+  background-color: var(--color-11);
+  border-radius: r(16);
+  padding: r(48) r(40);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include max-lg {
+    margin-bottom: r(36);
+  }
+
+  @include max-md {
+    padding: r(20);
+    margin-bottom: r(24);
+  }
+
+  &__bottom {
+    margin-top: r(74);
+
+    @include max-md {
+      margin-top: r(16);
+    }
+  }
+
+  &__footer {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include max-md {
+      display: block;
+    }
+
+    .btn {
+      margin-right: r(20);
+      min-width: r(207);
+      justify-content: center;
+
+      @include max-md {
+        display: flex;
+        margin-bottom: r(10);
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        @include max-md {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+    .btn--lo {
+      height: r(40);
+      min-height: r(40);
+      max-height: r(40);
+    }
+
+    .btn-a-arrow {
+      &:after {
+        margin-left: r(15);
+        left: r(8);
+        position: relative;
+      }
+    }
+
+    .btn--lo:before {
+      margin-right: r(24);
+    }
+
+  }
+
+  &__head {
+    color: #333;
+    padding-bottom: r(46);
+    border-bottom: 1px solid var(--color-9);
+    margin-bottom: r(46);
+
+    @include max-md {
+      margin-bottom: r(24);
+      padding-bottom: r(12);
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: r(32);
+    line-height: 1.2;
+    margin-bottom: r(26);
+
+    @include max-md {
+      font-size: r(18);
+      margin-bottom: r(15);
+    }
+  }
+
+  &__location {
+    font-size: r(24);
+    line-height: 1.5;
+    display: flex;
+
+    @include max-md {
+      font-size: r(16);
+      line-height: 1.25;
+    }
+
+    .icon-location {
+      flex: 0 0 r(32);
+      max-width: r(32);
+      margin-right: r(7);
+      margin-left: r(4);
+      position: relative;
+      top: r(-1);
+
+      @include max-md {
+        flex: 0 0 r(20);
+        max-width: r(20);
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.star-list {
+
+  list-style: none;
+
+  li {
+
+    position: relative;
+    padding-left: r(32);
+    font-size: r(18);
+    line-height: 1.5;
+    color: var(--color-6);
+    margin-bottom: r(16);
+
+    @include max-md {
+      font-size: r(14);
+      line-height: 1.25;
+      padding-left: r(30);
+    }
+
+    &:before {
+      background-image: url("data:image/svg+xml,%3Csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0.5L7.39657 2.90761C7.75127 5.06098 9.43902 6.74873 11.5924 7.10343L14 7.5L11.5924 7.89657C9.43902 8.25127 7.75127 9.93902 7.39657 12.0924L7 14.5L6.60343 12.0924C6.24873 9.93902 4.56098 8.25127 2.40761 7.89657L0 7.5L2.40761 7.10343C4.56098 6.74873 6.24873 5.06098 6.60343 2.90761L7 0.5Z' fill='%23151518' /%3E%3C/svg%3E");
+      width: r(14);
+      height: r(15);
+      position: absolute;
+      top: r(6);
+      left: r(4);
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: '';
+
+      @include max-md {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.icon-location {
+  display: inline-flex;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.4896 11.2668C26.0896 5.10683 20.7162 2.3335 15.9962 2.3335C15.9962 2.3335 15.9962 2.3335 15.9829 2.3335C11.2762 2.3335 5.88955 5.0935 4.48955 11.2535C2.92955 18.1335 7.14289 23.9602 10.9562 27.6268C12.3696 28.9868 14.1696 31.5005 15.9829 31.5005C17.7962 31.5005 19.6229 28.9868 21.0229 27.6268C24.8362 23.9602 29.0496 18.1468 27.4896 11.2668ZM15.9962 17.9468C13.6762 17.9468 11.7962 16.0668 11.7962 13.7468C11.7962 11.4268 13.6762 9.54683 15.9962 9.54683C18.3162 9.54683 20.1962 11.4268 20.1962 13.7468C20.1962 16.0668 18.3162 17.9468 15.9962 17.9468Z' fill='%234893F4' /%3E%3C/svg%3E");
+  width: r(32);
+  height: r(32);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

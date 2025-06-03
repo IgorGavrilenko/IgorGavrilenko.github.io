@@ -1,0 +1,82 @@
+// Popular Articles
+
+.popular-articles {
+
+  padding: r(74) 0;
+  overflow: hidden;
+
+  @include max-md {
+    padding: r(60) 0 r(40);
+  }
+
+  .section__head {
+
+    margin-bottom: r(60);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: r(10);
+
+    @include max-md {
+      margin-bottom: r(24);
+      padding-right: 0;
+    }
+
+    & > div:first-child {
+      padding-right: r(24);
+    }
+
+    .btn {
+
+      @include md {
+        min-width: r(206);
+      }
+
+      @include max-md {
+        height: r(35);
+        min-height: r(35);
+        max-height: r(35);
+      }
+    }
+  }
+
+  .section__title {
+    span {
+      color: var(--color-9);
+    }
+  }
+}
+
+.articles {
+
+  &__wrapper {
+
+    display: flex;
+
+    @include lg {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 r(-10);
+    }
+
+    @include max-lg {
+      margin-left: r(-4);
+      margin-right: r(-24);
+      overflow: auto;
+      padding-bottom: r(20);
+      padding-right: r(10);
+    }
+
+  }
+
+  &__inner {
+    @include lg {
+      flex: 0 0 25%;
+      max-width: 25%;
+      padding: 0 r(10) r(20);
+    }
+    @include max-lg {
+      padding: 0 r(4);
+    }
+  }
+}

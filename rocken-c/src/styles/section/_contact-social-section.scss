@@ -1,0 +1,135 @@
+// Contact Social Section
+
+.contact-social-section {
+
+  padding: r(120) 0 r(82);
+
+  @include max-md {
+    padding: r(84) 0 r(54);
+  }
+
+  &__head {
+    margin-bottom: r(82);
+
+    @include max-md {
+      margin-bottom: r(24);
+    }
+
+    .section__title {
+      br {
+        @include max-md {
+          display: none;
+        }
+      }
+
+    }
+
+    .section__tag {
+      margin-bottom: r(24);
+
+      @include max-md {
+        margin-bottom: r(18);
+      }
+    }
+  }
+}
+
+.social-link-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: r(120);
+  font-weight: 400;
+  font-size: r(32);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-1);
+  border-top: 1px solid #5a5a5a;
+  padding: 0 r(60);
+
+  @include max-md {
+    padding: r(24) r(20) r(20);
+    height: r(72);
+    font-size: r(18);
+    line-height: 1.2;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #5a5a5a;
+  }
+
+  &:hover {
+    & > div {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .marquee {
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
+    }
+  }
+
+  & > div {
+
+    opacity: 1;
+    visibility: visible;
+    transition: .3s opacity, .3s visibility;
+
+    .icon-link {
+      top: r(4);
+      right: r(6);
+
+      @include max-md {
+        top: r(2);
+        right: r(2);
+      }
+    }
+
+  }
+
+  .marquee {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 101%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s height;
+    will-change: transform, opacity;
+
+    &__item {
+      padding-right: r(62);
+    }
+  }
+
+  .marquee__content {
+    display: inline-flex;
+
+    .icon-link {
+      margin-left: r(70);
+      top: r(3)
+    }
+  }
+}
+
+.icon-link {
+  position: relative;
+  display: inline-flex;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 31L30 3' stroke='white' stroke-width='2.5' stroke-linecap='round' /%3E%3Cpath d='M30 3V29' stroke='white' stroke-width='2.5' stroke-linecap='round' /%3E%3Cpath d='M3 2H21' stroke='white' stroke-width='2.5' stroke-linecap='round' /%3E%3C/svg%3E");
+  width: r(32);
+  height: r(33);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include max-md {
+    width: r(22);
+    height: r(22);
+  }
+}

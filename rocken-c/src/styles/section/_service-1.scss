@@ -1,0 +1,312 @@
+/*section--service-1*/
+.section--service-1 {
+    position: relative;
+    padding-top: r(32);
+    padding-bottom: r(40);
+    @include section-light-after();
+    @include lg {
+        padding-top: r(57);
+        padding-bottom: r(180);
+    }
+    .section__container {
+        @include lg {
+            @include fl();
+        }
+    }
+    .section__intro {
+        position: relative;
+        z-index: 1;
+        margin-bottom: r(26);
+        @include lg {
+            margin-bottom: 0;
+        }
+    }
+    .section__title {
+        margin-bottom: r(32);
+        @include lg {
+            margin-bottom: r(104);
+        }
+    }
+    .section__title-sub {
+        @include lg {
+            position: relative;
+            top: r(8);
+            left: r(47);
+            display: inline-block;
+        }
+    }
+    .section__sub-text {
+        line-height: 1.2;
+        @include lg {
+            font-size: r(24);
+            line-height: 1.5;
+            position: relative;
+            left: r(46);
+            visibility: hidden;
+            transform: translateY(50%);
+            opacity: 0;
+        }
+        br {
+            @include max-lg {
+                display: none;
+            }
+
+        }
+    }
+    .section-text__accent {
+    }
+    .section__content {
+        position: relative;
+        z-index: 1;
+        @include lg {
+            top: 0;
+            right: r(100);
+        }
+    }
+
+}
+.card--service-1 {
+    overflow: visible;
+    padding: r(35) r(24) r(32) r(24);
+    color: var(--color-6);
+    border-radius: r($border-radius-xs);
+    @include fl();
+    @include fl-between();
+    @include fl-column();
+    @include lg {
+        height: r(535);
+    }
+    .card__title {
+        font-size: r(18);
+        line-height: 1.25;
+        margin-bottom: r(14);
+        @include lg {
+            font-size: r(24);
+            margin-bottom: r(32);
+        }
+        .br-m {
+            @include md {
+                display: none;
+            }
+        }
+        .br-d {
+            @include max-md {
+                display: none;
+            }
+        }
+    }
+    .card__media {
+        margin-bottom: r(10);
+    }
+    .card__text {
+        font-size: r(14);
+        line-height: 1.3;
+        margin-bottom: r(22);
+        @include lg {
+            font-size: r(18);
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+    }
+    .btn {
+        position: static;
+        @include max-lg {
+            max-width: r(170);
+        }
+        @include lg {
+            position: absolute;
+            visibility: hidden;
+            width: r(188);
+            opacity: 0;
+            @include fl-h-centr();
+        }
+        &:after,
+        &:before {
+            transition: all var(--transition-all-300) ease-out;
+        }
+    }
+}
+.m-grid--service-1 {
+    position: relative;
+    z-index: 2;
+    max-width: r(1024);
+    margin: r(-8) r(-10);
+    .m-grid__item {
+        @include fl();
+        padding: r(8) r(10);
+        @include sm {
+            @include fl-width-50();
+        }
+        @include lg {
+            visibility: hidden;
+            transform: translateY(50%);
+            opacity: 0;
+        }
+        .btn {
+            @include max-lg {
+                transform: none !important;
+            }
+        }
+        &:nth-child(odd) {
+            .btn {
+                @include max-lg {
+                    transform: rotate(180deg) !important;
+                }
+                &:hover {
+                    &:before {
+                        @include lg {
+                            margin-right: r(16);
+                        }
+                    }
+                }
+                .btn__text {
+                    @include max-lg {
+                        position: relative;
+                        top: r(-2);
+                        transform: rotate(-180deg) !important;
+                    }
+                }
+            }
+        }
+        &:nth-child(even) {
+            .btn {
+                &:hover {
+                    &:after {
+                        @include lg {
+                            margin-left: r(16);
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(1) {
+            @include fl-h-end();
+            @include fl-v-end();
+            .card--service-1 {
+                position: relative;
+                background-color: var(--color-11);
+                @include lg {
+                    max-width: r(328);
+                    max-height: r(368);
+                    padding: r(61) r(12) r(79) r(32);
+                    border-radius: r($border-radius-l) r($border-radius-s) r($border-radius-s) r($border-radius-s);
+                }
+                .btn {
+                    @include lg {
+                        bottom: r(29);
+                        left: r(-114);
+                        transform: translateX(50%);
+                    }
+                }
+            }
+            .card__media {
+                @include max-md {
+                    margin-bottom: r(-20);
+                }
+                @include lg {
+                    display: none;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .card--service-1 {
+                background-color: var(--color-17);
+                @include lg {
+                    padding: r(47) r(41) r(70) r(45);
+                    border-radius: r($border-radius-s);
+                }
+                .card__media {
+                    @include lg {
+                        margin-bottom: r(18);
+                    }
+                }
+                .card__text {
+                    @include lg {
+                        padding-right: r(17);
+                    }
+                }
+                .btn {
+                    @include lg {
+                        right: r(-54);
+                        bottom: r(38);
+                        transform: translateX(-35%);
+                    }
+                }
+            }
+        }
+        &:nth-child(3) {
+            .card--service-1 {
+                background-color: var(--color-18);
+                @include lg {
+                    padding: r(49) r(32) r(84) r(39);
+                    border-radius: r($border-radius-s);
+
+                }
+                .card__media {
+                    @include lg {
+                        margin-bottom: r(28);
+                    }
+                }
+                .btn {
+                    @include lg {
+                        bottom: r(25);
+                        left: r(-144);
+                        transform: translateX(50%);
+                    }
+                }
+            }
+        }
+        &:nth-child(4) {
+            .card--service-1 {
+                color: var(--color-1);
+                background-color: var(--color-3);
+                @include lg {
+                    max-width: r(349);
+                    max-height: r(396);
+                    padding: r(52) r(41) r(90) r(41);
+                    border-radius: r($border-radius-s) r($border-radius-s) r($border-radius-xl) r($border-radius-s);
+                }
+                .card__media {
+                    @include lg {
+                        display: none;
+                    }
+                }
+                .btn {
+                    @include lg {
+                        right: r(-60);
+                        bottom: r(23);
+                        transform: translateX(-35%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pattern--service-1 {
+    position: absolute;
+    @include max-lg {
+        display: none;
+    }
+    img {
+        @include object-fit-cover();
+    }
+    &.pattern--1 {
+        top: 35%;
+        left: -49.5%;
+        width: r(646);
+        height: r(569);
+        @include descLg {
+            top: 33%;
+        }
+    }
+    &.pattern--2 {
+        top: 47%;
+        right: -22%;
+        width: r(575);
+        height: r(720);
+        @include descLg {
+            top: 44%;
+        }
+    }
+}
