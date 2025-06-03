@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="assets/libs/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="assets/libs/multiple-select/multiple-select.min.css">
+<link rel="stylesheet" href="assets/libs/intl-tel-input-master/build/css/intlTelInput.min.css">
+<link rel="stylesheet" href="assets/css/app.min.css">
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <title>Form page</title>
+</head>
+<body class="body">
+    <header class="header">
+	<div class="container header__inner">
+		<a class="header__logo" href="#">
+			<img src="assets/img/logo.svg" alt="Tamedocs" title="Tamedocs" width="">
+		</a>
+		<nav class="header-nav">
+            <ul class="header-nav__menu">
+                <li class="header-nav__item">
+                    <a class="header-nav__link header-nav__link--menu" href="javascript:;">Product</a>
+                    <div class="header-submenu">
+                        <div class="header-submenu__inner">
+                            <a class="menu-card menu-card--bg-1" href="javascript:;">
+                                <img class="menu-card__icon" src="assets/img/icon/menu/1.png" alt="" width="64"
+                                     height="64">
+                                <span class="menu-card__title label-1">For 3rd Parties</span>
+                                <span class="menu-card__text text-4">Tamedocs helps 3rd Parties, GPs and Patients share
+                                sensitive information securely, transparently and efficiently.</span>
+                            </a>
+                            <a class="menu-card menu-card--bg-2" href="javascript:;">
+                                <img class="menu-card__icon" src="assets/img/icon/menu/2.png" alt="" width="64"
+                                     height="64">
+                                <span class="menu-card__title label-1">For GP’s</span>
+                                <span class="menu-card__text text-4">Tamedocs helps 3rd Parties, GPs and Patients share sensitive information securely, transparently and efficiently.</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="#">Governance</a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="#">Contact us</a>
+                </li>
+            </ul>
+            <div class="header-nav__control">
+                <a class="btn btn--fill-1" href="#">Sign up for free</a>
+                <div class="soc header__soc">
+                    <a class="soc__link" href="#"><svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.5 2a2 2 0 114 0 2 2 0 01-4 0zM18 10.41a4.61 4.61 0 00-3.55-4.56 4.46 4.46 0 00-3.95 1.07V6.5A.5.5 0 0010 6H7.5a.5.5 0 00-.5.5v10a.5.5 0 00.5.5H10a.5.5 0 00.5-.5v-5.64a2.07 2.07 0 011.66-2.08 2 2 0 012.34 2v5.72a.5.5 0 00.5.5h2.5a.5.5 0 00.5-.5v-6.09zM4.5 6.5v10a.5.5 0 01-.5.5H1.5a.5.5 0 01-.5-.5v-10a.5.5 0 01.5-.5H4a.5.5 0 01.5.5z" fill="#6B7691"/></svg></a>
+                    <a class="soc__link" href="#"><svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.97 2.464a7.989 7.989 0 01-1.847 1.778v.55a12.19 12.19 0 01-3.62 8.69A12.179 12.179 0 015.77 17 12.217 12.217 0 01.33 15.74a.25.25 0 01-.15-.23v-.11a.26.26 0 01.26-.26 8.844 8.844 0 005.112-1.837 4.363 4.363 0 01-3.884-2.558.26.26 0 01.26-.36c.51.052 1.025.004 1.517-.14A4.355 4.355 0 010 6.44a.26.26 0 01.36-.26c.497.22 1.034.335 1.577.34A4.277 4.277 0 01.23 1.585a.54.54 0 01.908-.18A12.339 12.339 0 009.536 5.28a3.998 3.998 0 01-.12-1 4.352 4.352 0 017.499-2.937A8.674 8.674 0 0019.3.517a.17.17 0 01.18 0 .17.17 0 010 .18 4.365 4.365 0 01-1.758 1.998 8.563 8.563 0 001.997-.48.16.16 0 01.18 0 .17.17 0 01.07.25z" fill="#6B7691"/></svg></a>
+                </div>
+            </div>
+        </nav>
+        <div class="header-control">
+            <a class="header-control__log" href="#">Log in</a>
+            <a class="header-control__sign btn btn--fill-1" href="#">Sign up</a>
+            <a class="header-nav-toggle" href="javascript:;"><span>Menu</span></a>
+        </div>
+	</div>
+</header>
+<!-- /header -->
+
+    <main class="main">
+    <section class="form">
+    <div class="container container--form">
+        <div class="form__item">
+            <h1 class="form__title">Get in touch!</h1>
+            <form class="form__body" action="#">
+                <div class="form__group form__group--row">
+                    <div class="form__group-inner">
+                        <label for="name">Name</label>
+                        <input class="form__t-input" type="text" name="name" id="name">
+                    </div>
+                    <div class="form__group-inner">
+                        <label for="last-name">Last Name</label>
+                        <input class="form__t-input" type="text" name="last-name" id="last-name">
+                    </div>
+                </div>
+                <div class="form__group form__group--row">
+                    <div class="form__group-inner">
+                        <label for="email">Email</label>
+                        <input class="form__t-input" type="email" name="email" id="email">
+                    </div>
+                    <div class="form__group-inner">
+                        <label for="tel">Number</label>
+                        <input class="form__t-input" type="text" name="tel" id="tel">
+                    </div>
+                </div>
+                <div class="form__group">
+                    <label for="company">Company</label>
+                    <input class="form__t-input" type="text" name="company" id="company">
+                </div>
+                <div class="form__group">
+                    <label for="message">Message</label>
+                    <textarea class="form__textarea" name="message" id="message" cols="30" rows="3"></textarea>
+                </div>
+                <div class="form__group">
+                    <label for="select">What is your message regarding? </label>
+                    <select class="form__select" name="select" id="select">
+                        <option value="0">Product</option>
+                        <option value="1">Demo</option>
+                        <option value="2">Data Privacy</option>
+                        <option value="3">Issue</option>
+                        <option value="4">Payments</option>
+                        <option value="5">Other</option>
+                    </select>
+                </div>
+                <div class="form__group form__group--checkbox">
+                    <input class="form__c-input" type="checkbox" name="pp" id="pp">
+                    <label for="pp">
+                        <span>I agree to my data being collected and processed in accordance with the Tamedocs privacy policy.</span>
+                    </label>
+
+                </div>
+                <div class="form__group form__group--submit">
+                    <button class="form__button btn btn--fill-1" type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+        <div class="form__item">
+            <picture>
+                <img class="form__img" src="assets/img/form/1.png" width="" height="" alt="">
+            </picture>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <!-- /main -->
+    <footer class="footer">
+	<div class="container">
+        <div class="footer__inner">
+            <div class="footer__info">
+                <a class="footer__logo" href="#">
+                    <img src="assets/img/logo.svg" alt="Tamedocs" title="Tamedocs" width="">
+                </a>
+                <address class="footer-address text-4">
+                    <p class="footer-address__text">Suite 1, 3rd Floor 11 - 12 St. James's Square, London, United Kingdom, SW1Y 4LB</p>
+                    <a class="footer-address__link label-4 link-underline" href="mailto:info@tamedocs.com">info@tamedocs.com</a>
+                </address>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-menu__list">
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">Product</a>
+                        <ul class="footer-menu__sub-list">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">For Access Requestor</a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="#">For GP’s</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">Governance</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">Terms and Conditions</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">Privacy Settings</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <a class="footer-menu__link" href="#">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <form class="form-contact" action="">
+                    <div class="form-contact__title label-3">Contact Us</div>
+                    <div class="form-contact__inner">
+                        <input class="form-contact__input" type="email" name="" id="" placeholder="Your email">
+                        <button class="form-contact__btn" type="submit"><svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.968.949l-5.99 16.722a.5.5 0 01-.469.329h-.16a.51.51 0 01-.459-.29L9.535 12.72a1.997 1.997 0 01.339-2.206l2.995-3.275a.5.5 0 000-.689l-.38-.379a.5.5 0 00-.689 0L8.526 9.165a1.996 1.996 0 01-2.206.34L1.33 7.147A.51.51 0 011 6.69v-.16a.5.5 0 01.33-.509L18.05.03a.499.499 0 01.518.11l.26.26a.5.5 0 01.14.549z" fill="#6665DD"/></svg></button>
+                    </div>
+                </form>
+                <div class="soc footer__soc">
+                    <a class="soc__link" href="#"><svg width="18" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.5 2a2 2 0 114 0 2 2 0 01-4 0zM18 10.41a4.61 4.61 0 00-3.55-4.56 4.46 4.46 0 00-3.95 1.07V6.5A.5.5 0 0010 6H7.5a.5.5 0 00-.5.5v10a.5.5 0 00.5.5H10a.5.5 0 00.5-.5v-5.64a2.07 2.07 0 011.66-2.08 2 2 0 012.34 2v5.72a.5.5 0 00.5.5h2.5a.5.5 0 00.5-.5v-6.09zM4.5 6.5v10a.5.5 0 01-.5.5H1.5a.5.5 0 01-.5-.5v-10a.5.5 0 01.5-.5H4a.5.5 0 01.5.5z" fill="#6B7691"/></svg></a>
+                    <a class="soc__link" href="#"><svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.97 2.464a7.989 7.989 0 01-1.847 1.778v.55a12.19 12.19 0 01-3.62 8.69A12.179 12.179 0 015.77 17 12.217 12.217 0 01.33 15.74a.25.25 0 01-.15-.23v-.11a.26.26 0 01.26-.26 8.844 8.844 0 005.112-1.837 4.363 4.363 0 01-3.884-2.558.26.26 0 01.26-.36c.51.052 1.025.004 1.517-.14A4.355 4.355 0 010 6.44a.26.26 0 01.36-.26c.497.22 1.034.335 1.577.34A4.277 4.277 0 01.23 1.585a.54.54 0 01.908-.18A12.339 12.339 0 009.536 5.28a3.998 3.998 0 01-.12-1 4.352 4.352 0 017.499-2.937A8.674 8.674 0 0019.3.517a.17.17 0 01.18 0 .17.17 0 010 .18 4.365 4.365 0 01-1.758 1.998 8.563 8.563 0 001.997-.48.16.16 0 01.18 0 .17.17 0 01.07.25z" fill="#6B7691"/></svg></a>
+                </div>
+            </div>
+        </div>
+	</div>
+</footer>
+<!-- /footer -->
+<div class="modal" id="modal-form" style="display: none;">
+    <div class="modal__content">
+        <picture>
+            <source media="(max-width: 639px)" srcset="assets/img/test/modal-form-m.jpg">
+            <source media="(min-width: 640px)" srcset="assets/img/test/modal-form.jpg">
+            <img class="img-fluid" src="assets/img/test/modal-form.jpg" alt="">
+        </picture>
+    </div>
+</div>
+
+<script src="assets/libs/jquery.min.js"></script>
+<script src="assets/libs/viewportchecker/jquery.viewportchecker.min.js"></script>
+<script src="assets/libs/fancybox/jquery.fancybox.min.js"></script>
+<script src="assets/libs/slick/slick.min.js"></script>
+<script src="assets/libs/multiple-select/multiple-select.min.js"></script>
+<script src="assets/libs/intl-tel-input-master/build/js/intlTelInput-jquery.min.js"></script>
+<script src="assets/js/app.min.js"></script>
+
+</body>
+</html>
