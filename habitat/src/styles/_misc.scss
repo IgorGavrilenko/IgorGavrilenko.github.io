@@ -1,0 +1,109 @@
+/* misc */
+html {
+    font-size: calc(0.09997308934338rem + 0.6458557588805167vw * 0.072923);
+}
+@media (max-width:3840px) {
+    html {
+        font-size: calc(0.009997308934337995rem + 0.67vw * 0.072923);
+    }
+}
+@media (max-width:1920px) {
+    html { font-size: calc(0.009997308934337995rem + 0.6vw * 0.072923);
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    html {
+        font-size: calc(0.00322265625rem + 1.2vw * 0.072923);
+    }
+}
+@media screen and (max-width:767px) {
+    html {
+        font-size: calc(-0.00020920502092049986rem + 2.1652803347280333vw * 0.072923);
+    }
+}
+@media screen and (max-width:479px) {
+    html {
+        font-size: calc(-0.00020920502092049986rem + 2.4472803347280333vw * 0.072923);
+    }
+}
+@media screen and (max-width:240px) {
+    html {
+        font-size: 0.5rem * 0.072923;
+    }
+}
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    color: $white;
+    overflow: hidden;
+    background: $black;
+    height: 100vh;
+    position: relative;
+    min-height: 100vh;
+    &.footer-ready.home-page {
+        background: $white;
+    }
+}
+.main{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    overflow-y: hidden !important;
+    padding-top: 249rem;
+    @include md {
+        padding-top: 228rem;
+    }
+    @media (max-height: 420px) and (max-width: 920px) {
+        padding-top: 90rem;
+    }
+    .ready & {
+        opacity: 1;
+    }
+    section {
+        background-color: $black;
+    }
+}
+.main__inner {
+    min-height: 100vh;
+}
+.container {
+    padding-left: 37rem;
+    padding-right: 37rem;
+    @include md {
+        padding-left: 80rem;
+        padding-right: 80rem;
+    }
+}
+picture {
+    display: block;
+    img {
+        display: block;
+    }
+}
+.img-fluid {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+.hidden {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
+
+.has-scroll-smooth {
+	backface-visibility: hidden;
+	transform: translateZ(0);
+}
+
+/* lozad */
+[data-toggle-class="lozad-active"] {
+    opacity: 0;
+}
+.lozad-active {
+    &.loaded {
+        opacity:1;
+    }
+ }

@@ -1,0 +1,74 @@
+/* intro */
+.intro {
+    height: calc(100vh);
+    left: 0;
+    background: $black;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2010;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.77,0,.175,1) 5.5s;
+    transition: transform 1s cubic-bezier(.77,0,.175,1) 5.5s;
+    &.ready {
+        -webkit-transform: translate3d(0,-100%,0)!important;
+        transform: translate3d(0,-100%,0)!important;
+    }
+    &.is-cookie {
+        display: none;
+    }
+    .intro__img {
+        pointer-events: none;
+        position: absolute;
+        height: calc(110vh);
+        top: calc(-5vh);
+        width: 100%;
+        z-index: 21;
+    }
+    .intro__data-img {
+        display: none;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: 112%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: -6%;
+        object-fit: cover;
+        &:first-child {
+            margin-top: 0!important;
+            z-index: 24;
+            -webkit-transition: opacity .3s ease-out .3s,-webkit-transform 1s cubic-bezier(.77,0,.175,1) 1s;
+            transition: opacity .3s ease-out .3s,transform 1s cubic-bezier(.77,0,.175,1) 1s;
+        }
+        &:nth-child(2) {
+            margin-top: 18%;
+            z-index: 23;
+            -webkit-transition: margin-top 1.6s ease-out 1s,opacity 0s 1s,-webkit-transform 1s cubic-bezier(.77,0,.175,1) 2.2s;
+            transition: margin-top 1.6s ease-out 1s,opacity 0s 1s,transform 1s cubic-bezier(.77,0,.175,1) 2.2s;
+        }
+        &:last-child {
+            margin-top: 18%;
+            z-index: 22;
+            -webkit-transition: margin-top 1.6s ease-out 2.2s,opacity 0s 1s,-webkit-transform 1s cubic-bezier(.77,0,.175,1) 3.4s;
+            transition: margin-top 1.6s ease-out 2.2s,opacity 0s 1s,transform 1s cubic-bezier(.77,0,.175,1) 3.4s;
+        }
+    }
+    &.ready {
+        img {
+            margin-top: -6%;
+            opacity: 1;
+            -webkit-transform: scale(1.05) translate3d(0,-100%,0) translateZ(0);
+            transform: scale(1.05) translate3d(0,-100%,0) translateZ(0);
+        }
+    }
+    .contact-page & {
+        display: none;
+    }
+}
+.ready .intro {
+    background: transparent;
+}

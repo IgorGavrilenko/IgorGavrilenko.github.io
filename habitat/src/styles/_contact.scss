@@ -1,0 +1,175 @@
+
+/* contact */
+.main--contact {
+    padding-top: 233rem;
+    @include md {
+        padding-top: 225rem;
+    }
+}
+.main__wrap {
+    @extend %transition-all-300;
+    opacity: 0;
+    .load & {
+            opacity: 1;
+        }
+}
+.contact {
+    font-weight: 300;
+    color: $gray;
+}
+.contact__data {
+    @include lg {
+        @include fl();
+    }
+}
+.contact__left {
+    margin-bottom: 217rem;
+    @include md {
+        margin-bottom: 65rem;
+    }
+    @include lg {
+        width: 44.5%;
+    }
+}
+.contact__right {
+    @include lg {
+        width: calc(100% - 43.2%);
+        padding-left: 13.4%;
+    }
+}
+.contact__title,
+.contact__sub-title {
+    font-size: 72rem;
+    font-weight: 400;
+    line-height: 1.17;
+    color: $white;
+    @include md {
+        font-size: 96rem;
+        line-height: 1.09;
+    }
+}
+.contact__title {
+    margin-bottom: 83rem;
+    @include md {
+        margin-bottom: 104rem;
+
+    }
+    .reveal-img__item {
+        position: relative;
+        display: inline-block;
+        @include a {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 18rem;
+            margin: auto;
+            height: 2rem;
+            background: $white;
+        }
+    }
+    .hover-reveal {
+        z-index: 1;
+        width: 528rem;
+        height: 354rem;
+    }
+    .hover-reveal__inner {
+        padding-bottom: 30rem;
+    }
+    .hover-reveal__text {
+        display: block;
+        font-size: 20rem;
+        font-weight: 300;
+        line-height: 1.6;
+        padding-top: 6rem;
+    }
+}
+.contact__sub-title {
+    margin-bottom: 83rem;
+    @include md {
+        margin-bottom: 58rem;
+    }
+}
+.contact__meilto {
+    font-size: 24rem;
+    @include md {
+        font-size: 20rem;
+    }
+}
+.contact-address {
+    font-size: 18rem;
+    line-height: 1.75;
+    padding-top: 111rem;
+    padding-bottom: 213rem;
+    @include md {
+        font-size: 16rem;
+        padding-top: 72rem;
+        padding-bottom: 144rem;
+    }
+    @include lg {
+        padding-top: 125rem;
+    }
+    p {
+        font-size: inherit;
+    }
+}
+.contact-address__title {
+    font-size: 24rem;
+    font-weight: 600;
+    line-height: 1.7777777777777777;
+    color: $white;
+    margin-bottom: 3rem;
+    @include md {
+        font-size: 18rem;
+    }
+
+}
+h3.contact-address__title {
+    font-size: 30rem;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 16rem;
+    @include md {
+        font-size: 32rem;
+        margin-bottom: 16rem;
+    }
+
+}
+.contact-address__item {
+    &:not(:last-child) {
+        margin-bottom: 40rem;
+        @include md {
+        margin-bottom: 33rem;
+        }
+    }
+}
+.footer--contact {
+    .footer__bottom {
+        padding-top: 33rem;
+        @include md {
+            padding-top: 28rem;
+        }
+    }
+    .footer__menu {
+        @include max-md {
+            margin-bottom: 90rem;
+        }
+    }
+    .footer__info {
+        @include max-md {
+            margin-bottom: 84rem;
+        }
+    }
+    .footer__info a {
+        margin-bottom: 15rem;
+        @include md {
+            margin-bottom: 60rem;
+        }
+    }
+    .footer__menu li {
+        margin-bottom: 46rem;
+        @include md {
+            margin-bottom: 13rem;
+        }
+    }
+}

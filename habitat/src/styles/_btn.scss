@@ -1,0 +1,45 @@
+.btn {
+    @include fli();
+    @include fl-h-centr();
+    @include fl-v-centr();
+    position: relative;
+    font-size: 16rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 16rem 20rem 16rem 40rem;
+    border-radius: 48rem;
+    appearance: none;
+    border: 1px solid transparent;
+    box-shadow: none;
+    background-color: $white;
+    color: $black;
+    @include b {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 16rem;
+        bottom: 0;
+        margin: auto;
+        width: 16rem;
+        height: 16rem;
+        border-radius: 50%;
+        background-color: $black;
+        @extend %transition-all-300;
+    }
+    .btn__text {
+        position: relative;
+        top: 2rem;
+        color: inherit;
+    }
+    @include h {
+        background-color: $black;
+        color: $white;
+        border-color: $white;
+        @include b {
+            background-color: $white;
+        }
+    }
+}
+button {
+    @extend %transition-all-300;
+}

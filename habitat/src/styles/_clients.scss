@@ -1,0 +1,78 @@
+/* clients */
+.clients {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 120rem;
+    @include lg {
+        padding-bottom: 64rem;
+    }
+    .container {
+        @include xl {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+.section-title--clients {
+    font-size: 36rem;
+    line-height: 1.35;
+    text-align: center;
+    margin-bottom: 33rem;
+    @include md {
+        font-size: 57rem;
+        line-height: 1.1428571428571428;
+        margin-bottom: 70rem;
+    }
+}
+.grid--clients {
+    @include fl();
+    @include fl-wrap();
+    @include fl-h-centr();
+    @include md {
+        @include fl-between();
+    }
+    .grid__item {
+        height: 158rem;
+        @include fl();
+        @include fl-v-centr();
+        @include lg {
+            margin-bottom: 136rem;
+        }
+        padding: 0 32rem;
+        -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
+        @include md {
+            height: 144rem;
+            padding-right: 16rem;
+            padding-left: 16rem;
+            -webkit-flex: 0 1 30%;
+            -ms-flex: 0 1 30%;
+            flex: 0 1 30%;
+            width: 30%;
+            max-width: 30%;
+            min-width: 30%;
+        }
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media (min-width: 576px) and (max-width: 1919px) {
+        img {
+            height: 56rem;
+        }
+    }
+    @media (min-width: 1921px) {
+        img {
+            height: 56rem;
+        }
+    }
+}

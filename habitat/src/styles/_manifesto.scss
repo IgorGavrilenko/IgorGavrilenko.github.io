@@ -1,0 +1,295 @@
+/* manifesto */
+.manifesto {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 222rem;
+    @include md {
+        padding-bottom: 200rem;
+    }
+    img {
+        display: block;
+    }
+}
+.section-title--manifesto {
+    margin-bottom: 77rem;
+    @include max-md {
+        font-size: 48rem;
+    }
+    @include md {
+        margin-bottom: 72rem;
+    }
+}
+.manifesto-text {
+    font-size: 36rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: $dark-2;
+    margin-bottom: 49rem;
+    @include md {
+        margin-bottom: 128rem;
+        font-size: 30rem;
+    }
+    @include lg {
+        font-size: 40rem;
+        padding: 0 223rem;
+    }
+    @include xxl {
+        padding: 0 223rem;
+    }
+    .manifesto-text__paragraph {
+        font-size: inherit;
+        &:not(:last-child) {
+            margin-bottom: 72rem;
+        }
+        @extend %transition-all-300;
+        &.is-inview {
+            color: $white;
+        }
+    }
+}
+.manifesto-text__item {
+    &:not(:last-child) {
+        margin-bottom: 170rem;
+        @include lg {
+            margin-bottom: 72rem;
+        }
+    }
+    img {
+        @include xl {
+            margin-top: 72rem;
+            margin-bottom: 120rem;
+            display: none;
+        }
+    }
+    &:nth-child(odd) {
+    .manifesto-text__img {
+            @include fl();
+            @include fl-h-end();
+            @include max-md {
+                margin-right: -37rem;
+                width: calc(100% + 37rem);
+            }
+            @include max-lg {
+                margin-right: -80rem;
+                width: calc(100% + 80rem);
+            }
+        }
+    }
+    .hover-reveal__text {
+        display: none !important;
+    }
+}
+.manifesto-text__img {
+    @include xl {
+        height: 300rem;
+        width: 240rem;
+        background-size: cover;
+        position: absolute;
+        z-index: 2;
+        opacity: 0;
+        margin-top: -150rem;
+        transform: scale(0.4);
+    }
+}
+.grid--manifesto {
+    @include md {
+        @include fl-between();
+        @include fl-nowrap();
+    }
+    @media (min-width: 1921px) {
+        @include fl-h-around();
+    }
+    .grid__left {
+        @include fl();
+        margin-right: -13rem;
+        margin-left: -13rem;
+        margin-bottom: 75rem;
+        @include md {
+            margin-right: -16rem;
+            margin-left: -16rem;
+            margin-bottom: 0;
+        }
+        .grid__item {
+            padding-bottom: 25rem;
+            padding-right: 13rem;
+            padding-left: 13rem;
+            @include md {
+                padding-bottom: 32rem;
+                padding-right: 16rem;
+                padding-left: 16rem;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+        @include md {
+            -webkit-flex: 0 1 57%;
+            -ms-flex: 0 1 57%;
+            flex: 0 1 57%;
+            width: 57%;
+            max-width: 57%;
+            min-width: 57%;
+        }
+        .grid__col {
+            &:first-child {
+                .grid__item {
+                    &:last-child {
+                        @include fl();
+                        @include fl-h-end();
+                    }
+                }
+            }
+        }
+    }
+    .grid__right {
+        @include md {
+            -webkit-flex: 0 1 43%;
+            -ms-flex: 0 1 43%;
+            flex: 0 1 43%;
+            width: 43%;
+            max-width: 43%;
+            min-width: 43%;
+        }
+        .grid__col {
+            height: 100%;
+            @include md {
+                @include fl();
+                @include fl-column();
+            }
+            .grid__row {
+                @include max-md {
+                    display: block;
+                }
+                @include md {
+                    -webkit-flex: 1 1 auto;
+                    -ms-flex: 1 1 auto;
+                    flex: 1 1 auto;
+                }
+            }
+        }
+    }
+    .grid__item {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: auto;
+        max-width: none;
+        min-width: auto;
+    }
+    .grid__row {
+        @include fl();
+        @include fl-between();
+        padding-bottom: 23rem;
+        @include md {
+            padding-bottom: 64rem;
+        }
+        .grid__item {
+            &:first-child {
+                padding-right: 20rem;
+                @include md {
+                    max-width: 228rem;
+                    min-width: 228rem;
+                }
+                @include lg {
+                    max-width: 320rem;
+                    min-width: 320rem;
+                }
+                @include fl();
+                @include sm {
+                    @include fl-v-end();
+                }
+                @include md {
+                    @include fl-v-start();
+                    @include fl-v-end();
+                }
+                color: $gray;
+                font-weight: 300;
+                font-size: 24rem;
+                line-height: 1.5;
+                @include md {
+                    font-size: 16rem;
+                    line-height: 1.75;
+                }
+            }
+        }
+    }
+    .grid__item--1 {
+        @include max-md {
+            margin-left: -57rem;
+        }
+        .manifesto__img {
+            // width: 578rem;
+            width: 580rem;
+            height: auto;
+            @include md {
+                width: 528rem;
+                height: 640rem;
+            }
+        }
+    }
+    .grid__item--2 {
+        .manifesto__img {
+            @include max-md {
+                width: 238rem;
+            }
+            width: 416rem;
+            height: 232rem;
+        }
+    }
+    .grid__item--3 {
+        .manifesto__img {
+            width: 304rem;
+            height: 326rem;
+        }
+    }
+    .grid__item--4 {
+        @include max-md {
+            padding-right: 0;
+            margin-bottom: 72rem;
+        }
+        .manifesto__img {
+            width: 304rem;
+            height: 326rem;
+        }
+    }
+    .grid__item--5 {
+        @include max-md {
+            @include fl();
+            @include fl-h-end();
+            margin-right: -60rem;
+            width: calc(100% + 60rem);
+        }
+        .manifesto__img {
+            @include max-md {
+                width: 250rem;
+            }
+        }
+    }
+    .grid__item--6 {
+        @include fl();
+        @include fl-h-end();
+        @include max-md {
+            margin-right: -25px;
+        }
+        .manifesto__img {
+            width: 752rem;
+            height: 514rem;
+            @include max-md {
+                max-width: 517rem;
+            }
+        }
+    }
+    .grid__item {
+        .manifesto__img {
+            @include max-lg {
+                height: auto;
+            }
+        }
+    }
+    p {
+        font-size: inherit;
+        @include xl {
+            margin-left: 4px;
+        }
+    }
+}

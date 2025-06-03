@@ -1,0 +1,20 @@
+/* type */
+p {
+    font-size: 20rem;
+    margin-bottom: 0;
+    &:not(:last-child) {
+        margin-bottom: 16rem;
+    }
+}
+
+.section-title {
+    font-weight: 300;
+    font-size: 46rem;
+    line-height: 1.0909090909090908;
+    @include md {
+        font-size: 88rem;
+    }
+    @media (max-height: 420px) and (max-width: 920px) {
+        font-size: 40rem;
+    }
+}

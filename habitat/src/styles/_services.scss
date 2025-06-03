@@ -1,0 +1,152 @@
+/* services */
+.services {
+    position: relative;
+    z-index: 1;
+    padding-top: 119rem;
+    @include md {
+        padding-top: 70rem;
+    }
+}
+.section-title--services {
+    margin-bottom: 77rem;
+    @include max-md {
+        font-size: 48rem;
+    }
+    @include md {
+        margin-bottom: 100rem;
+    }
+    @include lg {
+        margin-bottom: 40rem;
+    }
+}
+.services-text {
+    overflow: visible;
+}
+.services__list {
+    @include lg {
+        @include fl();
+    }
+}
+.services-img {
+    @include lg {
+        padding-left: 227rem;
+    }
+    @include max-lg {
+        display: none;
+    }
+    .services-num {
+        font-size: 50rem;
+        font-weight: bold;
+        position: absolute;
+        top: 40rem;
+        left: 40rem;
+    }
+}
+.services-img__inner {
+    position: relative;
+    width: 1625rem;
+    height: 604rem;
+}
+.services__list-img {
+    @include lg {
+        margin-left: 225rem;
+    }
+}
+.services__item {
+    font-weight: 300;
+    line-height: 1.6;
+    color: $dark-2;
+    -webkit-transition: color .3s ease-in;
+    transition: color .3s ease-in;
+    @include lg {
+        min-width: 70%;
+        min-height: 209rem;
+        padding-right: 40rem;
+    }
+    @include lg {
+        padding-left: 227rem;
+        padding-right: 0;
+    }
+    &.active {
+        @include lg {
+            color: $white;
+        }
+    }
+    &.is-inview {
+        @include max-lg {
+            color: $white;
+        }
+    }
+}
+.services__caption {
+    font-size: 24rem;
+    line-height: 1.5;
+    margin-bottom: 161rem;
+    @include lg {
+        max-width: 752rem;
+        margin-bottom: 40rem;
+    }
+    p {
+        font-size: inherit;
+    }
+    .services__img {
+        margin-top: 119rem;
+        object-fit: cover;
+        @include md {
+            margin-top: 80rem;
+        }
+        @include lg {
+            display: none;
+        }
+    }
+}
+.services__img-wrap {
+    @include max-lg {
+        @include fl();
+        @include fl-h-end();
+    }
+    @include max-md {
+        margin-right: -37rem;
+        width: calc(100% + 37rem);
+    }
+    @include max-lg {
+        margin-right: -80rem;
+        width: calc(100% + 80rem);
+    }
+}
+.services__title {
+    font-size: 36rem;
+    font-weight: 400;
+    line-height: 1.1428571428571428;
+    margin-bottom: 13rem;
+    @include md {
+        font-size: 24rem;
+        margin-bottom: 20rem;
+    }
+    @include lg {
+        font-size: 56rem;
+    }
+}
+.services-img__item {
+    position: absolute;
+    opacity: 0;
+    @extend %transition-all-300;
+    &.active {
+        opacity: 1;
+    }
+}
+.services-img__item--primer {
+    opacity: 1;
+}
+[attr^="data-panel"] {
+    position: relative;
+    z-index: 1;
+}
+.active ~ .services-img__item--primer {
+    display: none !important;
+}
+.services__img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}

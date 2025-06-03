@@ -1,0 +1,139 @@
+/* team */
+.team {
+    position: relative;
+    z-index: 1;
+    padding-top: 80rem;
+    padding-bottom: 80rem;
+    @include md {
+        padding-top: 150rem;
+        padding-bottom: 150rem;
+    }
+    overflow: hidden;
+    @include fl();
+    @include lg {
+        padding-top: 70rem;
+        padding-bottom: 183rem;
+    }
+    .container {
+        @include max-lg {
+            padding-right: 0;
+        }
+    }
+}
+.section-title--team {
+    @include max-md {
+        font-size: 48rem;
+    }
+    margin-bottom: 78rem;
+    @include lg {
+        margin-bottom: 20rem;
+    }
+    @media (max-height: 420px) and (max-width: 920px) {
+        margin-bottom: 10rem;
+    }
+}
+.team__list {
+    @include fl();
+    width: 100%;
+    @include lg {
+        padding-left: 225rem;
+    }
+}
+.team__item {
+    margin-bottom: 30rem;
+    min-width: 36vh;
+    @media (max-height: 420px) and (max-width: 920px) {
+        margin-bottom: 10rem;
+    }
+    @include lg {
+        max-width: 41.5vh;
+        min-width: auto;
+        min-width: 53.94vh;
+    }
+    margin-right: 30rem;
+    @media (max-height: 420px) and (max-width: 920px) {
+        margin-right: 10rem;
+    }
+}
+.team__img {
+    position: relative;
+    height: 0;
+    padding-bottom: 145%;
+    margin-bottom: 17rem;
+    cursor: pointer;
+    @media (max-height: 420px) and (max-width: 920px) {
+        padding-bottom: 121%;
+    }
+    @include md {
+        padding-bottom: 121%;
+    }
+    @include lg {
+        padding-bottom: 65.374vh;
+    }
+    @include max-lg {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        @extend %transition-all-300;
+    }
+}
+.team__name {
+    font-size: 30rem;
+    line-height: 1.5;
+    margin-bottom: 11rem;
+    @include md {
+        font-size: 32rem;
+        margin-bottom: 6rem;
+    }
+    @media (max-height: 420px) and (max-width: 920px) {
+        font-size: 12rem;
+        line-height: 1.2;
+    }
+}
+.team__post {
+    font-size: 16rem;
+    line-height: 1.75;
+    color: $gray;
+    @media (max-height: 420px) and (max-width: 920px) {
+        font-size: 12rem;
+        line-height: 1.2;
+    }
+}
+.team-post {
+    p {
+        font-size: inherit;
+        overflow: hidden;
+        margin-bottom: 0;
+        @extend %transition-all-300;
+    }
+}
+.team-post__anim {
+    height: 0;
+    opacity: 0;
+}
+.team__item {
+    @include h {
+        img {
+            &:last-child {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+        .team-post__anim {
+            height: auto;
+            opacity: 1;
+        }
+        .team-post__primer {
+            height: 0;
+            opacity: 0;
+        }
+    }
+}

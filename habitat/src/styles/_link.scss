@@ -1,0 +1,33 @@
+/* link */
+a {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    @extend %transition-all-300;
+    &:hover {
+        text-decoration: none;
+        // color: $accent;
+    }
+}
+// .link-underline {
+//     display: inline-block;
+//     line-height: 1.2;
+//     border-bottom: 1px solid $accent;
+//     &:hover {
+//         border-bottom-color: transparent;
+//     }
+// }
+.stretched-link {
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+        background-color: rgba(0,0,0,0);
+    }
+}

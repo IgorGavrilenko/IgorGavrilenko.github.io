@@ -1,0 +1,15 @@
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16rem;
+    height: 16rem;
+    background: $white;
+    border-radius: $border-radius-round;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 2000;
+    @include max-xl {
+        display: none;
+    }
+}

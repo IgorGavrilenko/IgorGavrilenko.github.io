@@ -1,0 +1,57 @@
+.cookies {
+    right: 36rem;
+    left: 36rem;
+    bottom: 15%;
+    border-radius: 20rem;
+    position: fixed;
+    z-index: 1;
+    font-size: 32rem;
+    line-height: 1.5;
+    padding: 24rem;
+    background: $white;
+    color: $black;
+    @extend %transition-all-300;
+    @include lg {
+        @include fl();
+        @include fl-between();
+        @include fl-v-centr();
+        right: 56rem;
+        left: 56rem;
+        bottom: 40rem;
+        border-radius: 100rem;
+    }
+    .footer-ready-start & {
+        background: $black;
+        color: $white;
+    }
+}
+.cookies__btn {
+    color: $white;
+    background: $black;
+    .footer-ready-start & {
+        background: $white;
+        color: $black;
+    }
+    @include b {
+        background: $white;
+        .footer-ready-start & {
+            background: $black;
+        }
+    }
+    @include h {
+        color: $black;
+        background: $white;
+        border-color: $black;
+        .footer-ready-start & {
+            color: $white;
+            background: $black;
+            border-color: $white;
+        }
+        @include b {
+            background: $black;
+            .footer-ready-start & {
+                background: $white;
+            }
+        }
+    }
+}
