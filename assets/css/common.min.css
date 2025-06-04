@@ -18,4 +18,8 @@
 .footer__text a:hover {
     color: red;
 }
-
+@media screen and (max-width: 1199px) {
+    .footer__img {
+        display: none !important;
+    }
+}
